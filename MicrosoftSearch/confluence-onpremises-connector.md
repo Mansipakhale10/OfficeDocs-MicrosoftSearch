@@ -150,8 +150,6 @@ The following steps provide guidance on how to register the app [Configure an in
 
 In this step, you can add or remove available properties from your Confluence data source. Microsoft 365 has already selected a few properties by default.
 
-With a Confluence Query Language (CQL) string, you can specify conditions for syncing pages. It's like a **Where** clause in a **SQL Select** statement. For example, you can choose to index only the pages that have been modified in the last two years. To learn about creating your own query string, see [Advanced Searching using CQL](https://developer.atlassian.com/server/confluence/advanced-searching-using-cql/). By default, all pages are indexed by the connector.
-
 **Specify the spaces you want to index:** By default, the connector will index all spaces. However, you can choose to include or exclude specific spaces using the space filter option. Enter the list of space keys you wish to include or exclude, and you will see a preview of the results.
 Space key: Each Confluence space has a **space key**, which is a short, unique identifier that forms part of the URL for that space. To get the space key please contact confluence admin
 
