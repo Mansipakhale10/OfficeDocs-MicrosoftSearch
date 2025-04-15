@@ -19,7 +19,11 @@ Indexing on-premises data sources require you to install *Microsoft Graph connec
 
 For help on installation, refer to [this page](graph-connector-agent.md#installation).
 
-[Download latest Graph Connector Agent](https://aka.ms/gca)
+[Download latest Graph Connector Agent](https://aka.ms/gca) 
+
+## Version 3.1.7.0 (*March 31, 2025*)
+* Bug fixes for SharePoint, Confluence, Jira and Enterprise Websites on-prem connectors.
+* Added support to use the URL of SharePoint items as the searchable item ID.
 
 ## Version 3.1.4.0 (*January 13, 2025*)
 
