@@ -1,6 +1,6 @@
 --- 
 ms.date: 06/11/2020
-title: "Azure DevOps Work Items Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot" 
+title: "Azure DevOps Work Items Microsoft 365 Copilot connector" 
 ms.author: vivg
 author: vivg
 manager: harshkum
@@ -9,17 +9,17 @@ ms.audience: Admin
 ms.topic: article 
 ms.service: mssearch 
 ms.localizationpriority: medium 
-description: "Set up the Azure DevOps Work Items Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot" 
+description: "Set up the Azure DevOps Work Items Microsoft 365 Copilot connector." 
 ---
 
-# Azure DevOps Work Items Microsoft Graph connector
+# Azure DevOps Work Items Microsoft 365 Copilot connector
 
-The Azure DevOps Work Items Microsoft Graph connector allows your organization to index work items in its instance of the Azure DevOps service. After you configure the connector, end users can search for work items from Azure DevOps in Microsoft Search and Microsoft 365 Copilot.
+The Azure DevOps Work Items Microsoft 365 Copilot connector allows your organization to index work items in its instance of the Azure DevOps service. After you configure the connector, end users can search for work items from Azure DevOps in Microsoft Search and Microsoft 365 Copilot.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Azure DevOps Work Items Microsoft Graph connector.
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Azure DevOps Work Items Copilot connector.
 
 >[!IMPORTANT]
->The Azure DevOps Work Items Microsoft Graph connector supports only the Azure DevOps cloud service. Azure DevOps Server 2019, TFS 2018, TFS 2017, TFS 2015, and TFS 2013 are not supported by this connector.
+>The Azure DevOps Work Items Copilot connector supports only the Azure DevOps cloud service. Azure DevOps Server 2019, TFS 2018, TFS 2017, TFS 2015, and TFS 2013 are not supported by this connector.
 
 ## Capabilities
 - Index Work Items from Azure DevOps
@@ -35,7 +35,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
     ![Screenshot that shows third-party application access via OAuth.](media/ado-workitems-connector-security-policies.png)
 
-- **Service Account**: To connect to Azure DevOps and allow the Microsoft Graph Connector to update work items regularly, you need a service account with the following permissions granted to it.
+- To connect to Azure DevOps and allow the Microsoft Graph Connector to update work items regularly, you need a service account with the following permissions granted to it.
 
     | Permission name | Permission type | Required for |
     | ------------ | ------------ | ------------ |
