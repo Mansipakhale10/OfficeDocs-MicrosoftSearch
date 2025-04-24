@@ -50,19 +50,19 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
 [![Screenshot that shows connection creation screen for Microsoft Graph Connector for Azure DevOps Work Items.](media/ado-workitems-create-page.png)](media/ado-workitems-create-page.png#lightbox)
 
-### 1. Display name 
+### Choose display name 
 A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
-### 2. ADO Organization
+### Add the ADO Organization
 The Azure DevOps connector allows indexing of one organization per connection. To connect to your Azure DevOps service, provide the name of the organization to be indexed.
 
-### 3. Authentication type
+### Provide authentication type
 
 To authenticate and sync work items from Azure DevOps, choose **one of the two** supported methods:<br>
 
 > [!IMPORTANT]
 > - [Microsoft Entra ID OAuth](/azure/devops/integrate/get-started/authentication/oauth?preserve-view=true&view=azure-devops) is the recommended OAuth mechanism.
-> - [Azure DevOps OAuth](/azure/devops/integrate/get-started/authentication/oauth?preserve-view=true&view=azure-devops) is the legacy authentication mechanism, not being actively invested upon.
+> - [Azure DevOps OAuth](/azure/devops/integrate/get-started/authentication/oauth?preserve-view=true&view=azure-devops) is the legacy authentication mechanism, not being actively invested in.
 
 #### a. Microsoft Entra ID OAuth
 
@@ -159,8 +159,6 @@ For other settings, like **Access Permissions**, **Data Inclusion Rules**, **Sch
 | Incremental Crawl | _Frequency: Every 15 mins_ |
 | Full Crawl | _Frequency: Every Day_ |
 
-If you want to edit any of these values, you need to choose the "Custom Setup" 
-
 ## Custom Setup
 
 Custom setup is for those admins who want to edit the default values for settings listed in the above table. Once you click on the "Custom Setup" option, you see three more tabs - Users, Content, and Sync.
@@ -181,7 +179,7 @@ The Azure DevOps Work Items connector supports search permissions visible to **E
 
 [![Screenshot that shows Content tab where you can configure projects and connection schema.](media/ado-workitems-content-tab.png)](media/ado-workitems-content-tab.png#lightbox)
 
-**Choose projects**
+#### Choose projects
 
 In this step, you specify the scope of data that you want to index using the Azure DevOps Work Items Microsoft Graph connector. You can then choose for the connection to index either the entire organization or specific projects within the selected organization.
 
@@ -192,7 +190,7 @@ If you choose to index individual projects, only work items in the selected proj
 > [!NOTE]
 > Azure DevOps projects can be crawled after granting the _View project-level information_ and _View analytics_ permissions.
 
-**Manage Properties**
+#### Manage Properties
 
 Here, you can add or remove available properties from your Azure DevOps data source, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label and add an alias to the property. Properties that are selected by default are listed below.
 
@@ -217,8 +215,7 @@ Here, you can add or remove available properties from your Azure DevOps data sou
 | URL | url | URL of the work item | Retrieve |
 | WorkItemType | | | Query, Retrieve, Search |
 
-**Preview Data**
-
+#### Preview data
 Use the preview results button to verify the sample values of the selected properties.
 
 ### Sync
