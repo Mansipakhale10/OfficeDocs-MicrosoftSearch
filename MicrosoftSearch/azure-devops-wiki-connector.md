@@ -1,5 +1,5 @@
 --- 
-title: "Azure DevOps Wiki Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot" 
+title: "Azure DevOps Wiki Microsoft 365 Copilot connector" 
 ms.author: vivg 
 author: vivg 
 manager: harshkum 
@@ -12,18 +12,18 @@ search.appverid:
 - BFB160 
 - MET150 
 - MOE150 
-description: "Set up the Azure DevOps Wiki Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot"
+description: "Set up the Azure DevOps Wiki Microsoft 365 Copilot connector"
 ms.date: 06/03/2022
 ---
 
-# Azure DevOps Wiki Microsoft Graph connector
+# Azure DevOps Wiki Microsoft 365 Copilot connector
 
-The Azure DevOps Wiki Microsoft Graph connector allows your organization to index wikis in its instance of the Azure DevOps service. After you configure the connector, end users can search for project wikis and code wikis from Azure DevOps in Microsoft Search and Microsoft 365 Copilot.
+The Azure DevOps Wiki Microsoft 365 Copilot connector allows your organization to index wikis in its instance of the Azure DevOps service. After you configure the connector, end users can search for project wikis and code wikis from Azure DevOps in Microsoft Search and Microsoft 365 Copilot.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Azure DevOps Wiki Microsoft Graph connector.
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Azure DevOps Wiki Microsoft 365 Copilot connector.
 
 >[!IMPORTANT]
->The Azure DevOps Wiki Microsoft Graph connector supports only the Azure DevOps cloud service. Azure DevOps Server 2019, TFS 2018, TFS 2017, TFS 2015, and TFS 2013 are not supported by this connector.
+>The Azure DevOps Wiki Microsoft 365 Copilot connector supports only the Azure DevOps cloud service. Azure DevOps Server 2019, TFS 2018, TFS 2017, TFS 2015, and TFS 2013 are not supported by this connector.
 
 ## Capabilities
 - Index wikis from Azure DevOps
@@ -52,10 +52,10 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
 [![Screenshot that shows connection creation screen for Microsoft Graph Connector for Azure DevOps Wikis.](media/ado-wiki-create-page.png)](media/ado-wiki-create-page.png#lightbox)
 
-### 1. Display name 
+### Choose display name 
 A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
-### 2. Authentication type
+### 2. Provide authentication type
 To authenticate and sync wikis from Azure DevOps, choose **one of the two** supported methods:<br>
 
 > [!IMPORTANT]
