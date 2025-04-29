@@ -26,11 +26,10 @@ Microsoft Search helps users find the right answers, people, and content to comp
 
 - Users get results that are relevant in the **context** of the app they search from. For example, when they search in [Microsoft Outlook](https://www.microsoft.com/outlook), they find emails, and not [SharePoint](https://sharepoint.com/) sites. When they search in SharePoint, they find sites, pages, and files.
 - Whichever app users are working in; Microsoft Search is **personal**. Microsoft Search uses insights from the [Microsoft Graph](https://developer.microsoft.com/graph/) to show results that are relevant to each user. Each user might see different results, even if they search for the same words. They only see results that they already have access to, Microsoft Search doesn't change permissions.
-- When in [Bing](https://bing.com), users get results from within their organization in addition to the public web results.
 
 ## What users see
 
-In [Bing](https://bing.com), users use the same search box as for web searches. In the Office apps, users find the Microsoft Search box in the header bar. It looks like this:
+In Office apps, users find the Microsoft Search box in the header bar. It looks like this:
 
 ![Screenshots of app windows with Microsoft Search box in the header bar.](media/Headings_520.png)
 
@@ -68,7 +67,7 @@ As an administrator you can create an amazing Microsoft Search experience for yo
 
 Microsoft Search shows the content that your organization has stored in Microsoft 365 or has indexed through connectors. Microsoft Search doesn't search across tenants or show results from content that's shared by other organizations. If your organization has set up a hybrid SharePoint environment using cloud hybrid search, Microsoft Search returns search results from both online and on-premises SharePoint content, including any external content you've connected to your SharePoint Server environment. [Learn more about hybrid search environments](/sharepoint/hybrid/learn-about-cloud-hybrid-search-for-sharepoint).
 
-Users will get the same search results they get from other locations and when using Microsoft Search in Bing they will also get results from the internet.
+Users will get the same search results they get from other locations.
 
 ## How Microsoft Search works
 
@@ -78,8 +77,6 @@ The search results that the user has **permission** to see are presented on the 
 ## Privacy
 
 In Microsoft Search only the content that a user has permission to see can appear in search results. A user might, for example, have permission to see a file because the user created it, it was shared with the user or with a larger group that includes the user, or it’s stored in a folder or location that the user has permission to access.
-> [!NOTE]
-> Learn how Microsoft Search in Bing protects your company data in [Security and Privacy for Microsoft Search in Bing](security-for-search.md).
 
 When people filter on a person in SharePoint, they see results from content that the filtered person has worked on and that they have permission to see. If the filtered person or their organization have turned off item insights in Microsoft Graph, people only see results from content the filtered person has shared with them or from content that they both have worked on. [Learn about item insights](/graph/item-insights-overview).
 

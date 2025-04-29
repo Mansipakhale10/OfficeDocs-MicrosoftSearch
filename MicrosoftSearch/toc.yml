@@ -251,10 +251,12 @@ items:
           items:
           - name: Setup
             href: postgresql-connector.md    
-        - name: PagerDuty Escalation Policies
+        - name: PagerDuty
           items:
-          - name: Setup
+          - name: Setup PagerDuty Escalation Policies
             href: PagerDuty-Escalation-Policies-connector.md
+          - name: Setup PagerDuty Schedules
+            href: pagerduty-schedules-connector.md
         - name: Salesforce CRM
           items:
           - name: Setup
@@ -323,10 +325,12 @@ items:
             href: veeva-vault-promoMats-connector.md
           - name: Troubleshooting
             href: troubleshoot-veeva-vault-connectors.md
-        - name: WordPress.org (on-prem)
+        - name: WordPress
           items:
-          - name: Setup
+          - name: Setup WordPress.org (on-prem)
             href: WordPress-onprem-connector.md
+          - name: WordPress.com
+            href: wordpress-cloud-connector.md
         - name: Zendesk Help Center
           items:
           - name: Setup
