@@ -24,7 +24,7 @@ This article is for anyone who configures, runs, and monitors an Azure Data Lake
 In the article, we use *Azure Storage* as a generic term for [Azure Blob Storage](/azure/storage/blobs/storage-blobs-introduction) and [Azure Data Lake Gen 2 Storage](/azure/storage/blobs/data-lake-storage-introduction).
 
 ## Limitations
-A published connection for Azure Blob Storage can't be reconfigured for Azure Data Lake Storage Gen2 source and the other way around. In such scenarios, it's recommended to configure a new connection.
+A published connection for Azure Blob Storage can't be reconfigured for Azure Data Lake Storage Gen2 source, and the other way around. In such scenarios, it's recommended to configure a new connection.
 
 Also, the size of the files needs to be 4 MB or less for it to be crawled. File types currently supported are:
 
@@ -36,7 +36,7 @@ Also, the size of the files needs to be 4 MB or less for it to be crawled. File 
 * HTML
 * PDF
 
-Binary files like images (.jpg, .bmp, etc.) aren't supported. For example, if a .docx file contains only images, it might be skipped because it didn't return any content.
+Binary files like images (.jpg, .bmp, etc.) aren't supported. For example, if a .docx file contains only images, it might be skipped because it doesn't return any content.
 
 ## Get started
 ### Add a connector in the Microsoft 365 admin center
@@ -49,7 +49,7 @@ Binary files like images (.jpg, .bmp, etc.) aren't supported. For example, if a 
 
 Follow the general [setup instructions](./configure-connector.md).
 
-###Configure the connection settings
+### Configure the connection settings
 
 Enter your primary storage connection string. This string is required to allow access to your storage account. To find your connection string, go to the [Azure portal](https://ms.portal.azure.com/#home) and navigate to the **Keys** section of your relevant Azure Storage account.
 
