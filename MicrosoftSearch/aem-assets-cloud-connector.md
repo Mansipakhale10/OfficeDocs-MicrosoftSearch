@@ -75,7 +75,7 @@ In custom setup,  you can edit any of the default values for users, content, and
 
 #### Access permissions
 
-Currently, only published assets from your AEM Assets are indexed. All data indexed using the Adobe Experience Manager Assets Copilot connector is visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.
+Currently, only published assets from your AEM Assets are indexed. All data indexed using the Adobe Experience Manager Assets Copilot tor is visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.
 
 ### Content 
 
@@ -116,6 +116,6 @@ To check available properties from your Adobe Experience Manager Assets, assign 
 You can configure full and incremental crawls based on the scheduling options present here. By default, incremental crawl is set for every 15 minutes, and full crawl is set for every day. If needed, you can adjust these schedules to fit your data refresh needs.
 
 ## Troubleshooting
-After publishing your connection, you can review the status under **Data sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+After publishing your connector, you can review the status under **Data sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
 If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).
