@@ -37,16 +37,16 @@ This documentation is for Microsoft 365 administrators or anyone who configures,
 
 ## Get started
 
-### 1. Choose display name   
+### Choose display name   
 Choose a display name that helps users easily recognize associated files or items in Copilot responses.
 
-### 2. Add the instance URL
+### Add the instance URL
 The default 15Five instance URL is `https://my.15five.com`.
 
-### 3. Choose authentication type
+### Choose authentication type
 Select the available authentication type and enter the access token you obtained from your 15Five company API keys setting.
 
-### 4. Roll out to a limited audience
+### Roll out to a limited audience
 Deploy this connection to a limited user base to validate it in Copilot and other search surfaces before you roll it out to a broader audience.
 
 ## Custom setup 
