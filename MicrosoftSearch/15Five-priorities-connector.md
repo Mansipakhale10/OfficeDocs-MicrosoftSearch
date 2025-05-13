@@ -21,7 +21,7 @@ ms.date: 02/28/2025
 
 The 15Five Priorities Microsoft 365 Copilot connector allows your organization to index 15Five priority data, using Microsoft 365 Copilot and Microsoft Search. 
 
-This documentation is for Microsoft 365 administrators or anyone who configures, runs, and monitors the 15Five Priorities Microsoft 365 Copilot connector. 
+This documentation is for Microsoft 365 administrators or anyone who configures, runs, and monitors the 15Five Priorities Microsoft Copilot connector. 
 
 ## Capabilities
 - Access 15Five priorities by using the power of semantic search.
@@ -86,7 +86,7 @@ The following are common errors that can occur and how to resolve them.
 
 Credential information has expired. Create a new key in the 15Five integrations setting and copy the latest access token from the settings tab in 15Five to authenticate.
 
-2. Invalid credentials detected. Please check the credential info and check the permission scopes of the 15Five App.**
+2. Invalid credentials detected. Please check the credential info and check the permission scopes of the 15Five App.
 
 This is a common credential error. Go to the 15Five integrations setting and verify that the access token is correct.
 
