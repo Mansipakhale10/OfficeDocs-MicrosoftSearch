@@ -115,7 +115,7 @@ Go to "Results" to verify the sample values of the selected properties and query
 
 ### Sync
 
-The refresh interval determines how often your data is synced between the data source and the Aha! Microsoft Graph connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [Refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Aha! Microsoft 365 Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [Refresh settings](configure-connector.md#guidelines-for-sync-settings).
 
 You can change the default refresh interval here if needed.
 If you have issues or want to provide feedback, contact [Microsoft Graph support](https://developer.microsoft.com/graph/support).
