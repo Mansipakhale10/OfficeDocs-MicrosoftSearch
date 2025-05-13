@@ -60,7 +60,7 @@ Deploy this connection to a limited user base if you want to validate it in Copi
 
 To create the connection for AEM Sites, click **Create** to publish your connection and index published web pages from your AEM Sites. 
 
-For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl frequency, etc., we set defaults based on what works best with AEM Sites data. You can see the default values below: 
+For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl frequency, etc., we set defaults based on what works best with data in Adobe Experience Manager Sites. The default value settings are as follows.
 
 |Page |Settings |Default values|
 |--- | ---- | --- |
