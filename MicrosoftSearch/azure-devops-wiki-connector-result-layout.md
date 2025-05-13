@@ -1,5 +1,6 @@
 --- 
-title: "Result Layout for Azure DevOps Wiki Microsoft 365 Copilot connector" 
+title: "Result layout for the Azure DevOps Wiki Microsoft 365 Copilot connector" 
+
 ms.author: vivg 
 author: vivg 
 manager: harshkum 
