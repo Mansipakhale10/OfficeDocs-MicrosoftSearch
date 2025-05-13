@@ -43,7 +43,7 @@ A display name is used to identify each citation in Copilot, helping users easil
 ### Add instant URL
 An Aha! instance URL is the unique web address assigned to each Aha! instance, allowing you to access your specific Aha! environment. The URL follows the format https://contoso.aha.io. 
 
-### 3. Authentication Type
+### Provide authentication type
 To use Aha! OAuth for authentication, an Aha! admin needs to create an Aha! OAuth2.0 app in the [Aha! developer console](https://secure.aha.io/session/new).
 
 **Create Aha! OAuth 2.0 application**
@@ -53,7 +53,7 @@ To properly register the Aha! OAuth application for GCS access, first navigate t
 
 Copy the **Client ID** and **Secret** from the OAuth tab in the Aha! app and paste it in the connector setup. Choose Authorize, and use the same Aha! admin account credentials to authenticate permission to crawl. For more information, see [Aha! OAuth2 Authentication](https://www.aha.io/api/oauth2#registering-an-application).
 
-### 4. Roll out to limited audience
+### Roll out to limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. For more information, see [Staged rollout for Microsoft Graph connectors](staged-rollout-for-graph-connectors.md).
 
 At this point, you're ready to create the connection for Aha!. Click "Create" to publish your connection and index features from your Aha! account.
