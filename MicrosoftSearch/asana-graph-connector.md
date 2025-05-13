@@ -38,21 +38,21 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
 ## Get started
 
-### 1. Choose a display name 
+### Choose a display name 
 The display name is used to identify each citation in Copilot to help users easily recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). 
 
 A default value is provided; you can customize it to a name that users in your organization recognize.
 
-### 2. Add the Asana URL
+### Add the Asana URL
 To connect to your Asana workspace, you need the Asana URL. The URL is typically the following: `https://app.asana.com`.
 
-### 3. Choose the authentication type
+### Choose the authentication type
 To use **Asana OAuth** for authentication, an Asana admin needs to create an app in the [Asana developer console](https://app.asana.com/0/my-apps).
 
 Use the information in the following table to complete the OAuth client creation form.
 
 |Field | Description | Recommended value|
-|--- | --- | ---
+|--- | --- | ---|
 |App name | Unique value that identifies the application for which you require OAuth access. | Microsoft Search|
 |Which best describes what your app will do? | Describe the purpose of the app. | Get data out of Asana to create reports.|
 |Redirect URL | A required callback URL that the authorization server redirects to. | For **Microsoft 365 Enterprise**: `https://gcs.office.com/v1.0/admin/oauth/callback`</br></br>For **Microsoft 365 Government**: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`|
@@ -63,7 +63,7 @@ Copy the client ID and client secret from the OAuth tab in the Asana app that yo
 > [!NOTE]
 > You need to authorize access to the Asana app in a pop-up window. Make sure that your browser permits pop-up windows or grants access if the pop-up window is blocked.
 
-### 4. Roll out to a limited audience
+### Roll out to a limited audience
 Deploy the connection to a limited user base if you want to validate it in Copilot and other Search surfaces before you roll it out to a broader audience. For more information, see [Staged rollout for connectors](staged-rollout-for-graph-connectors.md).
 
 At this point, you're ready to create the connection for Asana. Choose **Create** to publish your connection and index articles from your Asana account.
