@@ -6,7 +6,7 @@ author: vivg
 manager: harshkum
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: article
 ms.service: mssearch 
 ms.localizationpriority: medium 
 description: "Set up the Azure DevOps Work Items Microsoft 365 Copilot connector." 
@@ -31,11 +31,11 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
 ## Prerequisites
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
-- To allow the connector to connect to your Azure DevOps organization, you must enable **Third-party application access via OAuth**. Refer Azure DevOps documentation to [manage security policies](/azure/devops/organizations/accounts/change-application-access-policies?view=azure-devops#manage-a-policy&preserve-view=true) to learn more.
+- To allow the connector to connect to your Azure DevOps organization, you must enable **Third-party application access via OAuth**. For more information, see [manage security policies](/azure/devops/organizations/accounts/change-application-access-policies?view=azure-devops#manage-a-policy&preserve-view=true) to learn more.
 
     ![Screenshot that shows third-party application access via OAuth.](media/ado-workitems-connector-security-policies.png)
 
-- To connect to Azure DevOps and allow the Microsoft Graph Connector to update work items regularly, you need a service account with the following permissions granted to it.
+- To connect to Azure DevOps and allow the Azure DevOps Work Items Copilot connector to update work items regularly, you need a service account with the following permissions granted to it.
 
     | Permission name | Permission type | Required for |
     | ------------ | ------------ | ------------ |
@@ -46,15 +46,15 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
     >[!IMPORTANT]
     >The service account must have **Basic** access level. To learn more about access levels in Azure DevOps, read [supported access levels](/azure/devops/organizations/security/access-levels).
 
-## Get Started
+## Get started
 
-[![Screenshot that shows connection creation screen for Microsoft Graph Connector for Azure DevOps Work Items.](media/ado-workitems-create-page.png)](media/ado-workitems-create-page.png#lightbox)
+[![Screenshot that shows connection creation screen for the Azure DevOps Work Items Copilot connector.](media/ado-workitems-create-page.png)](media/ado-workitems-create-page.png#lightbox)
 
 ### Choose display name 
 A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### Add the ADO Organization
-The Azure DevOps connector allows indexing of one organization per connection. To connect to your Azure DevOps service, provide the name of the organization to be indexed.
+The Azure DevOps Work Items Copilot connector allows indexing of one organization per connection. To connect to your Azure DevOps service, provide the name of the organization to be indexed.
 
 ### Provide authentication type
 
@@ -68,7 +68,7 @@ To authenticate and sync work items from Azure DevOps, choose **one of the two**
 
 **Ensure your ADO Organization is connected to Microsoft Entra**
 
-The Azure DevOps Graph connector only indexes content from an ADO organization connected with Microsoft Entra of your tenant. To ensure that your ADO organization is connected with Microsoft Entra account, use the following steps. 
+The Azure DevOps Work Items Copilot connector only indexes content from an ADO organization connected with Microsoft Entra of your tenant. To ensure that your ADO organization is connected with Microsoft Entra account, use the following steps. 
 
 1. Navigate to [Azure DevOps](https://dev.azure.com/) and select the required organization.
 2. Select `Organization settings`.
@@ -102,14 +102,14 @@ The Azure DevOps Graph connector only indexes content from an ADO organization c
 
 **Grant the Microsoft Entra app access to projects in the ADO organization**
 
-You need to provide the Microsoft Entra app the necessary access to the projects which need to be indexed using the following steps:
+You need to provide the Microsoft Entra app with the necessary access to the projects that need to be indexed using the following steps:
 
 1. Navigate to [Azure DevOps](https://dev.azure.com/) and select the required organization.
 2. Select `Organization settings`.
 3. On the left navigation pane, select `Users` under the 'General' header.
 4. Select `Add users`.
 5. Copy the Application (client) ID obtained from the app to "Users or Service Principals".
-6. Grant the `Basic` access level and select the projects to allow access to index. Also add to the `Project Reader` Azure DevOps group (or equivalent) to ensure access. De-select the option to send email invitation to users. Click add.
+6. Grant the `Basic` access level and select the projects to allow access to the index. Also, add to the `Project Reader` Azure DevOps group (or equivalent) to ensure access. De-select the option to send an email invitation to users. Click add.
 
 #### b. Azure DevOps OAuth
 
@@ -130,12 +130,12 @@ Mandatory Fields | Description | Recommended value
 | Authorized scopes | The scope of access for the application | Select the following scopes: Identity (read), Work Items (read), Variable Groups (read), Project and Team (read), Graph (read), Analytics (read)|
 
 >[!IMPORTANT]
->The authorized scopes that you select for the app should match the scopes exactly as listed above. If you omit one of the authorized scopes in the list or add another scope, the authorization will fail.
+>The authorized scopes that you select for the app should match the scopes exactly as listed above. If you omit one of the authorized scopes in the list or add another scope, the authorization fails.
 
-On registering the app, you get the **App ID** and **Client Secret** that is used to configure the connector.
+On registering the app, you get the **App ID** and **Client Secret** that are used to configure the connector.
 
 >[!NOTE]
->To revoke access to any app registered in Azure DevOps, go to User settings at the right top of your Azure DevOps instance. Select **Profile** and then select **Authorizations** in the Security section of the side pane. Hover over an authorized OAuth app to see the **Revoke** button at the corner of the app details.
+>To revoke access to any app registered in Azure DevOps, go to User settings at the top right of your Azure DevOps instance. Select **Profile** and then select **Authorizations** in the Security section of the side pane. Hover over an authorized OAuth app to see the **Revoke** button in the corner of the app details.
 
 ### 4. Roll out to limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
@@ -167,9 +167,9 @@ Custom setup is for those admins who want to edit the default values for setting
 
 [![Screenshot that shows Users tab where you can configure access permissions.](media/ado-workitems-users-tab.png)](media/ado-workitems-users-tab.png#lightbox)
 
-**Access Permissions**
+#### Access permissions
 
-The Azure DevOps Work Items connector supports search permissions visible to **Everyone** or **Only people with access to this data source**. If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to them.
+The Azure DevOps Work Items connector supports search permissions visible to **Everyone** or **Only people with access to this data source**. If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to it.
 
 >[!NOTE]
 >
@@ -177,11 +177,11 @@ The Azure DevOps Work Items connector supports search permissions visible to **E
 
 ### Content
 
-[![Screenshot that shows Content tab where you can configure projects and connection schema.](media/ado-workitems-content-tab.png)](media/ado-workitems-content-tab.png#lightbox)
+[![Screenshot that shows content tab where you can configure projects and connection schema.](media/ado-workitems-content-tab.png)](media/ado-workitems-content-tab.png#lightbox)
 
 #### Choose projects
 
-In this step, you specify the scope of data that you want to index using the Azure DevOps Work Items Microsoft Graph connector. You can then choose for the connection to index either the entire organization or specific projects within the selected organization.
+In this step, you specify the scope of data that you want to index using the Azure DevOps Work Items Copilot connector. You can then choose for the connection to index either the entire organization or specific projects within the selected organization.
 
 If you choose to index the entire organization, work items in all projects in the organization are indexed. New projects and work items are indexed during the next crawl after they're created.
 
@@ -222,15 +222,15 @@ Use the preview results button to verify the sample values of the selected prope
 
 [![Screenshot that shows Sync tab where you can configure crawl frequency.](media/ado-workitems-sync-tab.png)](media/ado-workitems-sync-tab.png#lightbox)
 
-The refresh interval determines how often your data is synced between the data source and the Graph connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Azure DevOps Work Items Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
 
-You can change the default values of refresh interval from here if you want to.
+You can change the default values of the refresh interval from here if you want to.
 
->[!TIP]
->**Default result type**
->* The Azure DevOps Work Items Microsoft Graph connector automatically registers a [result type](./customize-search-page.md#step-2-create-result-types) once the connector is published. The result type uses a dynamically generated [result layout](./customize-results-layout.md) based on the fields selected in step 3. 
->* You can manage the result type by navigating to [**Result types**](https://admin.microsoft.com/Adminportal/Home#/MicrosoftSearch/resulttypes) in the [Microsoft 365 admin center](https://admin.microsoft.com). The default result type is named "`ConnectionId`Default". For example, if your connection ID is `AzureDevOps`, your result layout is named: "AzureDevOpsDefault"
->* Also, you can choose to create your own result type if needed.
+> [!TIP]
+> **Default result type**
+> The Azure DevOps Work Items Copilot connector automatically registers a [result type](./customize-search-page.md#step-2-create-result-types) once the connector is published. The result type uses a dynamically generated [result layout](./customize-results-layout.md) based on the fields selected in step 3. 
+> You can manage the result type by navigating to [**Result types**](https://admin.microsoft.com/Adminportal/Home#/MicrosoftSearch/resulttypes) in the [Microsoft 365 admin center](https://admin.microsoft.com). The default result type is named "`ConnectionId`Default". For example, if your connection ID is `AzureDevOps`, your result layout is named: "AzureDevOpsDefault"
+> Also, you can choose to create your own result type if needed.
 
 ## Troubleshooting
 After publishing your connection, you can review the status under the **Data sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
