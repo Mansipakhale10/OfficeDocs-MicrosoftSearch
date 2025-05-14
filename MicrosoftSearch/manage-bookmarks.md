@@ -17,6 +17,9 @@ description: "Create and update bookmarks and ways to bulk edit bookmark results
 ---
 # Manage bookmarks
 
+> [!IMPORTANT]
+> Microsoft Search in Bing is being retired on March 31, 2025. Recommended bookmarks are also being retired—you can keep them by manually publishing or exporting them by April 30, 2025. [Learn more](/microsoftsearch/retirement-microsoft-search-bing)
+
 Bookmarks help people quickly find important sites and tools with just a search. Each bookmark includes a title, URL, a set of user-friendly keywords to trigger the bookmark, and a category.
 
 ## What makes a great bookmark
@@ -55,7 +58,7 @@ You can use the Microsoft Search content creator browser extension to easily add
 
 Promoted Results in SharePoint can be included in Microsoft Search. It’s an easy way to quickly populate results and make search more effective for your users. There are two ways you can import results into the Search & intelligence portal in the [Microsoft 365 admin center](https://admin.microsoft.com/): 
 1.	You can export the [CSV file from SharePoint](https://pnp.github.io/powershell/cmdlets/Get-PnPSearchConfiguration.html#example-8) and [import through the CSV bookmark import tool](#import-bookmarks) in the Answers tab in the Search & intelligence portal. 
-2.	You can export the bookmarks from SharePoint and create the API queries needed. Go to [Create bookmark](/graph/api/search-searchentity-post-bookmarks?view=graph-rest-beta&tabs=http) for more info. 
+2.	You can export the bookmarks from SharePoint and create the API queries needed. Go to [Create bookmark](/graph/api/search-searchentity-post-bookmarks) for more info. 
 When the import is finished, the new bookmarks will have a “Suggested” status; you can then review the bookmarks and publish or edit them as needed. 
 
 ### Add default and suggested bookmarks

@@ -1,7 +1,7 @@
 ---
 title: "Managing the search box in SharePoint sites"
-ms.author: keremy
-author: bstuck
+ms.author: misvenso
+author: wobba
 manager: bstucker
 ms.audience: Admin
 ms.topic: article
@@ -12,7 +12,7 @@ search.appverid:
 - MET150
 - MOE150
 description: "How to customize the search box experience on SharePoint sites"
-ms.date: 11/01/2023
+ms.date: 03/14/2025
 ---
 
 # Search box settings on SharePoint sites
@@ -21,10 +21,8 @@ One of the several ways Microsoft Search can be customized on SharePoint sites i
 
 For other customization options, see [Changing the Microsoft Search results page to add custom verticals, result types and layouts](customize-search-page.md), and [Creating a custom search results page](create-search-results-pages.md).
 
-> [!NOTE]
-> The suite navigation bar search box is not available for all customers at this time, but these options can still be set now and they will take effect when it becomes available.
 
-For the tasks listed below, you use PowerShell with SharePoint PnP PowerShell extensions. You can install and learn more about how to get started [here](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets). You sign into your site or site collection using this command:
+To configure search box behavior you use PowerShell with SharePoint PnP PowerShell extensions. You can install and learn more about how to get started [here](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets). You sign into your site or site collection using this command:
 
 ```powershell
 Connect-PnPOnline -Url <yoursiteurl> -UseWebLogin
@@ -52,9 +50,12 @@ Set-PnPSearchSettings -SearchScope Tenant
 
 After running this command, the site that was previously showing results from the current site by default will start to show results from the whole organization.
 
-To go back to the default setting, run the command again with the value “DefaultScope". To search across the Hub, use “Hub” as the SearchScope value.
+To go back to the default setting, run the command again with the value `DefaultScope`. To search across the Hub, use `Hub` as the SearchScope value.
 
 This setting applies at the individual site level. There's no equivalent setting for site collections.
+
+> [!NOTE]
+> Setting the default search scope to `Tenant` combined with a custom search results page breaks the people centric search experience. Also see the note on [Create a custom search results page in SharePoint Online](create-search-results-pages.md) for unsupported redirect scenarios.
 
 ## Show or hide the search box
 
@@ -74,7 +75,7 @@ Set-PnPSearchSettings -Scope Site -SearchBoxInNavBar Hidden
 # Hidden | Inherit
 ```
 
-After running these commands, the search box will no longer show up in the navigation bar on top of your page. To go back to showing the search box, run the commands again with the value provided to "SearchBoxInNavBar" parameter to “Inherit”.
+After running these commands, the search box will no longer show up in the navigation bar on top of your page. To go back to showing the search box, run the commands again with the value provided to `SearchBoxInNavBar` parameter to `Inherit`.
 
 There are several points to consider:
 
@@ -91,9 +92,9 @@ There are several points to consider:
 You can change the hint the search box shows for a given site or site collection. The hint text is the text that appears in the search box before they start typing into it. A custom hint text may help guide your users about what to expect from search if you configure a custom results page or changed behavior of search in other ways.
 
 > [!NOTE]
-> To be able to make this change, you need to allow running custom scripts on the site in question as a tenant administrator, which is disallowed by default. Please see [Allow or prevent custom script](/sharepoint/allow-or-prevent-custom-script) for details. You can allow running custom scripts, make the change, and then revert to disallowing scripts for the site if necessary.
+> To be able to make this change, you need to allow running custom scripts on the site in question as a tenant administrator, which is disallowed by default. See [Allow or prevent custom script](/sharepoint/allow-or-prevent-custom-script) for details. You can allow running custom scripts, make the change, and then revert to disallowing scripts for the site if necessary.
 
-To change this setting for a given site run the following command:
+Change the setting for a given site with the following command:
 
 ```powershell
 Set-PnPSearchSettings -Scope Web -SearchBoxPlaceholderText "my placeholder" 

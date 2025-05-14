@@ -2,7 +2,7 @@
 title: "Stack Overflow Connector for Microsoft Search and Copilot" 
 ms.author: rerabo
 author: vivg
-manager: igala
+manager: ereza
 audience: Admin
 ms.audience: Admin 
 ms.topic: article 
@@ -13,7 +13,7 @@ search.appverid:
 - MET150 
 - MOE150 
 description: "Set up the Stack Overflow Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot" 
-ms.date: 11/25/2024
+ms.date: 03/19/2025
 ---
 
 # Stack Overflow Microsoft Graph connector
@@ -21,9 +21,6 @@ ms.date: 11/25/2024
 The Stack Overflow Graph connector allows your organization to index questions and answers from Stack Overflow. After you configure the connector, end users can search for these posts from Stack Overflow in Microsoft Copilot and from any Microsoft Search client. 
 
 This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Stack Overflow Graph connector. 
-
->[!NOTE]
->The Stack Overflow Graph connector is in preview. If you wish to get early access to try it, sign up using [this form](https://forms.office.com/r/JniPmK5bzm).
 
 ## Capabilities
 - Index Stack Overflow questions and answers.
@@ -40,7 +37,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 ## Prerequisites
 - You must be a search admin for your organization's Microsoft 365 tenant.
 - To create a new connection, use your organization's Stack Overflow Instance URL.
-   - For Stack Overflow for Teams **Enterprise**, the instance URL is the home page URL, typically `https://stackoverflow.<company_name>.com`. 
+   - For Stack Overflow for Teams **Enterprise**, the instance URL is the home page URL, typically `https://<company_name>.stackenterprise.co`. 
    - For Stack Overflow for Teams **Business**, use the API URL, which usually looks like `https://api.stackoverflowteams.com/v3/teams/<company_name>`.
      
 ## Get Started
@@ -49,12 +46,12 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a content source filter. A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### 2. Stack Overflow URL
-Use your organization's Stack Overflow Instance URL. For Stack Overflow for Teams **Enterprise**, this will be the home page URL, typically `https://stackoverflow.<company_name>.com`. For Stack Overflow for Teams **Business**, use the API URL, which usually looks like `https://api.stackoverflowteams.com/v3/teams/<company_name>`.
+Use your organization's Stack Overflow Instance URL. For Stack Overflow for Teams **Enterprise**, this will be the home page URL, typically `https://<company_name>.stackenterprise.co`. For Stack Overflow for Teams **Business**, use the API URL, which usually looks like `https://api.stackoverflowteams.com/v3/teams/<company_name>`.
 
 ### 3. Authentication Type
 To authenticate and sync content from Stack Overflow, choose one of the two supported methods:<br>
    - If you use Stack Overflow for Teams **Enterprise**, select OAuth. To learn more about authentication and authorization in Stack Overflow for Teams **Enterprise**, [click here](https://stackoverflowteams.help/articles/8043418-stack-overflow-for-teams-enterprise-api-v3#authentication-and-authorization).<br>
-   - If you use Stack Overflow for Teams **Business**, select Basic authentication. To learn more about Stack Overflow for Teams **Business**, [click here](https://stackoverflowteams.help/articles/7913768-stack-overflow-for-teams-api-v3#authentication-and-authorization).
+   - If you use Stack Overflow for Teams **Business**, select Basic authentication. To learn more about authentication and authorization in Stack Overflow for Teams **Business**, [click here](https://stackoverflowteams.help/articles/7913768-stack-overflow-for-teams-api-v3#authentication-and-authorization).
  
 ### 4. Roll out to limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
@@ -79,9 +76,9 @@ Here, you can add or remove available properties from your Stack Overflow data s
 
 **Source Property** | **Semantic Label** |**Description**| **Schema**
 --- | ---- | --- | ---
+BestAnswerBody | | Best answer content (accepted by the question author as the most helpful or accurate) | Retrieve, Search
 BestAnswerAuthorId |  | ID of the best answer | Retrieve
 BestAnswerAuthorName | | Name of the author who provided the best answer | Retrieve, Search
-BestAnswerBody | | Best answer content | Retrieve, Search
 BestAnswerCreatedAt | | Date when the best answer was created | Query, Refine, Retrieve
 CreationDate | Created date time | Date when the post was created (question was asked) | Query, Refine, Retrieve
 LastActivityDate | Last modified date time | Date when the post was last modified | Query, Refine, Retrieve
