@@ -43,10 +43,10 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
     | Permission name | Permission type | Required for |
     | ------------ | ------------ | ------------ |
-    | View project-level information | [Project permission](/azure/devops/organizations/security/permissions?view=azure-devops&tabs=preview-page#project-level-permissions&preserve-view=true) | Crawling Azure DevOps Work Items. This permission is **mandatory** for the projects that need to be indexed. |
+    | View project-level information | [Project permission](/azure/devops/organizations/security/permissions?view=azure-devops&tabs=preview-page#project-level-permissions&preserve-view=true) | Crawling Azure DevOps Wiki. This permission is **mandatory** for the projects that need to be indexed. |
 
-    >[!IMPORTANT]
-    >The service account must have **Basic** access level. To learn more about access levels in Azure DevOps, read [supported access levels](/azure/devops/organizations/security/access-levels).
+>[!IMPORTANT]
+>The crawl account must have **Basic** access level. To learn more about access levels in Azure DevOps, read [supported access levels](/azure/devops/organizations/security/access-levels).
 
 ## Get Started
 
@@ -135,10 +135,10 @@ On registering the app, you get the **App ID** and **Client Secret** that is use
 
 To revoke access to any app registered in Azure DevOps, go to User settings at the top right of your Azure DevOps instance. Select **Profile** and then select **Authorizations** in the Security section of the side pane. Hover over an authorized OAuth app to see the Revoke button in the corner of the app details.
 
-### 3. Select Organization
+### Select organization
 The Azure DevOps Wiki Copilot connector allows indexing of one organization per connection. To connect to your Azure DevOps service, select the right organization from the list of organizations accessible to the service account.
 
-### 4. Roll out to limited audience
+### Roll out to limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
 
 At this point, you're ready to create the connection for Azure DevOps wikis. You can click **Create** to publish your connection and index wikis from your Azure DevOps organization.
@@ -194,25 +194,25 @@ If you choose to index individual projects, only wikis in the selected projects 
 
 Here, you can add or remove available properties from your Azure DevOps data source, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label and add an alias to the property. Properties that are selected by default are listed below.
 
-|Source Property|Label|Description|Schema|
+|Source property|Label|Description|Schema|
 |---|---|---|---|
-| Authors | Authors | Name all the people who participated/collaborated on the item in the data source | Retrieve |
+| Authors | Authors | Name all the people who participated/collaborated on the item in the data source | Retrieve. |
 | CommitId | | | |
-| Content | Content | The content body of the wiki | Search |
+| Content | Content | The content body of the wiki | Search. |
 | GitItemPath | | | |
-| IconUrl | IconUrl | Icon url that represents the wiki | Retrieve |
+| IconUrl | IconUrl | Icon url that represents the wiki | Retrieve. |
 | isParentPage | | | |
-| LastPublishedAuthorEmail | Last modified by | | Retrieve |
-| LastPublishedDate | Last modified date time | Date and time the item was last modified in the data source | Retrieve |
-| Organization | | | Retrieve |
+| LastPublishedAuthorEmail | Last modified by | | Retrieve. |
+| LastPublishedDate | Last modified date time | Date and time the item was last modified in the data source | Retrieve. |
+| Organization | | | Retrieve. |
 | Path | | | |
-| Project | | | Retrieve |
-| ProjectId | | | Retrieve |
-| RemoteURL | url | The URL of the wiki in the data source | Retrieve |
-| Title | Title | The title of the wiki page | Search, Retrieve |
-| Version | | | Retrieve |
-| WikiId | | | Retrieve |
-| WikiIdentifier | | | Retrieve |
+| Project | | | Retrieve. |
+| ProjectId | | | Retrieve. |
+| RemoteURL | url | The URL of the wiki in the data source | Retrieve. |
+| Title | Title | The title of the wiki page | Search, Retrieve. |
+| Version | | | Retrieve. |
+| WikiId | | | Retrieve. |
+| WikiIdentifier | | | Retrieve. |
 | WikiType | | | |
 
 #### Preview data

@@ -21,6 +21,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 >[!IMPORTANT]
 >The Azure DevOps Work Items Copilot connector supports only the Azure DevOps cloud service. Azure DevOps Server 2019, TFS 2018, TFS 2017, TFS 2015, and TFS 2013 are not supported by this connector.
 
+
 ## Capabilities
 - Index Work Items from Azure DevOps
 - Enable your end users to ask questions related to work items.
@@ -43,8 +44,8 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
     | View analytics| [Project permission](/azure/devops/organizations/security/permissions?view=azure-devops&tabs=preview-page#project-level-permissions&preserve-view=true) | Crawling Azure DevOps Work Items. This permission is **mandatory** for the projects that need to be indexed. |
     | View work items in this node| [Area path](/azure/devops/organizations/security/permissions?view=azure-devops&tabs=preview-page#area-path-object-level&preserve-view=true) | Crawling Work Items in an area path. This permission is **optional**. Only those area paths are crawled for which the user account has permission. |
 
-    >[!IMPORTANT]
-    >The service account must have **Basic** access level. To learn more about access levels in Azure DevOps, read [supported access levels](/azure/devops/organizations/security/access-levels).
+>[!IMPORTANT]
+>The crawl account must have **Basic** access level. To learn more about access levels in Azure DevOps, read [supported access levels](/azure/devops/organizations/security/access-levels).
 
 ## Get started
 
@@ -58,13 +59,13 @@ The Azure DevOps Work Items Copilot connector allows indexing of one organizatio
 
 ### Provide authentication type
 
-To authenticate and sync work items from Azure DevOps, choose **one of the two** supported methods:<br>
+To authenticate and sync work items from Azure DevOps, follow the below steps:<br>
 
 > [!IMPORTANT]
 > - [Microsoft Entra ID OAuth](/azure/devops/integrate/get-started/authentication/oauth?preserve-view=true&view=azure-devops) is the recommended OAuth mechanism.
 > - [Azure DevOps OAuth](/azure/devops/integrate/get-started/authentication/oauth?preserve-view=true&view=azure-devops) is the legacy authentication mechanism, not being actively invested in.
 
-#### a. Microsoft Entra ID OAuth
+#### Microsoft Entra ID OAuth
 
 **Ensure your ADO Organization is connected to Microsoft Entra**
 
@@ -97,7 +98,7 @@ The Azure DevOps Work Items Copilot connector only indexes content from an ADO o
     - For **M365 Government**: https://<span>gcsgcc.office.<span>com/v1.0/admin/oauth/callback
 12. Under **Implicit grant and hybrid flows**, check the option for `ID tokens (used for implicit and hybrid flows)` and click **Configure**.
 13. From the navigation pane, select **Certificates and secrets** under **Manage**.
-14. Select **New Client secret** and select an expiry period for the secret. Copy the generated secret (Value) and save it because it is not shown again.
+14. Select **New Client secret** and select an expiry period for the secret. Copy the generated secret (Value) and save it because it isn't shown again.
 15. Use this Client secret and the application ID to configure the connector.
 
 **Grant the Microsoft Entra app access to projects in the ADO organization**
@@ -137,6 +138,7 @@ On registering the app, you get the **App ID** and **Client Secret** that are us
 >[!NOTE]
 >To revoke access to any app registered in Azure DevOps, go to User settings at the top right of your Azure DevOps instance. Select **Profile** and then select **Authorizations** in the Security section of the side pane. Hover over an authorized OAuth app to see the **Revoke** button in the corner of the app details.
 
+
 ### 4. Roll out to limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
 
@@ -172,7 +174,6 @@ Custom setup is for those admins who want to edit the default values for setting
 The Azure DevOps Work Items connector supports search permissions visible to **Everyone** or **Only people with access to this data source**. If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to it.
 
 >[!NOTE]
->
 > Updates to groups governing access permissions are synced in full crawls only. Incremental crawls don't support processing of updates to permissions.
 
 ### Content

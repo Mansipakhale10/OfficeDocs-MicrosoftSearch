@@ -106,7 +106,10 @@ To identify which option is suitable for your organization:
 ### Content
 
 #### Content filter
-Select time range: Select a time range for the content to be indexed. Only content with a last modified date and time within the selected range will be indexed. Choose an appropriate time range based on the volume of content to be indexed. Selecting "All time" may significantly impact your platform's performance if there is a large volume of content to be indexed.
+Select a **time range** for the content to be indexed. for the content to be indexed. Only content with a last modified date and time within the selected range will be indexed. Choose an appropriate time range based on the volume of content to be indexed. Selecting **All time** may significantly impact your platform's performance if there is a large volume of content.
+
+Select one or more **Seismic content profiles** to index. All content under the selected profiles is indexed and publicly accessible to everyone within your organization. 
+
 
 #### Manage properties
 

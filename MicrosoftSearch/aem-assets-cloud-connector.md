@@ -24,8 +24,8 @@ With the Adobe Experience Manager Assets Microsoft 365 Copilot connector, your o
 This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Adobe Experience Manager Assets Copilot connector. 
 
 ## Capabilities
-- Index published assets of your AEM Assets.
-- Supports ingestion filters based on page paths, allowing for exact matching and phrase matching using regular expressions.
+- Index the published assets of your Adobe Experience Manager Assets.
+- Support ingestion filters based on page paths, allowing for exact matching and phrase matching using regular expressions.
 - Customize your crawl frequency.
 - Create workflows using this connection and plugins from Microsoft Copilot Studio.  
 - Use [Semantic search in Copilot](semantic-index-for-copilot.md) to enable users to find relevant content.
@@ -50,7 +50,7 @@ A display name is used to identify each citation in Copilot, helping users easil
 To correctly access and update data from the Adobe Experience Manager Assets, both the author and publish environment URLs are essential.   
 
 ### Provide authentication Type
-Authentication Type - We support the technical account for Adobe Experience Cloud. To enable and configure the technical account for Adobe Experience Manager Assets, please find more details [here](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis#generate-a-jwt-token-and-exchange-it-for-an-access-token).
+Authentication Type - We support the technical account for Adobe Experience Cloud. To enable and configure the technical account for Adobe Experience Manager Assets. For more information, see [Adobe Experience Cloud documentation](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis#generate-a-jwt-token-and-exchange-it-for-an-access-token).
 
 ### Staged rollout to a limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience.
@@ -71,6 +71,7 @@ For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl
 ## Custom setup 
 
 In custom setup,  you can edit any of the default values for users, content, and sync.
+
 ### Users 
 
 #### Access permissions
@@ -111,11 +112,10 @@ To check available properties from your Adobe Experience Manager Assets, assign 
 | Width   |     | Width         | Query, Retrieve   |
 | Tags                | Tags                    | Tags defined in AEM Assets metadata. In AEM, tags are organized hierarchically   | Query, Retrieve, Search.     |
 
-
 ### Sync 
 You can configure full and incremental crawls based on the scheduling options present here. By default, incremental crawl is set for every 15 minutes, and full crawl is set for every day. If needed, you can adjust these schedules to fit your data refresh needs.
 
 ## Troubleshooting
 After publishing your connector, you can review the status under **Data sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
-If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).
+If you have issues or want to provide feedback, see [Microsoft Graph support](https://developer.microsoft.com/graph/support).
