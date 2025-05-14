@@ -76,9 +76,33 @@ items:
         href: map-non-aad.md
       - name: Map Microsoft Entra identities
         href: map-aad.md
-      - name: Microsoft Graph built connectors
+      - name: Prebuilt Microsoft Graph connectors
         href: pre-built-connectors-overview.md
         items:
+        - name: 15Five High Fives
+          items:
+          - name: Setup
+            href: 15Five-high-fives-connector.md
+        - name: 15Five Priorities
+          items:
+          - name: Setup
+            href: 15five-priorities-connector.md
+        - name: Adobe Experience Manager Sites
+          items:
+          - name: Setup
+            href: aem-sites-cloud-connector.md
+        - name: Adobe Experience Manager Assets
+          items:
+          - name: Setup
+            href: aem-assets-cloud-connector.md        
+        - name: Aha!
+          items:
+          - name: Setup
+            href: aha-cloud-connector.md
+        - name: Asana
+          items:
+          - name: Setup
+            href: asana-graph-connector.md
         - name: Azure Data Lake Storage Gen2
           items:
           - name: Setup
@@ -97,12 +121,22 @@ items:
             href: azure-devops-wiki-connector.md
           - name: Troubleshooting
             href: troubleshoot-azure-devops-wiki-connector.md
+        - name: Azure File Share
+          items:
+          - name: Setup
+            href: Azure-File-Share-connector.md
+          - name: Troubleshooting
+            href: troubleshoot-azure-file-share-connector.md
         - name: Azure SQL and Microsoft SQL Server
           items:
           - name: Setup
             href: MSSQL-connector.md
           - name: Troubleshooting
             href: troubleshoot-mssql-connector.md
+        - name: Bitbucket
+          items:
+          - name: Setup
+            href: bitbucket-connector.md     
         - name: Confluence Cloud
           items:
           - name: Setup
@@ -117,6 +151,18 @@ items:
               href: troubleshoot-confluence-onpremises-connector.md
             - name: License agreement for Microsoft Graph connector plugin for Confluence
               href: graph-connector-atlassian-plugin-eula.md
+        - name: DataStax
+          items:
+          - name: Setup
+            href: datastax-graph-connector.md
+        - name: Dropbox
+          items:
+          - name: Setup
+            href: Dropbox-connector.md
+        - name: Freshservice
+          items:
+          - name: Setup
+            href: freshservice-connector.md
         - name: Jira Cloud
           items:
             - name: Setup
@@ -127,12 +173,20 @@ items:
           items:
             - name: Setup
               href: jira-data-center-connector.md
+        - name: Coda Enterprise
+          items:
+          - name: Setup
+            href: coda-enterprise-connector.md
         - name: CSV
           items:
           - name: Setup
             href: csv-connector.md
           - name: Troubleshooting
             href: troubleshoot-csv-connector.md
+        - name: Egnyte
+          items:
+          - name: Setup
+            href: egnyte-connector.md
         - name: Enterprise websites Cloud
           items:
           - name: Setup
@@ -151,20 +205,42 @@ items:
             href: fileshare-connector.md
           - name: Troubleshooting
             href: troubleshoot-file-share-connector.md
-        - name: GitHub (preview)
+        - name: GitHub
+          items:
+          - name: Setup - GitHub Cloud Knowledge
+            href: GitHub-connector.md 
+          - name: Setup - GitHub Cloud Issues
+            href: GitHub-cloud-issue-connector.md 
+          - name: Setup - GitHub Cloud Pull Requests
+            href: GitHub-cloud-pull-request-connector.md 
+        - name: GitLab (preview)
           items:
           - name: Setup
-            href: GitHub-connector.md 
+            href: gitlab-connector.md 
+          - name: Troubleshooting
+            href: troubleshoot-gitlab-connector.md
         - name: Google Drive
           items:
           - name: Setup
             href: Google-Drive-connector.md
+        - name: Guru
+          items:
+          - name: Setup
+            href: guru-connector.md       
         - name: MediaWiki
           items:
           - name: Setup
             href: mediawiki-connector.md
           - name: Troubleshooting
             href: troubleshoot-media-wiki-connector.md 
+        - name: Monday.com
+          items:
+          - name: Setup
+            href: monday-connector.md
+        - name: Miro
+          items:
+          - name: Setup
+            href: miro-connector.md    
         - name: Oracle SQL
           items:
           - name: Setup
@@ -174,8 +250,14 @@ items:
         - name: PostgreSQL
           items:
           - name: Setup
-            href: postgresql-connector.md
-        - name: Salesforce
+            href: postgresql-connector.md    
+        - name: PagerDuty
+          items:
+          - name: Setup PagerDuty Escalation Policies
+            href: PagerDuty-Escalation-Policies-connector.md
+          - name: Setup PagerDuty Schedules
+            href: pagerduty-schedules-connector.md
+        - name: Salesforce CRM
           items:
           - name: Setup
             href: salesforce-connector.md
@@ -185,6 +267,10 @@ items:
           items:
           - name: Setup
             href: salesforce-knowledge-connector.md
+        - name: Seismic Content
+          items:
+          - name: Setup
+            href: seismic-content-connector.md
         - name: ServiceNow Catalog
           items:
           - name: Setup
@@ -195,6 +281,12 @@ items:
           items:
           - name: Setup
             href: servicenow-knowledge-connector.md
+          - name: Grant Table Access to a Service Account in ServiceNow
+            href: granting-table-access-servicenow.md
+          - name: Advanced flow
+            href: servicenow-knowledge-advanced-flow.md
+          - name: Authenticating using OAuth 2.0
+            href: setup-oauth-servicenow.md
           - name: Troubleshooting
             href: troubleshoot-servicenow-knowledge-connector.md
         - name: ServiceNow Tickets
@@ -207,18 +299,54 @@ items:
           items:
           - name: Setup
             href: sharepoint-server-connector.md
+        - name: Shortcut Story
+          items:
+          - name: Setup
+            href: shortcut-cloud-connector.md
+        - name: Smartsheet Sheet
+          items:
+          - name: Setup
+            href: smartsheet-sheet-connector.md
         - name: Stack Overflow
           items:
           - name: Setup
             href: stack-overflow-connector.md
-        - name: WordPress.org (on-prem)
+        - name: Tableau Cloud
           items:
           - name: Setup
+            href: tableau-cloud-connector.md
+        - name: Trello
+          items:
+          - name: Setup
+            href: trello-connector.md
+        - name: Unily
+          items:
+          - name: Setup
+            href: unily-intranet-connector.md
+        - name: Veeva Vault
+          items:
+          - name: Setup - Veeva Vault PromoMats
+            href: veeva-vault-promoMats-connector.md
+          - name: Troubleshooting
+            href: troubleshoot-veeva-vault-connectors.md
+        - name: WordPress
+          items:
+          - name: Setup WordPress.org (on-prem)
             href: WordPress-onprem-connector.md
+          - name: WordPress.com
+            href: wordpress-cloud-connector.md
         - name: Zendesk Help Center
           items:
           - name: Setup
             href: zendesk-help-center-connector.md
+        - name: Zendesk Ticket
+          items:
+          - name: Setup
+            href: zendesk-ticket-connector.md
+        - name: Zoom
+          items:
+          - name: Setup
+            href: zoom-connector.md
     - name: Manage connections
       items:
       - name: Monitor connections
@@ -233,13 +361,9 @@ items:
         href: connectors-viva-topics-item-delete-notification.md
     - name: Deploy Microsoft Graph connectors in Teams admin center
       href: connectors-deploy-teams.md
-  - name: Federated Search connectors
-    items:
-    - name: Dataverse and Dynamics 365
-      href: manage-dynamics365.md
   - name: Semantic index
     items:
-    - name: Semantic index for Microsoft 365 Copilot
+    - name: Semantic indexing for Microsoft 365 Copilot
       href: semantic-index-for-copilot.md
 - name: Customize and configure
   items:
@@ -269,21 +393,9 @@ items:
       href: manage-classic-spo-pages.md
   - name: Microsoft Search in Bing
     items:
-    - name: Overview
-      href: overview-microsoft-search-bing.md
-    - name: Security and Privacy
-      href: security-for-search.md
-    - name: Use Windows Search to find work or school results
-      href: use-windows-search-find-work-school-results.md             
-    - name: Customize address bar shortcuts for Microsoft Edge
-      href: edge-shortcuts.md
-    - name: Add a search box to your intranet site
-      href: add-a-search-box-to-your-intranet-site.md
-    - name: Select a school or work search experience
-      href: select-work-school-search-experience.md
+    - name: Retirement of Microsoft Search in Bing
+      href: retirement-microsoft-search-bing.md
     - name: Make Microsoft Edge the default browser
       href: /deployedge/edge-default-browser
-    - name: Make Bing the default search engine
-      href: set-default-search-engine.md
     - name: Make Bing.com the default home page
       href: set-default-homepage.md

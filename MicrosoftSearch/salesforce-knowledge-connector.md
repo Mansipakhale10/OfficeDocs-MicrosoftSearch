@@ -1,8 +1,8 @@
 --- 
-title: "Salesforce Knowledge Connector for Microsoft Search and Copilot" 
+title: "Salesforce Knowledge connector for Microsoft Search and Microsoft 365 Copilot" 
 ms.author: rerabo
 author: vivg
-manager: igala
+manager: ereza
 audience: Admin
 ms.audience: Admin 
 ms.topic: article 
@@ -13,17 +13,14 @@ search.appverid:
 - MET150 
 - MOE150 
 description: "Set up the Salesforce Knowledge Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot" 
-ms.date: 12/05/2024
+ms.date: 03/19/2025
 ---
 
 # Salesforce Knowledge Microsoft Graph connector
 
-The Salesforce Knowledge Graph connector allows your organization to index articles from Salesforce Knowledge. After you configure the connector, end users can search for Knowledge articles from Salesforce in Microsoft Copilot and from any Microsoft Search client. 
+The Salesforce Knowledge Microsoft Graph connector allows your organization to index articles from Salesforce Knowledge. After you configure the connector, end users can search for Knowledge articles from Salesforce in Microsoft Copilot and from any Microsoft Search client. 
 
-This documentation is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Salesforce Knowledge Graph connector. 
-
->[!NOTE]
->The Salesforce Knowledge Graph connector is in preview. If you wish to get early access to try it, sign up using [this form](https://forms.office.com/r/JniPmK5bzm).
+This documentation is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Salesforce Knowledge Microsoft Graph connector. 
 
 ## Capabilities
 - Index Salesforce Knowledge articles.
@@ -34,12 +31,16 @@ This documentation is for Microsoft 365 administrators or anyone who configures,
 - Use [Semantic search in Copilot](semantic-index-for-copilot.md) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
-- The connector doesn't support ACLs (access control lists). All the data indexed using the Salesforce Knowledge connector is visible to all Microsoft 365 users in your tenant, accessible through Microsoft Search or Copilot.
+- The Salesforce Knowledge connector currently supports permissions based only on knowledge entity access. It does not support data category-based permissions, field-level security (FLS), or sharing rules.
 
 ## Prerequisites
+
+>[!NOTE]
+>Make sure that the Salesforce account used to log in for the Salesforce Knowledge Microsoft Graph connector is the same as the account already logged into Salesforce.
+
 To connect to your Salesforce instance, you need your Salesforce instance URL, the client ID, and the client secret for OAuth 2.0 authentication. The following steps explain how you or your Salesforce administrator can get this information from your Salesforce account:
 
-- Log in to your Salesforce instance and go to Setup
+- Log in to your Salesforce instance and go to **Setup**.
 - Navigate to Apps -> App Manager.
 - Select **New connected app**.
 - Complete the API section as follows:
@@ -61,10 +62,10 @@ To connect to your Salesforce instance, you need your Salesforce instance URL, t
     - Find the app you created and select the drop-down on the right. Select **Manage**.
     - Select **edit policies**.
     - For the refresh token policy, select **Refresh token is valid until revoked**.
-  > [!div class="mx-imgBorder"]
-  > [![Screenshot that shows select the Refresh Token Policy named "Refresh token is valid until revoked ".](media/salesforce-connector/oauthpolicies.png)](media/salesforce-connector/oauthpolicies.png#lightbox)
+       > [!div class="mx-imgBorder"]
+       > [![Screenshot that shows select the Refresh Token Policy named "Refresh token is valid until revoked ".](media/salesforce-connector/oauthpolicies.png)](media/salesforce-connector/oauthpolicies.png#lightbox)
 
-You can now use the [Microsoft 365 Admin Center](https://admin.microsoft.com/) to complete the rest of the setup process for your Salesforce Knowledge Graph connector.
+You can now use the [Microsoft 365 Admin Center](https://admin.microsoft.com/) to complete the rest of the setup process for your Salesforce Knowledge Microsoft Graph connector.
      
 ## Get Started
 
@@ -75,9 +76,17 @@ A display name is used to identify each citation in Copilot, helping users easil
 Use your organization’s Salesforce Knowledge Instance URL. This URL is the specific web address used to access and interact with Salesforce Knowledge's API services for data retrieval, which typically looks like `https://[COMPANY_NAME].my.salesforce.com`
 
 ### 3. Authentication Type
-For Salesforce Knowledge graph connector, use OAuth 2.0 for authentication. 
+For Salesforce Knowledge Microsoft Graph connector, use OAuth 2.0 for authentication. 
 
-To authenticate, enter the Client ID and Client Secret. The Client ID is a unique identifier assigned to your application for making requests to the Salesforce Knowledge API. The Client Secret is a confidential key used alongside the Client ID to securely authenticate your application with the Salesforce Knowledge API. 
+To authenticate, enter the Client ID and Client Secret. The Client ID is a unique identifier assigned to your application for making requests to the Salesforce Knowledge API. The Client Secret is a confidential key used alongside the Client ID to securely authenticate your application with the Salesforce Knowledge API.
+
+The first time you've attempted to sign in with these settings, you'll get a pop-up asking you to log in to Salesforce with your admin username and password.
+
+  >[!NOTE]
+  >
+  > - If the pop-up doesn't appear, it might be getting blocked in your browser, so you must allow pop-ups and redirects.
+  > - Ensure that the Salesforce account being used to log in for the Graph connector is the same as the user already logged into Salesforce.
+  > - Ensure the user logging in has all the necessary object permissions for the organization.
  
 ### 4. Roll out to limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
@@ -89,8 +98,29 @@ At this point, you're ready to create the connection for Salesforce Knowledge. Y
 Custom setup is for admins who want to edit the default values for settings. Once you click on the 'Custom Setup' option, you see three other tabs: Users, Content, and Sync.
 
 ### Users
-Currently, articles from your organization’s Salesforce Knowledge instance are indexed. All the data indexed using the Salesforce Knowledge connector is visible to all Microsoft 365 users in your tenant, accessible through Microsoft Search or Copilot. 
- 
+**Access Permissions**
+
+The Salesforce Knowledge connector supports search permissions visible to **Everyone** or **Only people with access to this data source**. If you choose **Everyone**, indexed data will appear in the search results for all users. If you choose **Only people with access to this data source**, indexed data will appear in the search results for users who have access to them. Choose the one that is most appropriate for your organization.
+
+**Mapping Identities**
+
+You can choose to ingest Access Control Lists (ACLs) from your Salesforce instance or allow everyone in your organization to see search results from this data source. ACLs can include Microsoft Entra identities (users who are federated from Microsoft Entra ID to Salesforce), non-Azure AD identities (native Salesforce users who have corresponding identities in Microsoft Entra ID), or both.
+
+>[!NOTE]
+>If you use a third-party Identity Provider like Ping ID or secureAuth, you should select "non-Microsoft Entra" as the identity type.
+
+If you chose to ingest an ACL from your Salesforce instance and selected "non-ME ID" for the identity type, see [Map your non-Microsoft Entra Identities](map-non-aad.md) for instructions on mapping the identities.
+
+If you chose to ingest an ACL from your Salesforce instance and selected "ME-ID" for the identity type, see [Map your Microsoft Entra Identities](map-aad.md) for instructions on mapping the identities. To learn how to set up Microsoft Entra SSO for Salesforce, see this [tutorial](/azure/active-directory/saas-apps/salesforce-tutorial).
+
+>[!NOTE]
+>
+> Updates to groups governing access permissions are synced in full crawls only. Incremental crawls don't support processing of updates to permissions.
+
+In the following video, you will learn how to authenticate to your Salesforce instance, sync your non-Microsoft Entra identities with your Microsoft Entra identities, and apply the appropriate security settings to your Salesforce items. While this guide is specifically for the Salesforce CRM connector, the same steps can be applied to the Salesforce Knowledge connector.
+
+> [!VIDEO https://www.youtube-nocookie.com/embed/SZYiFxZMKcM]
+
 ### Content
 
 **Manage properties**
@@ -120,7 +150,7 @@ UrlName | | A unique URL-friendly name generated for the article. | Query, Retri
 
 ### Sync
 
-The refresh interval determines how often your data is synced between the data source and the Graph connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#step-8-refresh-settings).
+The refresh interval determines how often your data is synced between the data source and the Salesforce Knowledge Microsoft Graph connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
 
 ## Troubleshooting
 After publishing your connection, you can review the status under the **Data Sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md). 

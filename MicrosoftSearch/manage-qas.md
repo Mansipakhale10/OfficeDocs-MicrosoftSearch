@@ -18,6 +18,9 @@ ms.date: 01/08/2019
 
 # Manage Q&As
 
+> [!IMPORTANT]
+> Microsoft Search in Bing is being retired on March 31, 2025. Q&As will not be available after that date. [Learn more](/microsoftsearch/retirement-microsoft-search-bing)
+
 Creating a Q&A is similar to creating bookmarks. Q&As allow you to answer the user's questions instead of just providing a link to a webpage. You can also format the answer in rich text. If a bookmark and a Q&A share the same keyword, the bookmark result appears first. Like bookmarks, the Q&A index is refreshed immediately after a Q&A is added or changed.
 
 ## Add or edit a single Q&A
