@@ -36,7 +36,7 @@ This article is intended to help Microsoft 365 administrators locate the resourc
 * [How do I customize and configure search results?](#how-do-i-customize-and-configure-search-results)
 * [How do I search my connector data from a custom application?](#how-do-i-search-my-connector-data-from-a-custom-application)
 * [How do I customize search results?](#how-do-i-customize-and-configure-search-results)
-* [What are the connector limitations?](#what-are-the-limitations-of-microsoft-graph-connectors)
+* [What are the connector limitations?](#what-are-the-limitations-of-microsoft--connectors)
 
 ## Architecture
 
@@ -45,7 +45,7 @@ The following architectural diagram of the Microsoft Graph platform shows how Mi
 ![Diagram: on-premises and cloud-based data is pulled by connectors and indexed by the Microsoft Search API, and then the Microsoft Search service delivers the results to users.](media/connectors-overview/highlevel-connectors.png)
 Microsoft 365 Copilot connectors can pull data from cloud-based (SaaS) data sources and on-premises data stores. The above diagram shows connections to only two data sources, but you can add connections to up to ten sources per tenant.
 
-The Microsoft Graph connectors API instantiates one connection per data source. Then, the API indexes and stores the data. Established connections interact with Microsoft Search and Microsoft 365 Copilot so that users can get search results.
+The Microsoft 365 Copilot connectors API instantiates one connection per data source. Then, the API indexes and stores the data. Established connections interact with Microsoft Search and Microsoft 365 Copilot so that users can get search results.
 
 You can use the Microsoft 365 [admin center](https://admin.microsoft.com) to set up and manage any of the Microsoft 365 Copilot connectors. The admin center has a simple user interface that makes it easy to establish a connection to your data source and monitor connection status and utilization.
 
