@@ -166,7 +166,7 @@ Specify sample data in the **Sample Data Editor** to view the data-bound card wh
 { 
     "title": "Contoso Solutions", 
     "titleLink": "https://contoso.com", 
-    "description": "Marketing team at Contoso.., and looking at the Contoso Marketing documents on the team site. This contains the data from FY20 and will taken over to FY21...Marketing Planning is ongoing for FY20.." 
+    "description": "Marketing team at Contoso.., and looking at the Contoso Marketing documents on the team site. This contains the data from FY20 and will be taken over to FY21...Marketing Planning is ongoing for FY20.." 
 } 
 ```
 
@@ -180,7 +180,7 @@ Select a field in the layout to highlight the variables that need to be mapped. 
 
 ### Show snippet on search result  
 
-Dynamic snippets generated on the **content** property of the connector result can be shown on the search result. **ResultSnippet** is the system property that acts as a placeholder property for the snippets generated for each Connector result. To show the snippets on the result layout, the **ResultSnippet** system property must be mapped to an appropriate field, for example Description, in the search result layout. Snippets generated on each result also highlight the matches in the Snippet with the query term entered by the user.
+Dynamic snippets generated on the **content** property of the connector result can be shown on the search result. **ResultSnippet** is the system property that acts as a placeholder property for the snippets generated for each connector result. To show the snippets on the result layout, the **ResultSnippet** system property must be mapped to an appropriate field, for example, Description, in the search result layout. Snippets generated on each result also highlight the matches in the Snippet with the query term entered by the user.
 
 ## Things to consider
 
@@ -188,12 +188,12 @@ Before you get started, there are a few things that you should do and a few thin
 
 ### Do
 
-- While designing the layouts think of the layout structure as row and column and create those by adding column set elements 
-- Provide a logo/icon for every result layout as this maintains consistency and easy scanning with other results. Edit a template to provide the logo link in the layout if you're using static links for logos and not result properties.
+- While designing the layouts, think of the layout structure as rows and columns, and create those by adding column set elements 
+- Provide a logo/icon for every result layout, as this maintains consistency and easy scanning with other results. Edit a template to provide the logo link in the layout if you're using static links for logos and not result properties.
 - It is recommended to use a square logo to ensure proper alignment of results. To avoid pixelation, use a logo with a minimum size of 32px by 32px.
-- Think of theme requirements when designing a result layout, your result icon should be visible in dark theme as well.
+- Think of theme requirements when designing a result layout; your result icon should be visible in dark theme as well.
 - Validate the result layout for scenarios where no data is returned for a result property used in the result JSON. Use the `$when` condition to hide an element if the property doesn't contain data.  
-- Make sure that data types of the `$when` condition and the result property match. For example, don't compare `Number` with `Text` in the `$when` condition.  
+- Make sure that the  data types of the `$when` condition and the result property match. For example, don't compare `Number` with `Text` in the `$when` condition.  
 - Make sure that the `Textblock` element can handle dynamic content. You can use the `wrap` and `maxLines` element properties for this purpose.
 - Properly format the date when using `{DATE()}` in Markdown.  
 - Ensure properties of type StringCollection are wrapped in a join method as: ```json ${propertyName} -> ${join(propertyName, ‘,’)} ``` . If you want to show a single value (say, the ith item) from a StringCollection, you can specify it as follows:  ```json ${propertyName} -> ${propertyName[i]}  ``` (Note: indexing in StringCollection types start from 0 )
@@ -203,7 +203,7 @@ Before you get started, there are a few things that you should do and a few thin
 - Don't define invalid data types when binding values. For more information about data types, see [Manage the Search schema](/sharepoint/search/manage-the-search-schema).
 - Avoid cropping the result on the result page by following the maximum height of the result layout JSON. If you exceed the maximum height of the result layout, the result will be cropped on the result page.
 - Don't use `px` values in element properties.
-- Don't use markdown with the **ResultSnippet** property in the result layout to highlight query match in the search result.
+- Don't use markdown with the **ResultSnippet** property in the result layout to highlight query matches in the search result.
 
 ## Resources
 
