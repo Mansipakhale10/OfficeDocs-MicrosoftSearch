@@ -30,21 +30,23 @@ Microsoft Search users can search for Power BI results from the Windows search b
 
 Power BI results can be queried from All tab on the Search page
 
-![PowerBI All Tab](https://github.com/MicrosoftDocs/OfficeDocs-MicrosoftSearch-pr/assets/72018014/70c6d1c8-5863-4518-b0b6-10da777ec96e)
+![PowerBI All Tab](./media/powerbi-all-tab.png)
 
 Power BI results can also be queried from the dedicated Power BI Custom vertical
 
-![PowerBI-Vertical](https://github.com/MicrosoftDocs/OfficeDocs-MicrosoftSearch-pr/assets/72018014/1a0bc8ac-0c8e-42f7-b4e7-8ff41539774c)
+![PowerBI Vertical Tab](./media/powerbi-vertical.png)
+
+When users search for Power BI content, they see a list of results that includes the following information:
 
 ## Manage Power BI search 
 
 Power BI results are enabled by default. Your Power BI admin can manage them at any time. To manage in the Power BI Admin portal, go to settings and toggle the **Share data with your Microsoft 365 Services** setting. To learn more, see [Administering Power BI in the admin portal](/power-bi/admin/service-admin-portal#use-global-search-for-power-bi-preview).
 
-![PowerBI Admin - Search settings](https://github.com/MicrosoftDocs/OfficeDocs-MicrosoftSearch-pr/assets/72018014/c3641943-85d4-43b7-8952-613ebe6868de)
+![PowerBI Admin - Search settings](./media/powerbi-admin-search-settings.png)
 
 Power BI search vertical is enabled by default in the list of verticals. It can be disabled from the Verticals page if required.
 
-![PowerBI vertical with disable option](https://github.com/MicrosoftDocs/OfficeDocs-MicrosoftSearch-pr/assets/72018014/1a6d05a3-69ed-4ab4-b662-2c4ed0516675)
+![PowerBI vertical with disable option](./media/powerbi-vertical-disable-option.png)
 
 > [!NOTE]
 > When using Microsoft Search, your search query and the results returned from Power BI, could be processed in a region or geography different than where your Power BI data is located.

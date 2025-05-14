@@ -18,6 +18,9 @@ ms.date: 01/08/2019
 
 # Manage locations
 
+> [!IMPORTANT]
+> Microsoft Search in Bing is being retired on March 31, 2025. Some Microsoft Search answers will no longer be available after that date, including location answers. [Learn more](/microsoftsearch/retirement-microsoft-search-bing)
+
 ## Location
 
 Location helps your users find addresses and locate your organization's buildings by providing an accurate location for offices, campuses, and buildings, along with directions and navigation. Administrators should add all important locations of your organization. Unlike Bookmarks and Q&A, the index isn't refreshed immediately, and it can take several hours for new or changed locations to appear in search results.
@@ -59,6 +62,6 @@ Here are some important points regarding the template file:
 - For partners who manage multiple organizations, you can export your locations from one org and import them into another. But you must remove the data in the *Id* column before you import.
 
 > [!NOTE]
-> You cannot import Locations if there are any errors in the template file. To prevent errors, make sure your import file is properly formatted and include all the required information.
+> You can't import Locations if there are any errors in the template file. To prevent errors, make sure your import file is properly formatted and include all the required information.
 
 For more information on how to prevent error, see [Prevent import errors](manage-bookmarks.md#prevent-import-errors).
