@@ -283,6 +283,7 @@ These are the connectors under learning.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
+|getAbstract|getAbstract|The getAbstract Microsoft Graph connector enhances your Microsoft Copilot with verified business knowledge from leading experts. The connector delivers fully indexed and licensed knowledge from domains like leadership & strategy, sales, marketing, corporate Finance, digital transformation, and many more, helping your employees solve business issues right in the flow of work. For more information, see [getAbstract connector](https://www.getabstract.com/microsoft-graph-connector).|
 |Go1|Go1|Go1 integration with Microsoft Search allows your employees to find and access learning from Microsoft Search, in places like Office.com, SharePoint, and Bing. Your employees can learn directly from Microsoft Search in their normal day-to-day routine. For more information, see [Go1 connector](https://www.go1.com/en-au/go1-microsoft-search).|
 
 ## Social Networks
