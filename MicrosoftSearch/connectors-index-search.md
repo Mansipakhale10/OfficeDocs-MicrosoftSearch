@@ -1,6 +1,6 @@
 ---
 ms.date: 10/02/2019
-title: "Searching and validating indexed content Microsoft Graph connectors"
+title: "Searching and validating indexed content Microsoft 365 Copilot connectors"
 ms.author: danielabo
 author: danielabom
 manager: SteveWilkins1123
@@ -11,11 +11,11 @@ ms.localizationpriority: medium
 description: "Learn how to search and validate whether some content is indexed in Microsoft Search and Microsoft 365 Copilot."
 ---
 
-# Searching and validating indexed content Microsoft Graph connectors
+# Searching and validating indexed content in Microsoft 365 Copilot connectors
 
 You can use the index browser **to test indexing** when you cannot find a particular item during connection testing. If you need **to verify properties and user access**, it helps **review the metadata and access control lists (ACLs)** of indexed items. Additionally, it is beneficial for **troubleshooting search issues**; if users report problems accessing items, this feature confirms whether the item was indexed correctly and includes the correct data.
 
-:::image type="content" source="media/manage-connector/index-search.png" alt-text="Screenshot that shows connector what users can see when they enter an item ID of an indexed item.":::
+:::image type="content" source="media/manage-connector/index-search.png" alt-text="Screenshot that shows the connector what users can see when they enter an item ID of an indexed item.":::
 
 ## About the index browser
 
