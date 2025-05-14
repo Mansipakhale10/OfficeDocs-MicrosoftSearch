@@ -1,6 +1,6 @@
 ---
 ms.date: 11/16/2024
-title: "Confluence Cloud Microsoft Graph connector"
+title: "Confluence Cloud Microsoft 365 Copilot connector"
 ms.author: mansipakhale
 author: mansipakhale
 manager: harshkum
@@ -13,16 +13,16 @@ search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Set up the Confluence Cloud Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot"
+description: "Set up the Confluence Cloud Microsoft 365 Copilot connector."
 ---
 
-# Confluence Cloud Microsoft Graph connector
+# Confluence Cloud Microsoft 365 Copilot connector
 
-The Confluence Cloud Microsoft Graph connector allows your organization to index Confluence content. After you configure the connector and index data from the Confluence site, end users can search for those contents in Microsoft Search and Microsoft 365 Copilot.
+The Confluence Cloud Microsoft 365 Copilot connector allows your organization to index Confluence content. After you configure the connector and index data from the Confluence site, end users can search for that content in Microsoft Search and Microsoft 365 Copilot.
 
-This article is intended for Microsoft 365 administrators who are responsible for configuring, running, and monitoring the Confluence Cloud Microsoft Graph connector. It supplements the general instructions provided in setting up Microsoft Graph connectors in the Microsoft 365 admin center.
+This article is intended for Microsoft 365 administrators who are responsible for configuring, running, and monitoring the Confluence Cloud Copilot connector. It supplements the general instructions provided in setting up Microsoft Copilot connectors in the Microsoft 365 admin center.
 
-## Benefits
+## Capabilities
 - **Enhanced search capabilities**: Users can ask natural language questions about Wiki content in Copilot, such as:
    - Summarize the architecture document </br>
    - How to get access to a portal </br> 
@@ -40,7 +40,7 @@ This article is intended for Microsoft 365 administrators who are responsible fo
 > * The change to migrate to new v2 APIs was released to all customers in **December 2023**. Post this release, your existing connections need to be reauthenticated. The new v2 APIs also require some more scopes (as compared to previous v1 APIs) which need to be provided during re-authentication. A new set of scopes required (complete list) – `read:group:confluence`, `read:user:confluence`, `read:content-details:confluence`, `Read:space:confluence`, `Read:permission:confluence`, `read:audit-log:confluence`, `read:content.metadata:confluence` and `read:page:confluence`.
 
 ## Get started
-This video provides a step-by-step guide on adding the Confluence Cloud Microsoft Graph connector.
+This video provides a step-by-step guide on adding the Confluence Cloud Copilot connector.
 > [!VIDEO https://www.youtube-nocookie.com/embed/9WXQt1JykXo]
 
 ### 1. Display name
@@ -58,7 +58,7 @@ To authenticate and synchronize content from Confluence On-prem, choose **one of
 >Make sure the service **account has view access** to the Confluence content you want to index.
 
    **a. Basic authentication** <br>
-To authenticate using basic auth, enter your username (usually your email) and API token. To help generating an API token, see Atlassian's [guide](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
+To authenticate using basic auth, enter your username (usually your email) and API token. To help generate an API token, see Atlassian's [guide](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
 
    **b. OAuth 2.0 (recommended)** <br> 
 Register an app in Confluence Cloud so that the Microsoft Search app and Microsoft 365 Copilot can access the instance. To learn more, see Atlassian Support documentation on how to [Enable OAuth 2.0](https://developer.atlassian.com/cloud/confluence/oauth-2-3lo-apps/#enabling-oauth-2-0--3lo-).
@@ -86,7 +86,7 @@ The following steps provide guidance on how to register the app:
 
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about the limited rollout, click [here](./staged-rollout-for-graph-connectors.md).
 
-At this point, you are ready to create the connection for ServiceNow Knowledge. You can click the "Create" button and the Confluence Cloud Microsoft Graph connector starts indexing page from your Confluence account.
+At this point, you are ready to create the connection for ServiceNow Knowledge. You can click the "Create" button, and the Confluence Cloud Copilot connector starts indexing the page from your Confluence account.
 
 For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl frequency etc., We set defaults based on what works best with Confluence data. The default values are as follows:
 
@@ -115,7 +115,7 @@ Custom setup is for those admins who want to edit the default values for setting
 
 **Access permissions**
 
-Confluence Cloud Microsoft Graph connector supports search permissions visible to **Everyone** or **Only people with access to this data source**. If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to them. 
+Confluence Cloud Copilot connector supports search permissions visible to **Everyone** or **Only people with access to this data source**. If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to them. 
 In Confluence Cloud, security permissions for users and groups are defined using space permissions and page restrictions. Page-level restrictions, if present, take precedence over space permissions.
 
 If there are no page restrictions, the connector checks for space-level permissions - 
@@ -154,7 +154,7 @@ Use the preview results button to verify the sample values of the selected prope
 **Manage properties**
 
 In this step, you can add or remove available properties from your Confluence data source. A few properties are selected by default.
-*The list of properties that you select here, can impact how you can filter, search and view your results in Microsoft 365 Copilot.*
+*The list of properties that you select here can impact how you can filter, search and view your results in Microsoft 365 Copilot.*
 
 
 Source property | Label | Description
@@ -174,7 +174,7 @@ Use the preview results button to verify selected properties and filters.
 
 ### Sync
 
-The refresh interval determines how often your data is synchronized between the data source and the Confluence Cloud Microsoft Graph connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more details, click [here](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synchronized between the data source and the Confluence Cloud Copilot connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more details, click [here](configure-connector.md#guidelines-for-sync-settings).
 You can change the default values of refresh interval from here if you want to.
 
 ### Review and test your connection
