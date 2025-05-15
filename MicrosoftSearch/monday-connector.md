@@ -1,7 +1,7 @@
 --- 
 title: "Monday.com Microsoft Graph connector (preview)" 
-ms.author: dannyyao
-author: dannyyaou
+ms.author: rantang
+author: rantang
 manager: jecui
 audience: Admin
 ms.audience: Admin 
@@ -13,7 +13,7 @@ search.appverid:
 - MET150 
 - MOE150 
 description: "Set up the Monday.com Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot." 
-ms.date: 02/26/2025
+ms.date: 05/15/2025
 ---
 # Monday.com Microsoft Graph Connector (preview)
 
@@ -48,15 +48,25 @@ The Monday.com connector enables:
 
 ### Configure OAuth APP in Monday.com  
 
-1. Go to the **Monday.com Developer Center** and create a **new app**.  
-2. In the **Basic Information** section, locate and note down your **Client ID** and **Client secret**.  
-3. Open the **OAuth** tab and **enable all read permissions**.  
-4. Go to the **Redirect URLs** tab and enter the following URLs:  
+1. Log in your Monday.com account and go to the **Monday.com Developer Center**
+   
+![Screenshot that shows the navigation path to the Monday.com Developer Center](media/monday-developer-center.png)
+
+2. Click **Create app**.
+
+![Screenshot that shows the button of "Create APP".](media/monday-create-app.png)  
+ 
+3. In the **General Settings** section, locate and note down your **Client ID** and **Client secret**.
+
+![Screenshot that shows how to find the Client id and Client secret for the Monday.com OAuth App.](media/monday-general-settings.png)  
+
+7. Open the **OAuth** tab and **enable all read permissions**.  
+8. Go to the **Redirect URLs** tab and enter the following URLs:  
 
    - **For Microsoft 365 Enterprise**, copy and paste: `https://gcs.office.com/v1.0/admin/oauth/callback`.  
    - **For Microsoft 365 Government**, copy and paste:  `https://gcsgcc.office.com/v1.0/admin/oauth/callback`.
 
-5. Choose **Promote to Live** to activate the app.  
+9. Choose **Promote to Live** to activate the app.  
 
 ## Get started
 
