@@ -1,7 +1,7 @@
 --- 
 title: "Monday.com Microsoft Graph connector (preview)" 
 ms.author: rantang
-author: rantang
+author: ranran1998
 manager: jecui
 audience: Admin
 ms.audience: Admin 
