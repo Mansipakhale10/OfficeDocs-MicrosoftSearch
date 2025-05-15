@@ -46,7 +46,7 @@ The Monday.com connector enables:
 
 ## Prerequisites  
 
-### Configure OAuth in Monday.com  
+### Configure OAuth APP in Monday.com  
 
 1. Go to the **Monday.com Developer Center** and create a **new app**.  
 2. In the **Basic Information** section, locate and note down your **Client ID** and **Client secret**.  
