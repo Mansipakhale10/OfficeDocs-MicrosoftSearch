@@ -134,47 +134,62 @@ To identify which option is suitable for your organization:
 ### Content
 On the **Content** tab, you can verify property mappings in the sample data for metadata such as **content**, **labels**, **description**, and **timestamps**.
 
-**Content ingestion filters**   
+#### Content ingestion filters   
 
 You can choose what data you want to index. Use the regex expression of WorkSpaces to select your data before it is indexed, allowing you to control what data is searchable. Following are some examples to illustrate how to use regex expressions to select specific workspace(s).
 
-| Scenario                            | Example Workspace Name(s)                                      | Regex Expression                            | Notes                                                        |
-|-------------------------------------------|------------------------------------------------------|---------------------------------------------|-----------------------------------------------------------------------|
-| Exact match for a single workspace        | `/workspace1/`                                                  | <code>^/workspace1/</code>                  | Exact matches `workspace1`                                           |
-| Fuzzy match for a single workspace        | `/team-marketing-q1`                                  | <code>^/.*marketing.*/</code>               | Matches any workspace that contains "marketing" in the name          |
-| Exact match for multiple workspaces       | `/workspace1`, `/workspace2`                           | <code>^/(workspace1&#124;workspace2)/</code> | Exact matches `workspace1` and `workspace2`                          |
-| Fuzzy match for multiple workspaces       | `/workspace-marketing/`, `/workspace-sales/`          | <code>^/workspace-[a-z]+/</code>            | Matches any workspace starting with `workspace-` followed by letters |
-| Fuzzy match for multiple keywords in name | `/workspace-engineering/`, `/workspace-sales-q4/`         | <code>^/.*(eng&#124;sales).*/</code>        | Matches any workspace with `eng` or `sales` in the name              |
+| Scenario                                   | Example Workspace Name(s)               | Regex Expression                                 | Notes                                                                 |
+|--------------------------------------------|------------------------------------------|--------------------------------------------------|-----------------------------------------------------------------------|
+| Exact match for a single workspace         | `workspace1`                             | <code>^workspace1$</code>                        | Exact match of `workspace1`                                          |
+| Fuzzy match for a single workspace         | `team-marketing-q1`                      | `.*marketing.*`                    | Matches any workspace that contains "marketing" in the name          |
+| Exact match for multiple workspaces        | `workspace1`, `workspace2`               | <code>^(workspace1&#124;workspace2)$</code>      | Matches exactly `workspace1` or `workspace2`                         |
+| Fuzzy match for multiple workspaces        | `workspace-marketing`, `workspace-sales` | <code>^workspace-[a-z]+$</code>                  | Matches any workspace starting with `workspace-` and letters         |
+| Fuzzy match for multiple keywords in name  | `workspace-engineering`, `workspace-sales-q4` | `.*(eng\|sales).*`       | Matches workspaces containing `eng` or `sales` in the name           |
 
 Use the preview results button to verify the sample values of the selected properties and filters. 
 
-**Manage properties**
+#### Manage properties
 
-Here, you can check available properties from your Guru. Assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias to the property. Properties that are selected by default are listed below. 
+Here, you can check available properties from your Monday.com instance. Assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), review the semantic label, and add an alias to the property. Properties that are selected by default are listed below. 
 
-| Properties       | Semantic Label          | Schema                      |
-|-----------------|------------------------|-----------------------------|
-| CollectionLink  |                        | Retrieve                    |
-| CollectionName  |                        | Query, Retrieve, Search     |
-| Content        | `CONTENT`               | Search                      |
-| CreatedTime    | Created date time       | Query, Retrieve             |
-| LastModifiedBy | Last modified by        | Query, Retrieve, Search     |
-| Link          | url                      | Retrieve                    |
-| ModifiedTime   | Last modified date time | Query, Refine, Retrieve     |
-| Owner         | Created by               | Query, Retrieve, Search     |
-| Title         | Title                    | Query, Retrieve, Search     |
+| Property             | Semantic Label       | Description                                     | Schema                |
+|----------------------|----------------------|------------------------------------------------|-----------------------|
+| BoardDescription     | None                 | Description of the board                        | Retrieve, Search      |
+| BoardID              | None                 | Unique identifier for the board                 | Query, Retrieve       |
+| BoardName            | None                 | Name of the board                               | Query, Retrieve, Search|
+| BoardUrl             | None                 | URL link to the board                           | Retrieve              |
+| Content              | `CONTENT`            | Merge all columns and corresponding values of the item   | Search                |
+| CreatedBy            | `Created by`         | User who created the item                     | Query, Retrieve       |
+| CreatedDateTime      | `Created date time`  | Timestamp when the item was created            | Query, Retrieve       |
+| GroupID              | None                 | Unique identifier for the group    | Query, Retrieve       |
+| GroupName            | None                 | Name of the group         | Query, Retrieve, Search|
+| LastModifiedDateTime | `Last modified date time` | Timestamp of the last modification          | Query, Retrieve       |
+| Title                | `Title`              | Title of the task item,                        | Query, Retrieve, Search|
+| URL                  | `url`                | URL related to the item                         | Retrieve              |
+| WorkspaceDescription | None                 | Description of the workspace                    | Retrieve, Search      |
+| WorkspaceID          | None                 | Unique identifier for the workspace             | Query, Retrieve       |
+| WorkspaceName        | None                 | Name of the workspace                            | Query, Retrieve, Search|
 
 
-#### Filter  
-You can configure filtering by **workspace** to refine the indexed content.  
+**Description of `Content` property:**  
+The Content field contains a JSON object that represents all the columns and their corresponding values for a given item. Each key in the JSON object corresponds to a column name (such as Assignee or Status), and each value holds the specific data for that item. Below is an example illustrating how the item and its Content field are structured.
+
+![Screenshot that shows a example of item content](media/mondy-content-example.png)
+
+```json
+{
+  "Assignee": "QC",
+  "Status": "Not Started",
+  "Date": "Apr 2",
+  "Priority": "Medium",
+  "Labels": "Benefits, Flexible"
+}
+```
 
 ### Sync
-You can configure **incremental** and **full** crawls. The following are the default values:
+You can configure full and incremental crawls based on the scheduling options present here. By default, incremental crawl is set for every 4 hours, and full crawl is set for every day. If needed, you can adjust these schedules to fit your data refresh needs.
 
-  - Incremental crawl runs **every 2 hours** by default.
-  - Full crawl runs **daily** to ensure up-to-date indexing.
+## Troubleshooting
+After publishing your connection, you can review the status under the **Data sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
-## Next steps
-
-- Review the connection status in the Microsoft 365 admin center. 
-- If you have issues or need support, see [Microsoft Graph support](https://developer.microsoft.com/en-us/graph/support).
+If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).
