@@ -60,13 +60,20 @@ The Monday.com connector enables:
 
 ![Screenshot that shows how to find the Client id and Client secret for the Monday.com OAuth App.](media/monday-general-settings.png)  
 
-7. Open the **OAuth** tab and **enable all read permissions**.  
-8. Go to the **Redirect URLs** tab and enter the following URLs:  
+4. In the **Build** section, open the **OAuth & permission** tab, click the **Scopes** subtab and **enable all read permissions**.
+
+![Screenshot that shows how to configure essential permission for the Monday.com OAuth App.](media/monday-oauth-scopes-read-permission.png)  
+ 
+5. Go to the **Redirect URLs** subtab and enter the following redirect URLs and click **Save Scopes**. 
 
    - **For Microsoft 365 Enterprise**, copy and paste: `https://gcs.office.com/v1.0/admin/oauth/callback`.  
    - **For Microsoft 365 Government**, copy and paste:  `https://gcsgcc.office.com/v1.0/admin/oauth/callback`.
 
-9. Choose **Promote to Live** to activate the app.  
+![Screenshot that shows how to configure Redirect URL for the Monday.com OAuth App.](media/monday-redirect-URL.png)
+
+6. Click **Promote to Live** to activate the app.
+
+![Screenshot that shows how to activate Monday.com OAuth App.](media/monday-promote-to-live.png)
 
 ## Get started
 
@@ -83,18 +90,80 @@ Enter the instance URL of your Monday.com instance (for example, `https://test-i
 - Grant the required API scopes.
 
 ### 4. Roll out to limited audience
-Before you deploy the connector, test the connection with a limited user base in Copilot and Microsoft Search.
+
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience.
+
+To create the connection for your Monday.com instance, click **Create* to publish your connection and index items from your Monday.com instance.  
+
+For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl frequency, etc., we set defaults based on what works best with Monday.com items. The default values settings are as follows.
+
+|Page|Settings|Default values|
+|--- | ---- | ---|
+Users | Access permissions | Only people with access to this data source.
+Users | Map Identities |Data source identities mapped using Microsoft Entra IDs.
+Content | Index content | All cards, except the cards in personal space. 
+Content | Manage properties | To check default properties and their schema, [click here](#content).
+Sync | Incremental crawl | Frequency: Every 4 hours
+Sync | Full crawl | Frequency: Every day
+
+If you want to edit any of these values, you need to choose the **Custom setup** option. 
 
 ## Custom setup
 Custom setup is for admins who want to edit the default values for any settings. When you choose **Custom setup**, you see three other tabs: **Users**, **Content**, and **Sync**. 
 
 ### Users
+**Access permissions**
+
+The Monday.com Microsoft Graph connector supports data visible to Only people with access to this data source (recommended) or Everyone. If you choose Everyone, indexed data appears in the search results for all users. 
+
 #### Identity mapping
 To ensure correct permission enforcement, map Monday.com user identities to Microsoft Entra ID. The following are the options:
-  - **Email:** Matches Monday.com email to Microsoft Entra ID user properties.
+
+To identify which option is suitable for your organization: 
+
+1. Choose the **Microsoft Entra ID** option if the email ID of Monday.com users is same as the UserPrincipalName (UPN) of users in Microsoft Entra ID. 
+
+2. Choose the **non-AAD** option if the email ID of Monday.com users is **different** from the UserPrincipalName (UPN) of users in Microsoft Entra ID.
+
+>[!Important]
+>- If you choose Microsoft Entra ID as the type of identity source, the connector maps the email IDs of users obtained from Monday.com directly to UPN property from Microsoft Entra ID.
+>- If you chose "non-AAD" for the identity type see Map your non-Azure AD Identities for instructions on mapping the identities. You can use this option to provide the mapping regular expression from email ID to UPN.
+>- Updates to users or groups governing access permissions are synced in full crawls only. Incremental crawls do not currently support the processing of updates to permissions.
+
 
 ### Content
 On the **Content** tab, you can verify property mappings in the sample data for metadata such as **content**, **labels**, **description**, and **timestamps**.
+
+**Content ingestion filters**   
+
+You can choose what data you want to index. Use the regex expression of WorkSpaces to select your data before it is indexed, allowing you to control what data is searchable. Following are some examples to illustrate how to use regex expressions to select specific workspace(s).
+
+| Scenario                            | Example Workspace Name(s)                                      | Regex Expression                            | Notes                                                        |
+|-------------------------------------------|------------------------------------------------------|---------------------------------------------|-----------------------------------------------------------------------|
+| Exact match for a single workspace        | `/workspace1/`                                                  | <code>^/workspace1/</code>                  | Exact matches `workspace1`                                           |
+| Fuzzy match for a single workspace        | `/team-marketing-q1`                                  | <code>^/.*marketing.*/</code>               | Matches any workspace that contains "marketing" in the name          |
+| Exact match for multiple workspaces       | `/workspace1`, `/workspace2`                           | <code>^/(workspace1&#124;workspace2)/</code> | Exact matches `workspace1` and `workspace2`                          |
+| Fuzzy match for multiple workspaces       | `/workspace-marketing/`, `/workspace-sales/`          | <code>^/workspace-[a-z]+/</code>            | Matches any workspace starting with `workspace-` followed by letters |
+| Fuzzy match for multiple keywords in name | `/workspace-engineering/`, `/workspace-sales-q4/`         | <code>^/.*(eng&#124;sales).*/</code>        | Matches any workspace with `eng` or `sales` in the name              |
+
+Use the preview results button to verify the sample values of the selected properties and filters. 
+
+**Manage properties**
+
+Here, you can check available properties from your Guru. Assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias to the property. Properties that are selected by default are listed below. 
+
+| Properties       | Semantic Label          | Schema                      |
+|-----------------|------------------------|-----------------------------|
+| CollectionLink  |                        | Retrieve                    |
+| CollectionName  |                        | Query, Retrieve, Search     |
+| Content        | `CONTENT`               | Search                      |
+| CreatedTime    | Created date time       | Query, Retrieve             |
+| LastModifiedBy | Last modified by        | Query, Retrieve, Search     |
+| Link          | url                      | Retrieve                    |
+| ModifiedTime   | Last modified date time | Query, Refine, Retrieve     |
+| Owner         | Created by               | Query, Retrieve, Search     |
+| Title         | Title                    | Query, Retrieve, Search     |
+
 
 #### Filter  
 You can configure filtering by **workspace** to refine the indexed content.  
