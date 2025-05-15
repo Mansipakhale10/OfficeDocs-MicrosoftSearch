@@ -76,9 +76,11 @@ When finished, select the Create button.
 **Step3: Enter the required fields of Tableau Graph Connector Authentication**.
 
 Enter the User, Connected App Client ID, Connected App Secret ID and Connected App Secret Key to connect to your Tableau Cloud Site. 
+
 ![Screenshot that shows the authentication process for Tableau Graph Connector.](media/tableau-gc-auth.png) 
 
 Refer to the following table to learn the descriptions of the required fields of Tableau Graph Connector Authentication
+
 Field | Description 
 --- | --- 
 User| The admin user email. Recommend to fill the email of an admin user who configured the Tableau Connected Apps with Direct Trust.
