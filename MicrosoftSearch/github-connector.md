@@ -12,18 +12,18 @@ search.appverid:
 - BFB160 
 - MET150 
 - MOE150 
-description: "Set up the GitHub Cloud Knowledge Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot" 
+description: "Set up the GitHub Cloud Knowledge Microsoft 365 Copilot connector." 
 ms.date: 11/11/2024
 ---
 
-# GitHub Cloud Knowledge Microsoft Graph connector (Preview)
+# GitHub Cloud Knowledge Microsoft 365 Copilot  connector (Preview)
 
-The GitHub Cloud Knowledge Graph Connector allows you to index content from GitHub repositories, making it easily searchable within the Microsoft 365 ecosystem. This connector is ideal for organizations that use GitHub Cloud for documentation, project files, or content management. By integrating GitHub data with Microsoft Search, users can access relevant content directly within Microsoft 365 applications, streamlining workflows and reducing the need to switch between platforms. 
+The GitHub Cloud Knowledge Microsoft 365 Copilot connector allows you to index content from GitHub repositories, making it easily searchable within the Microsoft 365 ecosystem. This connector is ideal for organizations that use GitHub Cloud for documentation, project files, or content management. By integrating GitHub data with Microsoft Search, users can access relevant content directly within Microsoft 365 applications, streamlining workflows and reducing the need to switch between platforms. 
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a GitHub Cloud Knowledge Graph connector.
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a GitHub Cloud Knowledge Copilot connector.
 
 >[!NOTE]
->The GitHub Cloud Knowledge Graph connector is in preview. If you wish to get early access to try it, sign up using [this form](https://forms.office.com/r/JniPmK5bzm).
+>The GitHub Cloud Knowledge Copilot connector is in preview. If you wish to get early access to try it, sign up using [this form](https://forms.office.com/r/JniPmK5bzm).
 
 ## Capabilities
 - Index GitHub Cloud repositories and markdown files to make project documentation accessible in Microsoft 365.
@@ -37,7 +37,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 ## Limitations
 - Only repository metadata and markdown files are indexed. Other GitHub entities such as issues, pull requests, and comments aren't indexed.
 - Only markdown files up to 1 MB in size are supported. Larger files aren't indexed.
-- The GitHub Cloud Knowledge Graph Connector does not support access to internal repositories in GitHub.
+- The GitHub Cloud Knowledge Copilot connector does not support access to internal repositories in GitHub.
 
 ## Prerequisites
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
@@ -61,12 +61,12 @@ To set up GitHub authentication using an Application, please follow the detailed
 
 ## Get Started
 
-[![Screenshot that shows connection creation screen for Microsoft Graph Connector for GitHub.](media/github-connector/GitHub-create-page.png)](media/github-connector/GitHub-create-page.png#lightbox)
+[![Screenshot that shows connection creation screen for GitHub Microsoft 365 Copilot connector.](media/github-connector/GitHub-create-page.png)](media/github-connector/GitHub-create-page.png#lightbox)
 
-### 1. Display name 
+### Choose display name 
 A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
-### 2. Authentication Type
+### Provide authentication type
 
 To authenticate and sync content from GitHub, you can choose one of the following authentication methods: <br>
 
@@ -114,13 +114,13 @@ For the GitHub App token:
 
 ## Custom Setup
 
-Custom setup is for those admins who want to edit the default values for settings listed. Once you click on the "Custom Setup" option, you see three more tabs - Users, Content, and Sync.
+In custom setup you can edit any of the default values for users, content, and sync.
 
 ### Users
 
 **Access Permissions**
 
-The GitHub Cloud Knowledge connector supports search permissions visible to **Everyone** with access to this data source. For Everyone, indexed data appears in the search results for all users.
+The GitHub Cloud Knowledge Copilot connector supports search permissions visible to **Everyone** with access to this data source. For Everyone, indexed data appears in the search results for all users.
 For identity transformation, refer to the [Map your non-Azure AD Identities | Microsoft Learn](map-non-aad.md).
  
 ### Content
@@ -129,7 +129,7 @@ Choose the repositories and file types (initially markdown files and other non-c
 
 **Manage Properties**
 
-[![Screenshot that shows manage properties screen for Microsoft Graph Connector for GitHub.](media/github-connector/GitHub-data-manage-properties.png)](media/github-connector/GitHub-data-manage-properties.png#lightbox)
+[![Screenshot that shows manage properties screen for GitHub Cloud Knowledge Copilot connector.](media/github-connector/GitHub-data-manage-properties.png)](media/github-connector/GitHub-data-manage-properties.png#lightbox)
 
 Here, you can add or remove available properties from your GitHub data source, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label and add an alias to the property.
 
@@ -137,7 +137,7 @@ Here, you can add or remove available properties from your GitHub data source, a
 
 [![Screenshot that shows Sync tab where you can configure crawl frequency.](media/github-connector/GitHub-sync-tab.png)](media/github-connector/GitHub-sync-tab.png#lightbox)
 
-The refresh interval determines how often your data is synced between the data source and the Graph connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the GitHub Cloud Knowledge Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
 
 You can change the default values of refresh interval from here if you want to.
 
