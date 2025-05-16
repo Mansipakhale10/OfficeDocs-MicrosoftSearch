@@ -24,7 +24,7 @@ This article explains how to grant table access to a service account in ServiceN
 
 - Ensure you have admin access in ServiceNow.
 - Elevate to the `security_admin` role to make changes to Access Control Lists (ACLs).
-- 
+  
 ## Get started
 
 ### Create a user
