@@ -154,21 +154,21 @@ Here, you can check available properties from your Monday.com instance. Assign a
 
 | Property             | Semantic Label       | Description                                     | Schema            |
 |----------------------|----------------------|------------------------------------------------|-----------------------|
-| BoardDescription     | None                 | Description of the board                        | Retrieve, Search      |
-| BoardID              | None                 | Unique identifier for the board                 | Query, Retrieve       |
-| BoardName            | None                 | Name of the board                               | Query, Retrieve, Search|
-| BoardUrl             | None                 | URL link to the board                           | Retrieve              |
-| Content              | `CONTENT`            | Merge all columns and corresponding values of the item   | Search  |
-| CreatedBy            | `Created by`         | User who created the item                     | Query, Retrieve  |
-| CreatedDateTime      | `Created date time`  | Timestamp when the item was created            | Query, Retrieve    |
-| GroupID              | None                 | Unique identifier for the group    | Query, Retrieve.       |
-| GroupName            | None                 | Name of the group         | Query, Retrieve, Search.|
-| LastModifiedDateTime | `Last modified date time` | Timestamp of the last modification          | Query, Retrieve  |
-| Title                | `Title`              | Title of the task item,                        | Query, Retrieve, Search|
-| URL                  | `url`                | URL related to the item                         | Retrieve              |
-| WorkspaceDescription | None                 | Description of the workspace                    | Retrieve, Search      |
-| WorkspaceID          | None                 | Unique identifier for the workspace             | Query, Retrieve       |
-| WorkspaceName        | None                 | Name of the workspace                            | Query, Retrieve, Search|
+| BoardDescription     | None                 | Description of the board.                        | Retrieve, Search.      |
+| BoardID              | None                 | Unique identifier for the board.                 | Query, Retrieve.       |
+| BoardName            | None                 | Name of the board.                               | Query, Retrieve, Search.|
+| BoardUrl             | None                 | URL link to the board.                           | Retrieve.              |
+| Content              | `CONTENT`            | Merge all columns and corresponding values of the item.   | Search.  |
+| CreatedBy            | `Created by`         | User who created the item.                     | Query, Retrieve.  |
+| CreatedDateTime      | `Created date time`  | Timestamp when the item was created.            | Query, Retrieve.    |
+| GroupID              | None                 | Unique identifier for the group.    | Query, Retrieve.       |
+| GroupName            | None                 | Name of the group.         | Query, Retrieve, Search.|
+| LastModifiedDateTime | `Last modified date time` | Timestamp of the last modification.          | Query, Retrieve.  |
+| Title                | `Title`              | Title of the task item.                        | Query, Retrieve, Search.|
+| URL                  | `url`                | URL related to the item.                         | Retrieve.              |
+| WorkspaceDescription | None                 | Description of the workspace.                    | Retrieve, Search.      |
+| WorkspaceID          | None                 | Unique identifier for the workspace.             | Query, Retrieve.       |
+| WorkspaceName        | None                 | Name of the workspace.                            | Query, Retrieve, Search.|
 
 
 **Description of `Content` property:**  
