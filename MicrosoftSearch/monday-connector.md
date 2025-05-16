@@ -99,12 +99,12 @@ For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl
 
 |Page|Settings|Default values|
 |--- | ---- | ---|
-Users | Access permissions | Only people with access to this data source.
-Users | Map Identities |Data source identities mapped using Microsoft Entra IDs.
-Content | Index content | All cards, except the cards in personal space. 
-Content | Manage properties | To check default properties and their schema, [click here](#content).
-Sync | Incremental crawl | Frequency: Every 4 hours
-Sync | Full crawl | Frequency: Every day
+|Users | Access permissions | Only people with access to this data source.|
+|Users | Map Identities |Data source identities mapped using Microsoft Entra IDs.|
+|Content | Index content | All cards, except the cards in personal space. |
+|Content | Manage properties | To check default properties and their schema, see [Content](#content).|
+|Sync | Incremental crawl | Frequency: Every 4 hours.|
+|Sync | Full crawl | Frequency: Every day.|
 
 If you want to edit any of these values, you need to choose the **Custom setup** option. 
 
@@ -138,7 +138,7 @@ On the **Content** tab, you can verify property mappings in the sample data for 
 
 You can choose what data you want to index. Use the regex expression of WorkSpaces to select your data before it is indexed, allowing you to control what data is searchable. Following are some examples to illustrate how to use regex expressions to select specific workspace(s).
 
-| Scenario                                   | Example Workspace Name(s)               | Regex Expression                                 | Notes                                                                 |
+| Scenario                                   | Example workspace name(s)               | Regex expression                                 | Notes                                                                 |
 |--------------------------------------------|------------------------------------------|--------------------------------------------------|-----------------------------------------------------------------------|
 | Exact match for a single workspace         | `workspace1`                             | <code>^workspace1$</code>                        | Exact match of `workspace1`                                          |
 | Fuzzy match for a single workspace         | `team-marketing-q1`                      | `.*marketing.*`                    | Matches any workspace that contains "marketing" in the name          |
@@ -158,12 +158,12 @@ Here, you can check available properties from your Monday.com instance. Assign a
 | BoardID              | None                 | Unique identifier for the board                 | Query, Retrieve       |
 | BoardName            | None                 | Name of the board                               | Query, Retrieve, Search|
 | BoardUrl             | None                 | URL link to the board                           | Retrieve              |
-| Content              | `CONTENT`            | Merge all columns and corresponding values of the item   | Search                |
-| CreatedBy            | `Created by`         | User who created the item                     | Query, Retrieve       |
-| CreatedDateTime      | `Created date time`  | Timestamp when the item was created            | Query, Retrieve       |
-| GroupID              | None                 | Unique identifier for the group    | Query, Retrieve       |
-| GroupName            | None                 | Name of the group         | Query, Retrieve, Search|
-| LastModifiedDateTime | `Last modified date time` | Timestamp of the last modification          | Query, Retrieve       |
+| Content              | `CONTENT`            | Merge all columns and corresponding values of the item   | Search.                |
+| CreatedBy            | `Created by`         | User who created the item                     | Query, Retrieve.       |
+| CreatedDateTime      | `Created date time`  | Timestamp when the item was created            | Query, Retrieve.       |
+| GroupID              | None                 | Unique identifier for the group    | Query, Retrieve.       |
+| GroupName            | None                 | Name of the group         | Query, Retrieve, Search.|
+| LastModifiedDateTime | `Last modified date time` | Timestamp of the last modification          | Query, Retrieve|       |
 | Title                | `Title`              | Title of the task item,                        | Query, Retrieve, Search|
 | URL                  | `url`                | URL related to the item                         | Retrieve              |
 | WorkspaceDescription | None                 | Description of the workspace                    | Retrieve, Search      |
