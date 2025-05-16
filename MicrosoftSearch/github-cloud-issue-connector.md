@@ -53,10 +53,10 @@ This article is intended for Microsoft 365 administrators or anyone who configur
 
 ## Get started
 
-### 1. Choose display name
+### Choose display name
 Choose a display name that helps users recognize the connection in a Copilot response.
 
-### 2. Provide authentication details
+### Provide authentication details
 - Enter your **Client ID** and **Client secret** from your GitHub App.
 - Choose **Authorize** to sign in and grant access. We recommend using separate user accounts for OAuth authentication with each connection, as GitHub's rate limit is calculated individually per user.
 - Grant the required API scopes.
