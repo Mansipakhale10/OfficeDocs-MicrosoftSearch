@@ -55,9 +55,9 @@ A Display name is used to identify each reference in Copilot, helping users easi
 
 To connect to your Confluence On-premises data, you need your organization's Confluence instance URL. Your organization's Confluence instance URL typically looks like 'https://contoso.atlassian.net'.
 
-### 3. Copilot connector agent (GCA)
+### 3. Graph connector Agent (GCA)
 
-To index your Confluence server or data center content, you must install and register the connector agent. See [Install the Copilot connector agent](./graph-connector-agent.md) for details. You must be the administrator for your organization's Microsoft 365 tenant and the administrator for your organization's Confluence site.
+To index your Confluence server or data center content, you must install and register the connector agent. See [Install the Graph Connector Agent](./graph-connector-agent.md) for details. You must be the administrator for your organization's Microsoft 365 tenant and the administrator for your organization's Confluence site.
 
 >[!NOTE]
 > GCA can be installed on a different Windows machine and need not be on the same machine as the On-premises server. The machine can help generate an App ID and secret, which can be used for the setup. You must ensure that the GCA machine is on during the crawling. 
