@@ -36,7 +36,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 ## Prerequisites
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
 - **Smartsheet Sheet instance region**: To connect to your Smartsheet Sheet data, you will need to choose the region for your organization's Smartsheet instance. Use one of the following Smartsheet instance regions: “Default” (`https://api.smartsheet.com`) or “Europe”(`https://api.smartsheet.eu`).
-- **Smartsheet Sheet account**: To connect to Smartsheet Sheet and allow Copilot connector to update Smartsheet sheet content and metadata regularly, you need Smartsheet Sheet Access Tokens of System Admin Users to access published content and metadata.
+- **Smartsheet Sheet account**: To connect to Smartsheet Sheet and allow the Copilot to update Smartsheet sheet content and metadata regularly, you need Smartsheet Sheet Access Tokens of System Admin Users to access published content and metadata.
 
 ## Get Started
 
