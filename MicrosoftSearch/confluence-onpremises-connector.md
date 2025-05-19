@@ -30,10 +30,10 @@ This article is intended for Microsoft 365 administrators who are responsible fo
 ## Limitations
 - Doesn't index blogs, attachment files, or comments.
 - Only indexes current pages; archived pages are excluded.
-- CQL (Confluence Query Language) isn't supported for Confluence on-premises; however, we support a space and page level filter.
+- CQL (Confluence Query Language) isn't supported for Confluence on-premises; however, we support a space and page-level filter.
 
 ## Prerequisites
-1. **Install the GCA [Copilot connector agent]**: Ensure that the GCA is installed on a Windows machine within the same network as the data source, accessible via the Confluence URL. You can find more information [Microsoft Copilot connector agent](./graph-connector-agent.md)
+1. **Install the GCA [Graph Connector Agent]**: Ensure that the GCA is installed on a Windows machine within the same network as the data source, accessible via the Confluence URL. You can find more information [Graph Connector Agent](./graph-connector-agent.md)
 2. **Install plugin**: Download and install the Confluence on-prem plugin from the Atlassian marketplace on your Confluence setup. Get the plugin from [Confluence On-prem Plugin for Copilot connectors | Atlassian Marketplace](https://marketplace.atlassian.com/apps/1234846?tab=reviews&hosting=datacenter).
 3. **Authentication**: Ensure that you have authentication credentials with the right access. 
 
