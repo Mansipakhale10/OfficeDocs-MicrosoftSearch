@@ -50,30 +50,30 @@ The Monday.com connector enables:
 
 1. Log in your Monday.com account and go to the **Monday.com Developer Center**
    
-![Screenshot that shows the navigation path to the Monday.com Developer Center.](media/monday-developer-center.png)
+   ![Screenshot that shows the navigation path to the Monday.com Developer Center.](media/monday-developer-center.png)
 
 2. Click **Create app**.
 
-![Screenshot that shows the button of "Create APP".](media/monday-create-app.png)  
+   ![Screenshot that shows the button of "Create APP".](media/monday-create-app.png)  
  
 3. In the **General Settings** section, locate and note down your **Client ID** and **Client secret**.
 
-![Screenshot that shows how to find the Client id and Client secret for the Monday.com OAuth App.](media/monday-general-settings.png)  
+   ![Screenshot that shows how to find the Client id and Client secret for the Monday.com OAuth App.](media/monday-general-settings.png)  
 
 4. In the **Build** section, open the **OAuth & permission** tab, click the **Scopes** subtab and **enable all read permissions**.
 
-![Screenshot that shows how to configure essential permission for the Monday.com OAuth App.](media/monday-oauth-scopes-read-permission.png)  
+   ![Screenshot that shows how to configure essential permission for the Monday.com OAuth App.](media/monday-oauth-scopes-read-permission.png)  
  
 5. Go to the **Redirect URLs** subtab and enter the following redirect URLs and click **Save Scopes**. 
 
    - **For Microsoft 365 Enterprise**, copy and paste: `https://gcs.office.com/v1.0/admin/oauth/callback`.  
    - **For Microsoft 365 Government**, copy and paste:  `https://gcsgcc.office.com/v1.0/admin/oauth/callback`.
 
-![Screenshot that shows how to configure Redirect URL for the Monday.com OAuth App.](media/monday-redirect-URL.png)
+   ![Screenshot that shows how to configure Redirect URL for the Monday.com OAuth App.](media/monday-redirect-URL.png)
 
 6. Click **Promote to Live** to activate the app.
 
-![Screenshot that shows how to activate Monday.com OAuth App.](media/monday-promote-to-live.png)
+   ![Screenshot that shows how to activate Monday.com OAuth App.](media/monday-promote-to-live.png)
 
 ## Get started
 
