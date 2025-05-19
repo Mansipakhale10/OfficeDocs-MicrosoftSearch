@@ -152,7 +152,7 @@ Here, you can check available properties from your Tableau Cloud. Assign a schem
 | Properties     | Semantic Label            | Schema                  | Description                                                                                   |
 | -------------- | ------------------------- | ----------------------- | --------------------------------------------------------------------------------------------- |
 | CreatedAt      | `Created date time`       | Query, Retrieve         | The timestamp indicating when the sheet was originally created.                   |
-| IconUrl        | `IconUrl`                 | Retrieve                | URL of the icon associated with the different sheet types (e.g., worksheet, dashboard, story) , used for display purposes.             |
+| IconUrl        | `IconUrl`                 | Retrieve                | URL of the icon associated with the different sheet types (e.g., worksheet, dashboard, story), used for display purposes.             |
 | LastModifiedBy | `Last modified by`        | Query, Retrieve, Search | The user who last modified the sheet.
 | Name           | `Title`                   | Query, Retrieve, Search | The title or display name of the sheet.                                           |
 | ProjectName    | None                      | Query, Search           | The name of the parent project under which the sheet resides.                            |
