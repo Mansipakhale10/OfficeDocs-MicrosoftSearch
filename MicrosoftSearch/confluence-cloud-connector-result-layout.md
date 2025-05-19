@@ -1,6 +1,6 @@
 --- 
 
-title: "Result Layout for Confluence cloud Microsoft 365 Copilot connector" 
+title: "Result Layout for Confluence Cloud Microsoft 365 Copilot connector" 
 ms.author: vivg 
 author: vivg 
 manager: harshkum 
@@ -13,23 +13,23 @@ search.appverid:
 - BFB160 
 - MET150 
 - MOE150 
-description: "Result layout JSON for Confluence cloud Microsoft 365 Copilot connector." 
+description: "Result layout JSON for Confluence Cloud Microsoft 365 Copilot connector." 
 ms.date: 03/08/2023
 ---
 
-# Result layout for Confluence cloud Microsoft 365 Copilot connector
+# Result layout for Confluence Cloud Microsoft 365 Copilot connector
 
-The [Confluence cloud Microsoft 365 Copilot connector](confluence-cloud-connector.md) allows your organization to index Confluence content. After you configure the connector and index data from the Confluence site, end users can search for that content in Microsoft Search.
+The [Confluence Cloud Microsoft 365 Copilot connector](confluence-cloud-connector.md) allows your organization to index Confluence content. After you configure the connector and index data from the Confluence site, end users can search for that content in Microsoft Search.
 
 To set up the search result page, you need to:
 1. Set up [search vertical](manage-verticals.md).
 2. Set up [search result type](manage-result-types.md).
 
-In this document, we have provided a sample result layout JSON required for setting up your result layout for the Confluence cloud Copilot connector.
+In this document, we have provided a sample result layout JSON required for setting up your result layout for the Confluence Cloud Copilot connector.
 
 ## Before you get started
 
-You must have configured the Confluence cloud Copilot connector. To consume the sample result layout JSON as is, you must select the following properties for indexing with the mentioned [search schema](configure-connector.md).
+You must have configured the Confluence Cloud Copilot connector. To consume the sample result layout JSON as is, you must select the following properties for indexing with the mentioned [search schema](configure-connector.md).
 
 > [!NOTE]
 > * **Retrieve** search attribute is required for displaying a property in the search result template. A property can have other search attributes also.  
@@ -46,7 +46,7 @@ You must have configured the Confluence cloud Copilot connector. To consume the 
 
 With this sample, your search results will look like:
 
-![Example of a layout for Confluence cloud Copilot connector.](media/confluence-cloud-connector-example-layout.png)
+![Example of a layout for Confluence Cloud Copilot connector.](media/confluence-cloud-connector-example-layout.png)
 
 And here's the layout's associated JSON file:
 
