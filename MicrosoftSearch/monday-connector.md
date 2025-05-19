@@ -1,5 +1,5 @@
 --- 
-title: "Monday.com Microsoft Graph connector (preview)" 
+title: "Monday.com  Microsoft 365 Copilot connector (preview)" 
 ms.author: rantang
 author: ranran1998
 manager: jecui
@@ -12,12 +12,12 @@ search.appverid:
 - BFB160 
 - MET150 
 - MOE150 
-description: "Set up the Monday.com Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot." 
+description: "Set up the Monday.com  Microsoft 365 Copilot connector." 
 ms.date: 05/15/2025
 ---
-# Monday.com Microsoft Graph Connector (preview)
+# Monday.com  Microsoft 365 Copilot connector (preview)
 
-The Monday.com Microsoft Graph Connector enables organizations to index board content from Monday.com into Microsoft Graph, making it accessible across Microsoft 365 experiences, including Microsoft 365 Copilot and Microsoft Search.
+The Monday.com  Microsoft 365 Copilot connector enables organizations to index board content from Monday.com into Microsoft Graph, making it accessible across Microsoft 365 experiences, including Microsoft 365 Copilot and Microsoft Search.
 
 The connector integrates the Monday.com permission model to ensure that users only access authorized content. It enhances productivity by enabling better task discovery, automated workflows, and AI-assisted project tracking. By indexing Monday.com data, the connector helps teams streamline collaboration and improve decision-making across projects.
 
@@ -112,9 +112,9 @@ If you want to edit any of these values, you need to choose the **Custom setup**
 Custom setup is for admins who want to edit the default values for any settings. When you choose **Custom setup**, you see three other tabs: **Users**, **Content**, and **Sync**. 
 
 ### Users
-**Access permissions**
+#### Access permissions
 
-The Monday.com Microsoft Graph connector supports data visible to Only people with access to this data source (recommended) or Everyone. If you choose Everyone, indexed data appears in the search results for all users. 
+The Monday.com Copilot connector supports data visible to Only people with access to this data source (recommended) or Everyone. If you choose Everyone, indexed data appears in the search results for all users. 
 
 #### Identity mapping
 To ensure correct permission enforcement, map Monday.com user identities to Microsoft Entra ID. The following are the options:
