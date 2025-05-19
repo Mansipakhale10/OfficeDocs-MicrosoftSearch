@@ -66,7 +66,7 @@ Custom setup is for admins who want to edit the default values for settings. Onc
 
 **Access Permissions**
 
-Currently, questions and answers from your organization’s Stack Overflow instance are indexed. All the data indexed using the Stack Overflow connector is visible to all Microsoft 365 users in your tenant, accessible through Microsoft Search or Copilot.
+Currently, questions and answers from your organization’s Stack Overflow instance are indexed. All the data indexed using the Stack Overflow Copilot connector is visible to all Microsoft 365 users in your tenant, accessible through Microsoft Search or Copilot.
  
 ### Content
 
