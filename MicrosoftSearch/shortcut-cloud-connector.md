@@ -1,5 +1,5 @@
 --- 
-title: "Shortcut Microsoft Graph connector" 
+title: "Shortcut Microsoft 365 Copilot connector" 
 ms.author: raynezou
 author: raynezou
 manager: zezhangzhao
@@ -12,18 +12,18 @@ search.appverid:
 - BFB160 
 - MET150 
 - MOE150 
-description: "Set up the Shortcut Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot" 
+description: "Set up the Shortcut Microsoft 365 Copilot connector." 
 ms.date: 03/27/2025
 ---
 
-# Shortcut Microsoft Graph connector (preview)
+# Shortcut Microsoft 365 Copilot connector (preview)
 
-The Shortcut Microsoft Graph connector empowers your organization to index and search Shortcut stories across your enterprise. Once configured, the connector automatically crawls Shortcut’s stories, making them easily discoverable through Microsoft 365 Copilot and any Microsoft Search client.
+The Shortcut Microsoft 365 Copilot connector empowers your organization to index and search Shortcut stories across your enterprise. Once configured, the connector automatically crawls Shortcut’s stories, making them easily discoverable through Microsoft 365 Copilot and any Microsoft Search client.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors the Shortcut Microsoft Graph connector.
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors the Shortcut Copilot connector.
 
 >[!NOTE]
->The Shortcut Microsoft Graph connector is in public preview. If you wish to get access to try it, enable the [Targeted release](/microsoft-365/admin/manage/release-options-in-office-365#set-up-the-release-option-in-the-admin-center) ring in your admin account.
+>The Shortcut Copilot connector is in public preview. If you wish to get access to try it, enable the [Targeted release](/microsoft-365/admin/manage/release-options-in-office-365#set-up-the-release-option-in-the-admin-center) ring in your admin account.
 
 ## Capabilities
 - Index stories from your Shortcut workspace
@@ -78,7 +78,7 @@ In custom setup you can edit any of the default values for users, content, and s
 ### Users
 
 #### Access permissions
-The Shortcut Microsoft Graph connector allows your organization to index stories from Shortcut. After you configure the connector, end users can search for these stories from Shortcut in Microsoft 365 Copilot and from any Microsoft Search client.
+The Shortcut Copilot connector allows your organization to index stories from Shortcut. After you configure the connector, end users can search for these stories from Shortcut in Microsoft 365 Copilot and from any Microsoft Search client.
 
 ### Content
 
@@ -113,7 +113,7 @@ To view available properties from your Shortcut, assign a schema to the property
 Use the preview results button to verify the sample values of the selected properties and query filter.
 
 ### Sync
-The refresh interval determines how often your data is synced between the data source and the Shortcut Microsoft Graph connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [Refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Shortcut Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [Refresh settings](configure-connector.md#guidelines-for-sync-settings).
 You can change the default refresh interval here if needed.
 
 If you have issues or want to provide feedback, contact [Microsoft Graph support](https://developer.microsoft.com/en-us/graph/support).
