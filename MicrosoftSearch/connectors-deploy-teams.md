@@ -24,7 +24,7 @@ description: "Learn how to deploy partner-built Microsoft 365 Copilot connectors
 This article describes how to deploy partner-built Microsoft 365 Copilot connectors with a single click in the Teams admin center. The connectors index content from these partners into Microsoft Graph so that content can participate in experiences such as Copilot for Microsoft 365, Microsoft Search, and more.
 
 ## Partners with Microsoft 365 Copilot connectors Teams apps
-Currently, the following partners have Microsoft Graph connectors that can be deployed from the Teams admin center:
+Currently, the following partners have Copilot connectors that can be deployed from the Teams admin center:
 - [Tigerhall](https://admin.teams.microsoft.com/policies/manage-apps/682912ef-28b1-49d1-889f-ea6a1ef6d198/graph-connector)
 
 ## Deploying a Microsoft 365 Copilot connector for Teams apps
