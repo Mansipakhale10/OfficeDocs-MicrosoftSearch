@@ -60,7 +60,7 @@ Navigate to **Account settings** > **API Settings** of a Coda Org Admin account,
 |:--- |:---|
 |Type of restriction | Doc or table.|
 |Type of access | Read and write.|
-|Doc or table to grant access to | `not required, leave it to empty`.|
+|Doc or table to grant access to | `not required, leave it empty`.|
 
 ### 4. Roll out to limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. For more information about limited rollout, see [Staged rollout for Copilot connectors](staged-rollout-for-graph-connectors.md).
