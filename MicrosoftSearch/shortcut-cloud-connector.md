@@ -51,7 +51,7 @@ The Shortcut instance URL is always `https://api.app.shortcut.com`.
 Choose "API Key" and enter the API key that you generated within Shortcut app.
 
 ### 4. Roll out to limited audience
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. For more information, see [Staged rollout for Microsoft Graph connectors](staged-rollout-for-graph-connectors.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. For more information, see [Staged rollout for Copilot connectors](staged-rollout-for-graph-connectors.md).
 
 To create the connection for Shortcut, click "Create" to publish your connection and index stories from your Shortcut account.
 
@@ -73,7 +73,7 @@ For other settings, like **Access permissions**, **Schema**, and **Crawl frequen
 
 ## Custom setup
 
-In custom setup you can edit any of the default values for users, content, and sync.
+In custom setup, you can edit any of the default values for users, content, and sync.
 
 ### Users
 
