@@ -15,32 +15,32 @@ The UI displays a limited number of connection errors. For a comprehensive list,
 
 1. Open Windows PowerShell with administrator rights.
 2. Install the script from the PowerShell gallery using the following command
-```powershell
-    Install-Script -Name DownloadErrorScript
-```
-With this script, you can download the item errors from a Microsoft 365 Copilot connector connection. It generates an MSAL token using the tenant credentials associated with the connection. The installation of the script automatically includes the MSAL.PS module. If this doesn't occur, install the module manually with
+    ```powershell
+        Install-Script -Name DownloadErrorScript
+    ```
+    With this script, you can download the item errors from a Microsoft 365 Copilot connector connection. It generates an MSAL token using the tenant credentials associated with the connection. The installation of the script automatically includes the MSAL.PS module. If this doesn't occur, install the module manually with
 
-```powershell
-    Install-Module -Name MSAL.PS
-```
+    ```powershell
+        Install-Module -Name MSAL.PS
+    ```
 For more information, see [Download error script](https://www.powershellgallery.com/packages/DownloadErrorScript/2.1).
 
 3. After installation, execute the script
 
-```powershell
-    DownloadErrorScript.ps1
-```
+    ```powershell
+        DownloadErrorScript.ps1
+    ```
 4. Provide the connection ID of the connection for which you want to download the error report.
 5. Specify the name for the output file without extension (without extension, the default is .csv).
 6. Define the batch size for downloading errors. Larger batches are suitable for thousands of errors to minimize data retrieval time, but may increase the likelihood of failures. The maximum batch size is 5000 errors.
    Once logged in using your tenant account, the download process begins.
 7. Depending on batch size and error count, the download duration varies. The generated file is saved in the script's execution path with the specified name.
 
-:::image type="content" alt-text="Screenshot that shows a PowerShell script run to download the error report." source="media/errorreport.png" lightbox="media/errorreport.png":::
+    :::image type="content" alt-text="Screenshot that shows a PowerShell script run to download the error report." source="media/errorreport.png" lightbox="media/errorreport.png":::
 
 ## Monitor errors
 
-To monitor errors, go to  **Data sources** > **Active Connector**, any existing crawl errors are displayed under **Current Crawl** > **Errors**. This section provides
+To monitor errors, go to **Data sources** > **Active Connector**, any existing crawl errors are displayed under **Current Crawl** > **Errors**. This section provides
 
 - Error codes - Lists the various error codes encountered.
 - Count -  Displays the number of occurrences for each error code.
