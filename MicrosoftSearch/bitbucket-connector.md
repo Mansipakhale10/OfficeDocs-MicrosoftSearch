@@ -1,5 +1,5 @@
 ---
-title: "Bitbucket Microsoft Graph connectors (preview)"
+title: "Bitbucket Microsoft 365 Copilot connector (preview)"
 ms.author: dannyyao
 author: dannyyaou
 manager: jecui
@@ -12,25 +12,23 @@ search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Set up the Bitbucket Microsoft Graph connectors for Microsoft Search and Microsoft 365 Copilot."
+description: "Set up the Bitbucket Microsoft 365 Copilot connector."
 ms.date: 02/14/2025
 ---
 
-# Bitbucket Microsoft Graph connectors (preview)
+# Bitbucket Microsoft 365 Copilot connector (preview)
 
-The Bitbucket Microsoft Graph connectors (Bitbucket Cloud Pull Request and Bitbucket Cloud Knowledge) allow your organization to index pull requests and documentation (.txt and .md files) stored in BitBucket. After you configure the connector and index Bitbucket content, users can search and retrieve information via Microsoft Search and Microsoft 365 Copilot.
+The Bitbucket Microsoft 365 Copilot connector allows your organization to index pull requests and documentation (.txt and .md files) stored in BitBucket. After you configure the connector and index Bitbucket content, users can search and retrieve information via Microsoft Search and Microsoft 365 Copilot.
 
-This article is intended for Microsoft 365 administrators or anyone who configures, runs, or monitors Bitbucket Microsoft Graph connectors.
+This article is intended for Microsoft 365 administrators or anyone who configures, runs, or monitors the Bitbucket Copilot connector.
 
 ## Capabilities
-
 - Index Bitbucket repositories, pull requests, and documentation.
 - Enable Microsoft Search and Microsoft 365 Copilot to retrieve Bitbucket data efficiently.
 - Maintain Bitbucket ACLs and user permissions.
 - Allow administrators to customize crawl frequency and indexing preferences.
 
 ## Limitations
-
 - The connector does not support indexing Bitbucket CI/CD pipelines beyond status indexing.
 - Only repositories, pull requests, .md, and .txt files are indexed.
 - On-premises/self-hosted Bitbucket instances aren't currently supported.
@@ -38,7 +36,6 @@ This article is intended for Microsoft 365 administrators or anyone who configur
 
 ## Prerequisites
 
-Before you set up the connector, make sure that:
 
 1. Your Bitbucket instance is accessible via API.
 2. You generate a **Client ID** and **Client secret** from Bitbucket for authentication.
@@ -46,17 +43,17 @@ Before you set up the connector, make sure that:
 4. The client ID and client secret have the **repository:read**, **account:read,** and **pullrequest** permissions.
 5. Users who access indexed Bitbucket data have corresponding **Microsoft Entra ID** identities for permission mapping.
 
-We recommend using separate user accounts for OAuth authentication with each connection as Bitbucket's rate limit is calculated individually per user.
+We recommend using separate user accounts for OAuth authentication with each connection, as Bitbucket's rate limit is calculated individually per user.
 
 ## Get started
 
-### 1. Choose display name
+### Choose display name
 Choose a display name that helps users recognize merge requests or documentation in a Copilot response.
 
-### 2. Bitbucket instance URL
+### Bitbucket instance URL
 Enter the URL of your Bitbucket instance (for example, `https://bitbucket.org/testinstance`).
 
-### 3. Authenticate
+### Provide authentication type
 
 - Enter your **Client ID** and **Client secret** from Bitbucket.
 - Choose **Authorize** to sign in and grant access.
@@ -66,7 +63,7 @@ Enter the URL of your Bitbucket instance (for example, `https://bitbucket.org/te
 Before you deploy the connector, test the connection with a limited user base in Copilot and Microsoft Search.
 
 ## Custom setup
-Custom setup is for admins who want to edit the default values for any settings. When you choose **Custom setup**, you see three other tabs: **Users**, **Content**, and **Sync**. 
+In custom setup, you can edit any of the default values for users, content, and sync.
 
 ### Users
 #### Identity mapping

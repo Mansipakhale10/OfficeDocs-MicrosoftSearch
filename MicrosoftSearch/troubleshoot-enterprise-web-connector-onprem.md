@@ -1,6 +1,6 @@
 ---
 ms.date: 10/08/2019
-title: "Troubleshooting the Enterprise Websites on-premises Microsoft Graph connector"
+title: "Troubleshooting the Enterprise Websites on-premises Microsoft 365 Copilot connector"
 ms.author: vivg
 author: vivg
 manager: harshkum
@@ -13,12 +13,12 @@ search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Troubleshooting the Enterprise websites on-premises Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot"
+description: "Troubleshooting the Enterprise websites on-premises Microsoft 365 Copilot connector."
 ---
 
-# Troubleshooting the Enterprise Websites on-premises Microsoft Graph connector
+# Troubleshooting the Enterprise Websites on-premises Microsoft 365 Copilot connector
 
-The following common errors are observed while configuring the connector, or during crawling and their possible reasons.
+The following common errors are observed while configuring the connector, or during crawling, and their possible reasons.
 
 Detailed Error code | Error message
 | --- | --- |

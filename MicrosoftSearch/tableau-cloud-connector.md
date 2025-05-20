@@ -1,6 +1,6 @@
 --- 
 
-title: "Tableau Cloud Microsoft Graph connector" 
+title: "Tableau Cloud Microsoft 365 Copilot connector (preview)" 
 ms.author: rantang
 author: ranran1998
 manager: jecui
@@ -13,15 +13,15 @@ search.appverid:
 - BFB160 
 - MET150 
 - MOE150 
-description: "Set up the Tableau Cloud Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot" 
+description: "Set up the Tableau Cloud Microsoft 365 Copilot connector" 
 ms.date: 3/14/2025
 ---
 
-# Tableau Cloud Microsoft Graph connector (preview)
+# Tableau Cloud Microsoft 365 Copilot connector 
 
-With the Tableau Cloud Microsoft Graph connector, your organization can index Tableau sheets of your Tableau Cloud. After you configure the connector and index content from Tableau Cloud, end users can search for those sheets in Microsoft Copilot and from any Microsoft Search client.
+With the Tableau Cloud Microsoft 365 Copilot connector, your organization can index Tableau sheets of your Tableau Cloud. After you configure the connector and index content from Tableau Cloud, end users can search for those sheets in Microsoft Copilot and from any Microsoft Search client.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Tableau Cloud Microsoft Graph connector. 
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Tableau Cloud Copilot connector. 
 
 ## Capabilities
 - Index sheets of your Tableau Cloud and supports ingestion filters based on top-level projects.
@@ -35,7 +35,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
 ## Prerequisites
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
-- **Configure Connected Apps with Direct Trust in Tableau**: To connect to Tableau Cloud and enable the Tableau Cloud Microsoft Graph connector to sync sheets regularly, you need to configure and enable Connected Apps with Direct Trust on your Tableau site, using credentials that can access the sheets. Tableau Connected Apps provide a seamless and secure authentication experience by establishing an explicit trust relationship between your Tableau Cloud site and external applications. Find more details [here](https://help.tableau.com/current/online/en-us/connected_apps_direct.htm?_gl=1*9bs6y1*_ga*MTk1OTAyNzg0MS4xNzIxMTIwMzA4*_ga_8YLN0SNXVS*MTczNTE5MzU5OS4zNC4xLjE3MzUyMDA1ODEuMC4wLjA.).
+- **Configure Connected Apps with Direct Trust in Tableau**: To connect to Tableau Cloud and enable the Tableau Cloud Copilot connector to sync sheets regularly, you need to configure and enable Connected Apps with Direct Trust on your Tableau site, using credentials that can access the sheets. Tableau Connected Apps provide a seamless and secure authentication experience by establishing an explicit trust relationship between your Tableau Cloud site and external applications. Find more details [here](https://help.tableau.com/current/online/en-us/connected_apps_direct.htm?_gl=1*9bs6y1*_ga*MTk1OTAyNzg0MS4xNzIxMTIwMzA4*_ga_8YLN0SNXVS*MTczNTE5MzU5OS4zNC4xLjE3MzUyMDA1ODEuMC4wLjA.).
 
 ## Get started
 
@@ -73,12 +73,12 @@ When finished, select the Create button.
 ![Screenshot that shows how to generate a secret for the Tableau App.](media/tableau-generate-a-secret.png)  
 2. Make note of the **Secret ID** ，**Secret Value** and **Client ID** to use in Step 3 below.
 
-**Step3: Enter the required fields of Tableau Graph Connector Authentication**.
+**Step 3: Enter the required fields of Tableau Copilot connector authentication**.
 
 Enter the User, Connected App Client ID, Connected App Secret ID and Connected App Secret Key to connect to your Tableau Cloud Site. 
 ![Screenshot that shows the authentication process for Tableau Graph Connector.](media/tableau-gc-auth.png) 
 
-Refer to the following table to learn the descriptions of the required fields of Tableau Graph Connector Authentication
+Refer to the following table to learn the descriptions of the required fields of Tableau Copilot connector authentication
 Field | Description 
 --- | --- 
 User| The admin user email. Recommend to fill the email of an admin user who configured the Tableau Connected Apps with Direct Trust.
@@ -112,10 +112,10 @@ Custom setup is for those admins who want to edit the default values for setting
 
 **Access permissions**
 
-The Tableau Cloud Microsoft Graph connector supports data visible to **Only people with access to this data source (recommended)** or Everyone. If you choose Everyone, indexed data appears in the search results for all users. 
+The Tableau Cloud Copilot connector supports data visible to **Only people with access to this data source (recommended)** or Everyone. If you choose Everyone, indexed data appears in the search results for all users. 
 
 >[!NOTE]
->Tableau's ACL ([Effective permissions - Tableau](https://help.tableau.com/current/online/en-us/permission_effective.htm#EvaluatePermRules)) system uses a layered evaluation mechanism to calculate users' effective permissions. When you select "**Only people with access to this data source**" while configuring the Tableau Cloud Graph Connector, the connector applies a logic similar to Tableau’s native ACL system. This mechanism ensures that the content indexed by the Graph Connector is **not overshared** with users who don't have appropriate permissions within Tableau Cloud Sites. This image shows the specific rules are applied to determine which permissions govern the content and which users are authorized to access it.![Diagram that shows the workflow of Tableau Graph Connector ACL.](media/tableau-connector-acl-workflow.png)  
+>Tableau's ACL ([Effective permissions - Tableau](https://help.tableau.com/current/online/en-us/permission_effective.htm#EvaluatePermRules)) system uses a layered evaluation mechanism to calculate users' effective permissions. When you select "**Only people with access to this data source**" while configuring the Tableau Cloud Copilot connector, the connector applies a logic similar to Tableau’s native ACL system. This mechanism ensures that the content indexed by the Copilot connector is **not overshared** with users who don't have appropriate permissions within Tableau Cloud Sites. This image shows the specific rules are applied to determine which permissions govern the content and which users are authorized to access it.![Diagram that shows the workflow of Tableau Copilot connector ACL.](media/tableau-connector-acl-workflow.png)  
 
 > - For admin users, they're always ALLOWED.
 > - If the user is a “denied user”, part of a “denied group” or in a “denied group set”, the user is DENIED.

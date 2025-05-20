@@ -12,15 +12,18 @@ search.appverid:
 - BFB160 
 - MET150 
 - MOE150 
-description: "Set up the GitHub Cloud Knowledge Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot" 
+description: "Set up the GitHub Cloud Knowledge Microsoft 365 Copilot connector." 
 ms.date: 05/20/2025
 ---
 
-# GitHub Cloud Knowledge Microsoft Graph connector (Preview)
+# GitHub Cloud Knowledge Microsoft 365 Copilot  connector (Preview)
 
-The GitHub Cloud Knowledge Graph Connector allows you to index content from GitHub repositories, making it easily searchable within the Microsoft 365 ecosystem. This connector is ideal for organizations that use GitHub Cloud for documentation, project files, or content management. By integrating GitHub data with Microsoft Search, users can access relevant content directly within Microsoft 365 applications, streamlining workflows and reducing the need to switch between platforms. 
+The GitHub Cloud Knowledge Microsoft 365 Copilot connector allows you to index content from GitHub repositories, making it easily searchable within the Microsoft 365 ecosystem. This connector is ideal for organizations that use GitHub Cloud for documentation, project files, or content management. By integrating GitHub data with Microsoft Search, users can access relevant content directly within Microsoft 365 applications, streamlining workflows and reducing the need to switch between platforms. 
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a GitHub Cloud Knowledge Graph connector.
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a GitHub Cloud Knowledge Copilot connector.
+
+>[!NOTE]
+>The GitHub Cloud Knowledge Copilot connector is in preview. If you wish to get early access to try it, sign up using [this form](https://forms.office.com/r/JniPmK5bzm).
 
 ## Capabilities
 - Index GitHub Cloud repositories and markdown files to make project documentation accessible in Microsoft 365.
@@ -34,6 +37,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 ## Limitations
 - Only repository metadata and markdown files are indexed. Other GitHub entities such as issues, pull requests, and comments aren't indexed.
 - Only markdown files up to 1 MB in size are supported. Larger files aren't indexed.
+- The GitHub Cloud Knowledge Copilot connector does not support access to internal repositories in GitHub.
 
 ## Prerequisites
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
@@ -46,41 +50,50 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 Follow the steps below to create a GitHub App for use with your Graph Connector:
 
 1. In GitHub, click your profile photo (top right), select **Your organizations**, and choose the organization where the Graph Connector should pull data from.
-[![Screenshot that shows how to access "Your organizations".](media/github-connector/organizations-nav.png)](media/github-connector/organizations-nav.png#lightbox)
 
-2.  On the organization overview page, click **Settings**.
-[![Screenshot that shows how to access "Settings" within the organization page.](media/github-connector/organization-overview.png)](media/github-connector/organization-overview.png#lightbox)
+   :::image type="content" alt-text="Screenshot that shows how to access 'Your organizations'." source="media/github-connector/organizations-nav.png" lightbox="media/github-connector/organizations-nav.png":::
+
+2. On the organization overview page, click **Settings**.
+
+   :::image type="content" alt-text="Screenshot that shows how to access 'Settings' within the organization page." source="media/github-connector/organization-overview.png" lightbox="media/github-connector/organization-overview.png":::
 
 3. In the left sidebar, scroll down to **Developer settings** and click **GitHub Apps**.
-[![Screenshot that shows how to access GitHub Apps.](media/github-connector/github-apps.png)](media/github-connector/github-apps.png#lightbox)
+
+   :::image type="content" alt-text="Screenshot that shows how to access GitHub Apps." source="media/github-connector/github-apps.png" lightbox="media/github-connector/github-apps.png":::
 
 4. Click **New GitHub App**.
-[![Screenshot that shows entry point to creation of new app.](media/github-connector/new-github-app.png)](media/github-connector/new-github-app.png#lightbox)
 
-5.  Configure the app:
-  - **GitHub App name**: Enter a name of your choice.
-  - **Homepage URL**: Copy the URL from your browser’s address bar (refer to the image if needed).
-  - **Callback URL**:  
-    - For Microsoft 365 Enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`  
-    - For Microsoft 365 Government: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
-[![Screenshot that shows the initial part of the app configuration including name and URLs.](media/github-connector/github-app1.png)](media/github-connector/github-app1.png#lightbox)
+   :::image type="content" alt-text="Screenshot that shows entry point to creation of new app." source="media/github-connector/new-github-app.png" lightbox="media/github-connector/new-github-app.png":::
+
+5. Configure the app:
+   - **GitHub App name**: Enter a name of your choice.
+   - **Homepage URL**: Copy the URL from your browser’s address bar (refer to the image if needed).
+   - **Callback URL**:  
+     - For Microsoft 365 Enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`  
+     - For Microsoft 365 Government: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
+
+       :::image type="content" alt-text="Screenshot that shows the initial part of the app configuration including name and URLs." source="media/github-connector/github-app1.png" lightbox="media/github-connector/github-app1.png":::
 
 6. Check **Request user authorization (OAuth) during installation** and disable the **Webhook** option.
-[![Screenshot that of some check boxes required for the app configuration.](media/github-connector/github-app2.png)](media/github-connector/github-app2.png#lightbox)
+
+   :::image type="content" alt-text="Screenshot that of some check boxes required for the app configuration." source="media/github-connector/github-app2.png" lightbox="media/github-connector/github-app2.png":::
 
 7. Set the following permissions:
-  - **Repository permissions**: Contents (Read-only), Metadata (Read-only)
-  - **Organization permissions**: Members (Read-only)
-  - **Account permissions**: Email addresses (Read-only)
+   - **Repository permissions**: Contents (Read-only), Metadata (Read-only)
+   - **Organization permissions**: Members (Read-only)
+   - **Account permissions**: Email addresses (Read-only)
 
 8. Under **Where can this GitHub App be installed**, select **Any account**, then click **Create GitHub App**.
-[![Screenshot that shows the final steps of the GitHub app set up.](media/github-connector/github-app3.png)](media/github-connector/github-app3.png#lightbox)
+
+   :::image type="content" alt-text="Screenshot that shows the final steps of the GitHub app set up." source="media/github-connector/github-app3.png" lightbox="media/github-connector/github-app3.png":::
 
 9. On the GitHub App’s **General** page, generate and copy the **client secret** by clicking **Generate a new client secret**. Then click **Install App**.
-[![Screenshot that shows the credentials of the app including Client Id and Client secret.](media/github-connector/github-app-credentials.png)](media/github-connector/github-app-credentials.png#lightbox)
+
+   :::image type="content" alt-text="Screenshot that shows the credentials of the app including Client Id and Client secret." source="media/github-connector/github-app-credentials.png" lightbox="media/github-connector/github-app-credentials.png":::
 
 10. Select the organization where you want the app to be installed. **After installation**, you're ready to configure the connector.
-[![Screenshot that shows the app installation dialog.](media/github-connector/github-install.png)](media/github-connector/github-install.png#lightbox)
+
+    :::image type="content" alt-text="Screenshot that shows the app installation dialog." source="media/github-connector/github-install.png" lightbox="media/github-connector/github-install.png":::
 
 ## Get Started
 
@@ -107,6 +120,7 @@ The GitHub Cloud Knowledge connector supports search permissions visible to **On
 
 **Map Identities**
 
+In custom setup you can edit any of the default values for users, content, and sync.
 To ensure correct permission enforcement, map GitHub user identities to Microsoft Entra ID. The following are the options:
 
 - **Email**: Maps GitHub email to Microsoft Entra ID user properties.
@@ -115,11 +129,26 @@ To ensure correct permission enforcement, map GitHub user identities to Microsof
 
 If direct mapping fails, use regular expressions (regex) to transform the data. For example: [a-zA-Z0-9]+ For personal accounts, mapping accuracy may be impacted due to variations in email domains and individual email visibility settings.
 
-For more information about identity transformation, see [Map your non-Azure AD Identities | Microsoft Learn](map-non-aad.md).
+The GitHub Cloud Knowledge Copilot connector supports search permissions visible to **Everyone** with access to this data source. For Everyone, indexed data appears in the search results for all users.
+For identity transformation, refer to the [Map your non-Azure AD Identities](map-non-aad.md).
+
+For more information about identity transformation, see [Map your non-Azure AD Identities](map-non-aad.md).
  
 ### Content
 
 Choose the repositories and file types (initially markdown files and other non-code documentation) you wish to make searchable.
+
+**Manage Properties**
+
+:::image type="content" alt-text="Screenshot that shows manage properties screen for GitHub Cloud Knowledge Copilot connector." source="media/github-connector/GitHub-data-manage-properties.png" lightbox="media/github-connector/GitHub-data-manage-properties.png":::
+
+Here, you can add or remove available properties from your GitHub data source, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label and add an alias to the property.
+
+### Sync
+
+:::image type="content" alt-text="Screenshot that shows Sync tab where you can configure crawl frequency." source="media/github-connector/GitHub-sync-tab.png" lightbox="media/github-connector/GitHub-sync-tab.png":::
+
+The refresh interval determines how often your data is synced between the data source and the GitHub Cloud Knowledge Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
 
 Under **Manage Properties** you can add or remove available properties from your GitHub data source, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label and add an alias to the property.
 
