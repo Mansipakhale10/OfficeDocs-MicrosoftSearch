@@ -24,7 +24,7 @@ With the Adobe Experience Manager Sites Microsoft 365 Copilot connector, your or
 This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Adobe Experience Manager Sites Copilot connector. 
 
 >[!NOTE]
->The Adobe Experience Manager Sites Copilot connector is in public preview. If you wish to get access to try it, you need to enable [Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide#set-up-the-release-option-in-the-admin-center) ring for your Admin account.
+>The Adobe Experience Manager Sites Copilot connector is in public preview. If you wish to get access to try it, you need to enable [Targeted Release](microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide) ring for your Admin account.
 
 ## Capabilities
 - Index published webpages of your AEM Sites.
