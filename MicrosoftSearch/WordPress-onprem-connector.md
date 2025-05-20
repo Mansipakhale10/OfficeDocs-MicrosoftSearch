@@ -25,7 +25,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
 
 >[!NOTE]
->The WordPress.org Copilot connector is in public preview. If you wish to get access to try it, you need to enable [Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide#set-up-the-release-option-in-the-admin-center) ring for your Admin account.
+>The WordPress.org Copilot connector is in public preview. If you wish to get access to try it, you need to enable [Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365#set-up-the-release-option-in-the-admin-center) ring for your Admin account.
 
 ## Capabilities
 - Index published posts and pages of your WordPress.org-built website.    
