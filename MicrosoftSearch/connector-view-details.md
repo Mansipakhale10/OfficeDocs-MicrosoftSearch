@@ -33,6 +33,7 @@ An item is indexed with the following information - content, properties (default
 2. We consider an item as partially indexed when some part of the data is indexed however, some part is missing. The item is still searchable with the remaining properties. E.g. For an item we could index all the content but could not index some properties. 
 
 How to read the data in connection statistics:
+
 | Sr. No |Section | Meaning |
 |:---|:--- |:---:|
 |1. |**Total number of discovered items** |Total items discovered in the data source during crawling. This is the number of items that the admin credentials have access to against the data source.|
