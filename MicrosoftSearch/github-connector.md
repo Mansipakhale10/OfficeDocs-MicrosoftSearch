@@ -12,15 +12,18 @@ search.appverid:
 - BFB160 
 - MET150 
 - MOE150 
-description: "Set up the GitHub Cloud Knowledge Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot" 
+description: "Set up the GitHub Cloud Knowledge Microsoft 365 Copilot connector." 
 ms.date: 05/20/2025
 ---
 
-# GitHub Cloud Knowledge Microsoft Graph connector (Preview)
+# GitHub Cloud Knowledge Microsoft 365 Copilot  connector (Preview)
 
-The GitHub Cloud Knowledge Graph Connector allows you to index content from GitHub repositories, making it easily searchable within the Microsoft 365 ecosystem. This connector is ideal for organizations that use GitHub Cloud for documentation, project files, or content management. By integrating GitHub data with Microsoft Search, users can access relevant content directly within Microsoft 365 applications, streamlining workflows and reducing the need to switch between platforms. 
+The GitHub Cloud Knowledge Microsoft 365 Copilot connector allows you to index content from GitHub repositories, making it easily searchable within the Microsoft 365 ecosystem. This connector is ideal for organizations that use GitHub Cloud for documentation, project files, or content management. By integrating GitHub data with Microsoft Search, users can access relevant content directly within Microsoft 365 applications, streamlining workflows and reducing the need to switch between platforms. 
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a GitHub Cloud Knowledge Graph connector.
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a GitHub Cloud Knowledge Copilot connector.
+
+>[!NOTE]
+>The GitHub Cloud Knowledge Copilot connector is in preview. If you wish to get early access to try it, sign up using [this form](https://forms.office.com/r/JniPmK5bzm).
 
 ## Capabilities
 - Index GitHub Cloud repositories and markdown files to make project documentation accessible in Microsoft 365.
@@ -34,6 +37,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 ## Limitations
 - Only repository metadata and markdown files are indexed. Other GitHub entities such as issues, pull requests, and comments aren't indexed.
 - Only markdown files up to 1 MB in size are supported. Larger files aren't indexed.
+- The GitHub Cloud Knowledge Copilot connector does not support access to internal repositories in GitHub.
 
 ## Prerequisites
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
@@ -107,6 +111,7 @@ The GitHub Cloud Knowledge connector supports search permissions visible to **On
 
 **Map Identities**
 
+In custom setup you can edit any of the default values for users, content, and sync.
 To ensure correct permission enforcement, map GitHub user identities to Microsoft Entra ID. The following are the options:
 
 - **Email**: Maps GitHub email to Microsoft Entra ID user properties.
@@ -115,11 +120,26 @@ To ensure correct permission enforcement, map GitHub user identities to Microsof
 
 If direct mapping fails, use regular expressions (regex) to transform the data. For example: [a-zA-Z0-9]+ For personal accounts, mapping accuracy may be impacted due to variations in email domains and individual email visibility settings.
 
+The GitHub Cloud Knowledge Copilot connector supports search permissions visible to **Everyone** with access to this data source. For Everyone, indexed data appears in the search results for all users.
+For identity transformation, refer to the [Map your non-Azure AD Identities | Microsoft Learn](map-non-aad.md).
+
 For more information about identity transformation, see [Map your non-Azure AD Identities | Microsoft Learn](map-non-aad.md).
  
 ### Content
 
 Choose the repositories and file types (initially markdown files and other non-code documentation) you wish to make searchable.
+
+**Manage Properties**
+
+[![Screenshot that shows manage properties screen for GitHub Cloud Knowledge Copilot connector.](media/github-connector/GitHub-data-manage-properties.png)](media/github-connector/GitHub-data-manage-properties.png#lightbox)
+
+Here, you can add or remove available properties from your GitHub data source, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label and add an alias to the property.
+
+### Sync
+
+[![Screenshot that shows Sync tab where you can configure crawl frequency.](media/github-connector/GitHub-sync-tab.png)](media/github-connector/GitHub-sync-tab.png#lightbox)
+
+The refresh interval determines how often your data is synced between the data source and the GitHub Cloud Knowledge Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
 
 Under **Manage Properties** you can add or remove available properties from your GitHub data source, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label and add an alias to the property.
 
