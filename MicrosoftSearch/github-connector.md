@@ -50,41 +50,50 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 Follow the steps below to create a GitHub App for use with your Graph Connector:
 
 1. In GitHub, click your profile photo (top right), select **Your organizations**, and choose the organization where the Graph Connector should pull data from.
-[![Screenshot that shows how to access "Your organizations".](media/github-connector/organizations-nav.png)](media/github-connector/organizations-nav.png#lightbox)
 
-2.  On the organization overview page, click **Settings**.
-[![Screenshot that shows how to access "Settings" within the organization page.](media/github-connector/organization-overview.png)](media/github-connector/organization-overview.png#lightbox)
+   [![Screenshot that shows how to access "Your organizations".](media/github-connector/organizations-nav.png)](media/github-connector/organizations-nav.png#lightbox)
+
+2. On the organization overview page, click **Settings**.
+
+   [![Screenshot that shows how to access "Settings" within the organization page.](media/github-connector/organization-overview.png)](media/github-connector/organization-overview.png#lightbox)
 
 3. In the left sidebar, scroll down to **Developer settings** and click **GitHub Apps**.
-[![Screenshot that shows how to access GitHub Apps.](media/github-connector/github-apps.png)](media/github-connector/github-apps.png#lightbox)
+
+   [![Screenshot that shows how to access GitHub Apps.](media/github-connector/github-apps.png)](media/github-connector/github-apps.png#lightbox)
 
 4. Click **New GitHub App**.
-[![Screenshot that shows entry point to creation of new app.](media/github-connector/new-github-app.png)](media/github-connector/new-github-app.png#lightbox)
 
-5.  Configure the app:
-  - **GitHub App name**: Enter a name of your choice.
-  - **Homepage URL**: Copy the URL from your browser’s address bar (refer to the image if needed).
-  - **Callback URL**:  
-    - For Microsoft 365 Enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`  
-    - For Microsoft 365 Government: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
-[![Screenshot that shows the initial part of the app configuration including name and URLs.](media/github-connector/github-app1.png)](media/github-connector/github-app1.png#lightbox)
+   [![Screenshot that shows entry point to creation of new app.](media/github-connector/new-github-app.png)](media/github-connector/new-github-app.png#lightbox)
+
+5. Configure the app:
+   - **GitHub App name**: Enter a name of your choice.
+   - **Homepage URL**: Copy the URL from your browser’s address bar (refer to the image if needed).
+   - **Callback URL**:  
+     - For Microsoft 365 Enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`  
+     - For Microsoft 365 Government: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
+
+      [![Screenshot that shows the initial part of the app configuration including name and URLs.](media/github-connector/github-app1.png)](media/github-connector/github-app1.png#lightbox)
 
 6. Check **Request user authorization (OAuth) during installation** and disable the **Webhook** option.
-[![Screenshot that of some check boxes required for the app configuration.](media/github-connector/github-app2.png)](media/github-connector/github-app2.png#lightbox)
+
+   [![Screenshot that of some check boxes required for the app configuration.](media/github-connector/github-app2.png)](media/github-connector/github-app2.png#lightbox)
 
 7. Set the following permissions:
-  - **Repository permissions**: Contents (Read-only), Metadata (Read-only)
-  - **Organization permissions**: Members (Read-only)
-  - **Account permissions**: Email addresses (Read-only)
+   - **Repository permissions**: Contents (Read-only), Metadata (Read-only)
+   - **Organization permissions**: Members (Read-only)
+   - **Account permissions**: Email addresses (Read-only)
 
 8. Under **Where can this GitHub App be installed**, select **Any account**, then click **Create GitHub App**.
-[![Screenshot that shows the final steps of the GitHub app set up.](media/github-connector/github-app3.png)](media/github-connector/github-app3.png#lightbox)
+
+   [![Screenshot that shows the final steps of the GitHub app set up.](media/github-connector/github-app3.png)](media/github-connector/github-app3.png#lightbox)
 
 9. On the GitHub App’s **General** page, generate and copy the **client secret** by clicking **Generate a new client secret**. Then click **Install App**.
-[![Screenshot that shows the credentials of the app including Client Id and Client secret.](media/github-connector/github-app-credentials.png)](media/github-connector/github-app-credentials.png#lightbox)
+
+   [![Screenshot that shows the credentials of the app including Client Id and Client secret.](media/github-connector/github-app-credentials.png)](media/github-connector/github-app-credentials.png#lightbox)
 
 10. Select the organization where you want the app to be installed. **After installation**, you're ready to configure the connector.
-[![Screenshot that shows the app installation dialog.](media/github-connector/github-install.png)](media/github-connector/github-install.png#lightbox)
+
+    [![Screenshot that shows the app installation dialog.](media/github-connector/github-install.png)](media/github-connector/github-install.png#lightbox)
 
 ## Get Started
 
@@ -121,9 +130,9 @@ To ensure correct permission enforcement, map GitHub user identities to Microsof
 If direct mapping fails, use regular expressions (regex) to transform the data. For example: [a-zA-Z0-9]+ For personal accounts, mapping accuracy may be impacted due to variations in email domains and individual email visibility settings.
 
 The GitHub Cloud Knowledge Copilot connector supports search permissions visible to **Everyone** with access to this data source. For Everyone, indexed data appears in the search results for all users.
-For identity transformation, refer to the [Map your non-Azure AD Identities | Microsoft Learn](map-non-aad.md).
+For identity transformation, refer to the [Map your non-Azure AD Identities](map-non-aad.md).
 
-For more information about identity transformation, see [Map your non-Azure AD Identities | Microsoft Learn](map-non-aad.md).
+For more information about identity transformation, see [Map your non-Azure AD Identities](map-non-aad.md).
  
 ### Content
 
