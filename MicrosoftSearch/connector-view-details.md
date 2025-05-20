@@ -35,7 +35,7 @@ An item is indexed with the following information - content, properties (default
 How to read the data in connection statistics:
 
 | Sr. No |Section | Meaning |
-|:---|:--- |:---:|
+|:---|:--- |:---|
 |1. |**Total number of discovered items** |Total items discovered in the data source during crawling. This is the number of items that the admin credentials have access to against the data source.|
 |2. |**Items currently in index**|All the items that could be indexed, partially or completely.|
 |2.a	|**Completely indexed items**|Total items successfully indexed with complete information attached to it, including content, access, and properties.|
