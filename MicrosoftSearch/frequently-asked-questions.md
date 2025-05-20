@@ -15,7 +15,7 @@ description: "This FAQ answers questions related to Microsoft 365 Copilot  conne
 
 ## 1. What are Microsoft 365 Copilot connectors?
 Microsoft 365 Copilot connectors increase the discoverability and engagement of your enterprise data by deeply integrating your data into the Microsoft 365 Copilot experience. With Copilot connectors, you can make the most of your external data for functions like enriched data analysis, giving Copilot the ability to access and summarize your diverse datasets from different sources, enabling more comprehensive insights.
-For more information, see [Microsoft 365 Copilot connectors overview](/graph/connecting-external-content-connectors-overview)
+For more information, see [Microsoft 365 Copilot connectors overview](/graph/connecting-external-content-connectors-overview).
 
 ## 2. How do I set up a Microsoft 365 Copilot connector?
 There are three main steps to set up a Copilot connector:
@@ -32,14 +32,14 @@ Currently, the capability to edit the query string once the connection is publis
 
 ## 4. How do Copilot connectors work Microsoft 365 Copilot?
 Copilot connectors allow external content to be stored in Microsoft Graph, enabling a way to surface external content in various Microsoft 365 experiences. This integration allows for Microsoft 365 Copilot to access and summarize your diverse datasets from different sources, enhancing the ways your users are already searching for answers.
-For more information, see [Build Copilot connectors for Microsoft Copilot for Microsoft 365](/microsoft-365-copilot/extensibility/overview-graph-connector)
+For more information, see [Build Copilot connectors for Microsoft Copilot for Microsoft 365](/microsoft-365-copilot/extensibility/overview-graph-connector).
 
 ## 5. Is my data secure with Copilot connectors?
 Yes, one crucial aspect of bringing content into Microsoft 365 is maintaining security and data access controls. When implementing Copilot connectors, you map existing access control lists to objects in Microsoft 365 and Microsoft Entra ID, ensuring that only individuals with the right permissions can access the content.
 
 ## 6. Where is the data stored when it is in Microsoft? 
 When data enters the Microsoft cloud through the Copilot connectors platform, it is automatically stored in the same region where the customer's Microsoft 365 tenant is located. We would also be adding options for customers to override the default region (upcoming feature).
-**Learn More:** [Where your Microsoft 365 customer data is stored](/microsoft-365/enterprise/o365-data-locations)
+**Learn More:** [Where your Microsoft 365 customer data is stored](/microsoft-365/enterprise/o365-data-locations).
 
 ## 7. Is the data ingested into Microsoft Graph connections encrypted? What encryption algorithm is used?  
 Yes, the data is encrypted. Here are the details: 
@@ -47,7 +47,7 @@ Yes, the data is encrypted. Here are the details:
 - **Data at rest (in customer's master store):** Encrypted using DEK (Data Encryption Key) & KEK (Key Encryption Key) supplied to the partner. 
 - **Data in transit:** Secure tunnel. 
 - **Data at rest (in Office 365):** Encrypted using Office 365 encryption key by default (customers can provide their own encryption key) 
-- Learn more about encryption in [Microsoft cloud](/purview/office-365-encryption-in-the-microsoft-cloud-overview) 
+- Learn more about encryption in [Microsoft cloud](/purview/office-365-encryption-in-the-microsoft-cloud-overview). 
 
 ## 8. If customer data were already encrypted, would Microsoft now have access to the document encryption keys?
 No, Microsoft would not have (or need) access to partner encryption keys. Content in the Microsoft cloud would be encrypted using Office 365 encryption keys by default. Customers can provide their own encryption key. For more information, see [Service encryption with customer key](/purview/customer-key-overview).
@@ -67,7 +67,7 @@ We adhere to a general Microsoft 365 data retention period. For more information
 Copilot offered connectors are pre-built connectors provided by Microsoft that allow you to integrate various third-party content sources into Microsoft 365. These connectors help you bring external data into Microsoft 365, making it searchable and accessible within your organization. **Learn more:** [Copilot connectors gallery](/microsoftsearch/connectors-gallery)
 
 ## 2. What are some examples of Microsoft-built 365 Copilot connectors?
-Some examples of Microsoft-built 365 Copilot connectors include connectors for popular services like Salesforce, ServiceNow, Confluence, and many others. These connectors enable you to integrate data from these services into Microsoft 365, enhancing your organization's ability to search and access this information and power Microsoft 365 Copilot experiences. **Learn more:** [Microsoft 365 Copilot connectors gallery](/microsoftsearch/connectors-gallery)
+Some examples of Microsoft-built 365 Copilot connectors include connectors for popular services like Salesforce, ServiceNow, Confluence, and many others. These connectors enable you to integrate data from these services into Microsoft 365, enhancing your organization's ability to search and access this information and power Microsoft 365 Copilot experiences. **Learn more:** [Microsoft 365 Copilot connectors gallery](/microsoftsearch/connectors-gallery).
 
 ## 3. What are the benefits of using Microsoft-built  365 Copilot connectors?
 Microsoft-built 365 Copilot connectors provide several benefits, including: 
@@ -97,9 +97,9 @@ To create a custom connector, you need a Microsoft work or school account with t
 - Doesn't handle deletions, so items removed from the data source remain in the index. 
 - Incremental crawls do not currently support processing of updates to permissions. 
 
-For more details on crawl schedules and refresh settings: [Microsoft 365 Copilot  connectors refresh settings](/microsoftsearch/configure-connector#step-8-refresh-settings)
+For more details on crawl schedules and refresh settings, see [Microsoft 365 Copilot  connectors refresh settings](/microsoftsearch/configure-connector#step-8-refresh-settings).
 
-## 8. Why don’t we get results displayed in Microsoft Search?
+## 8. Why don't we get results displayed in Microsoft Search?
 There could be several reasons why results are not displayed in Microsoft Search after configuring the Microsoft 365 Copilot connector. Here are some common issues and troubleshooting steps: 
 
 - **Indexing delays:** Sometimes, it takes a while for the data to be indexed and displayed in search results. It can vary based on the volume of data and the complexity of the data source.
