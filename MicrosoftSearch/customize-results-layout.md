@@ -41,58 +41,58 @@ And here's the layout's associated JSON file:
 
 ```json
 { 
-    "type": "AdaptiveCard", 
-    "version": "1.3", 
-    "body": [ 
-        { 
-            "type": "ColumnSet", 
-            "columns": [ 
-                { 
-                    "type": "Column", 
-                    "width": "auto", 
-                    "items": [ 
-                        { 
-                            "type": "Image", 
-                            "url": "https://searchuxcdn.blob.core.windows.net/designerapp/images/OOTBLayouts/search.png", 
-                            "altText": "Thumbnail image", 
-                            "horizontalAlignment": "center", 
-                            "size": "small" 
-                        } 
-                    ], 
-                    "horizontalAlignment": "center" 
-                }, 
-                { 
-                    "type": "Column", 
-                    "width": 10, 
-                    "items": [ 
-                        { 
-                            "type": "TextBlock", 
-                            "text": "[Contoso Solutions](https://contoso.com)", 
-                            "weight": "bolder", 
-                            "color": "accent", 
-                            "size": "medium", 
-                            "maxLines": 3 
-                        }, 
-                        { 
-                            "type": "TextBlock", 
-                            "text": "[https://contoso.com](https://contoso.com)", 
-                            "weight": "bolder", 
-                            "spacing": "small", 
-                            "maxLines": 3 
-                        }, 
-                        { 
-                            "type": "TextBlock", 
-                            "text": "Marketing team at Contoso.., and looking at the Contoso Marketing documents on the team site. This contains the data from FY20 and will taken over to FY21...Marketing Planning is ongoing for FY20..", 
-                            "maxLines": 3, 
-                            "wrap": true 
-                        } 
-                    ], 
-                    "spacing": "medium" 
-                } 
-            ] 
-        } 
-    ], 
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json" 
+    "type": "AdaptiveCard", 
+    "version": "1.3", 
+    "body": [ 
+        { 
+            "type": "ColumnSet", 
+            "columns": [ 
+                { 
+                    "type": "Column", 
+                    "width": "auto", 
+                    "items": [ 
+                        { 
+                            "type": "Image", 
+                            "url": "https://searchuxcdn.blob.core.windows.net/designerapp/images/OOTBLayouts/search.png", 
+                            "altText": "Thumbnail image", 
+                            "horizontalAlignment": "center", 
+                            "size": "small" 
+                        } 
+                    ], 
+                    "horizontalAlignment": "center" 
+                }, 
+                { 
+                    "type": "Column", 
+                    "width": 10, 
+                    "items": [ 
+                        { 
+                            "type": "TextBlock", 
+                            "text": "[Contoso Solutions](https://contoso.com)", 
+                            "weight": "bolder", 
+                            "color": "accent", 
+                            "size": "medium", 
+                            "maxLines": 3 
+                        }, 
+                        { 
+                            "type": "TextBlock", 
+                            "text": "[https://contoso.com](https://contoso.com)", 
+                            "weight": "bolder", 
+                            "spacing": "small", 
+                            "maxLines": 3 
+                        }, 
+                        { 
+                            "type": "TextBlock", 
+                            "text": "Marketing team at Contoso.., and looking at the Contoso Marketing documents on the team site. This contains the data from FY20 and will taken over to FY21...Marketing Planning is ongoing for FY20..", 
+                            "maxLines": 3, 
+                            "wrap": true 
+                        } 
+                    ], 
+                    "spacing": "medium" 
+                } 
+            ] 
+        } 
+    ], 
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json" 
 } 
 ```
 
@@ -104,58 +104,58 @@ Here's Layout JSON after binding the data:
 
 ```json
 { 
-    "type": "AdaptiveCard", 
-    "version": "1.3", 
-    "body": [ 
-        { 
-            "type": "ColumnSet", 
-            "columns": [ 
-                { 
-                    "type": "Column", 
-                    "width": "auto", 
-                    "items": [ 
-                        { 
-                            "type": "Image", 
-                            "url": "https://searchuxcdn.blob.core.windows.net/designerapp/images/OOTBLayouts/search.png", 
-                            "altText": "Thumbnail image", 
-                            "horizontalAlignment": "center", 
-                            "size": "small" 
-                        } 
-                    ], 
-                    "horizontalAlignment": "center" 
-                }, 
-                { 
-                    "type": "Column", 
-                    "width": 10, 
-                    "items": [ 
-                        { 
-                            "type": "TextBlock", 
-                            "text": "[${title}](${titleLink})", 
-                            "weight": "bolder", 
-                            "color": "accent", 
-                            "size": "medium", 
-                            "maxLines": 3 
-                        }, 
-                        { 
-                            "type": "TextBlock", 
-                            "text": "[${titleLink}](${titleLink})", 
-                            "weight": "bolder", 
-                            "spacing": "small", 
-                            "maxLines": 3 
-                        }, 
-                        { 
-                            "type": "TextBlock", 
-                            "text": "${description}", 
-                            "maxLines": 3, 
-                            "wrap": true 
-                        } 
-                    ], 
-                    "spacing": "medium" 
-                } 
-            ] 
-        } 
-    ], 
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json" 
+    "type": "AdaptiveCard", 
+    "version": "1.3", 
+    "body": [ 
+        { 
+            "type": "ColumnSet", 
+            "columns": [ 
+                { 
+                    "type": "Column", 
+                    "width": "auto", 
+                    "items": [ 
+                        { 
+                            "type": "Image", 
+                            "url": "https://searchuxcdn.blob.core.windows.net/designerapp/images/OOTBLayouts/search.png", 
+                            "altText": "Thumbnail image", 
+                            "horizontalAlignment": "center", 
+                            "size": "small" 
+                        } 
+                    ], 
+                    "horizontalAlignment": "center" 
+                }, 
+                { 
+                    "type": "Column", 
+                    "width": 10, 
+                    "items": [ 
+                        { 
+                            "type": "TextBlock", 
+                            "text": "[${title}](${titleLink})", 
+                            "weight": "bolder", 
+                            "color": "accent", 
+                            "size": "medium", 
+                            "maxLines": 3 
+                        }, 
+                        { 
+                            "type": "TextBlock", 
+                            "text": "[${titleLink}](${titleLink})", 
+                            "weight": "bolder", 
+                            "spacing": "small", 
+                            "maxLines": 3 
+                        }, 
+                        { 
+                            "type": "TextBlock", 
+                            "text": "${description}", 
+                            "maxLines": 3, 
+                            "wrap": true 
+                        } 
+                    ], 
+                    "spacing": "medium" 
+                } 
+            ] 
+        } 
+    ], 
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json" 
 } 
 ```
 
@@ -164,9 +164,9 @@ Specify sample data in the **Sample Data Editor** to view the data-bound card wh
 
 ```json
 { 
-    "title": "Contoso Solutions", 
-    "titleLink": "https://contoso.com", 
-    "description": "Marketing team at Contoso.., and looking at the Contoso Marketing documents on the team site. This contains the data from FY20 and will be taken over to FY21...Marketing Planning is ongoing for FY20.." 
+    "title": "Contoso Solutions", 
+    "titleLink": "https://contoso.com", 
+    "description": "Marketing team at Contoso.., and looking at the Contoso Marketing documents on the team site. This contains the data from FY20 and will be taken over to FY21...Marketing Planning is ongoing for FY20.." 
 } 
 ```
 
@@ -193,9 +193,9 @@ Before you get started, there are a few things that you should do and a few thin
 - It is recommended to use a square logo to ensure proper alignment of results. To avoid pixelation, use a logo with a minimum size of 32px by 32px.
 - Think of theme requirements when designing a result layout; your result icon should be visible in dark theme as well.
 - Validate the result layout for scenarios where no data is returned for a result property used in the result JSON. Use the `$when` condition to hide an element if the property doesn't contain data.  
-- Make sure that the  data types of the `$when` condition and the result property match. For example, don't compare `Number` with `Text` in the `$when` condition.  
-- Make sure that the `Textblock` element can handle dynamic content. You can use the `wrap` and `maxLines` element properties for this purpose.
-- Properly format the date when using `{DATE()}` in Markdown.  
+- Make sure that the  data types of the `$when` condition and the result property match. For example, don't compare `Number` with `Text` in the `$when` condition.  
+- Make sure that the `Textblock` element can handle dynamic content. You can use the `wrap` and `maxLines` element properties for this purpose.
+- Properly format the date when using `{DATE()}` in Markdown.  
 - Ensure properties of type StringCollection are wrapped in a join method as: ```json ${propertyName} -> ${join(propertyName, ‘,’)} ``` . If you want to show a single value (say, the ith item) from a StringCollection, you can specify it as follows:  ```json ${propertyName} -> ${propertyName[i]}  ``` (Note: indexing in StringCollection types start from 0 )
 
 ### Don't
