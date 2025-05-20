@@ -1,5 +1,5 @@
 --- 
-title: "CSV Microsoft Microsoft 365 Copilot connector" 
+title: "CSV Microsoft 365 Copilot connector" 
 ms.author: rchanda 
 author: rchanda 
 manager: harshkum 
