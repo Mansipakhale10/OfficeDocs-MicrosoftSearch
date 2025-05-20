@@ -100,7 +100,7 @@ To authenticate and synchronize content from Confluence On-prem, choose **one of
 
 ### 6. Rollout to limited audience
 
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. For more information, see [Staged rollout for ](./staged-rollout-for-graph-connectors.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](./staged-rollout-for-graph-connectors.md).
 
 At this point, you are ready to create the connection for Confluence. You can click on the "Create" button and the Microsoft Graph connector starts indexing page from your Confluence account.
 
