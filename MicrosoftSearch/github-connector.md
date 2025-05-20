@@ -1,8 +1,8 @@
 --- 
 title: "GitHub Cloud Knowledge Graph connector for Microsoft Search and Copilot" 
-ms.author: efgilboa
+ms.author: rerabo
 author: vivg
-manager: igala
+manager: ereza
 audience: Admin
 ms.audience: Admin 
 ms.topic: article 
@@ -13,7 +13,7 @@ search.appverid:
 - MET150 
 - MOE150 
 description: "Set up the GitHub Cloud Knowledge Microsoft 365 Copilot connector." 
-ms.date: 11/11/2024
+ms.date: 05/20/2025
 ---
 
 # GitHub Cloud Knowledge Microsoft 365 Copilot  connector (Preview)
@@ -41,87 +41,89 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
 ## Prerequisites
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
-- You must have an active GitHub account where you have access to all the repositories you intend to index.
- 
-   a. For personal repositories, you must be one of:
-   - A repository owner
-   - A repository collaborator
+- Make sure that your GitHub instance is accessible via API.
+- Configure and set up the GitHub App for authentication following the steps outlined [here](#set-up-a-github-app-for-authentication).
+- Make sure that users who access indexed GitHub data have corresponding Microsoft Entra ID identities for permission mapping.
+- For enterprise-managed users who authenticate via Single Sign-On (SSO), the account must be signed in before performing any actions, as the GitHub authentication flow does not currently support SSO login.
 
-   b. For organization-owned repositories, you must be one of: 
-    - An outside collaborator 
-    - An organization member as a direct collaborator
-    - An organization member with access through team memberships 
-    - An organization member with access through default organization permissions 
-    - An organization owner.
+### Set Up a GitHub App for Authentication 
+Follow the steps below to create a GitHub App for use with your Graph Connector:
 
+1. In GitHub, click your profile photo (top right), select **Your organizations**, and choose the organization where the Graph Connector should pull data from.
+[![Screenshot that shows how to access "Your organizations".](media/github-connector/organizations-nav.png)](media/github-connector/organizations-nav.png#lightbox)
 
-## GitHub Authentication with Application Registration
+2.  On the organization overview page, click **Settings**.
+[![Screenshot that shows how to access "Settings" within the organization page.](media/github-connector/organization-overview.png)](media/github-connector/organization-overview.png#lightbox)
 
-To set up GitHub authentication using an Application, please follow the detailed steps in the [GitHub guide on registering a GitHub App](https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/registering-a-github-app). This guide will walk you through the process of registering and configuring your GitHub App, including creating the necessary credentials and permissions.
+3. In the left sidebar, scroll down to **Developer settings** and click **GitHub Apps**.
+[![Screenshot that shows how to access GitHub Apps.](media/github-connector/github-apps.png)](media/github-connector/github-apps.png#lightbox)
+
+4. Click **New GitHub App**.
+[![Screenshot that shows entry point to creation of new app.](media/github-connector/new-github-app.png)](media/github-connector/new-github-app.png#lightbox)
+
+5.  Configure the app:
+  - **GitHub App name**: Enter a name of your choice.
+  - **Homepage URL**: Copy the URL from your browser’s address bar (refer to the image if needed).
+  - **Callback URL**:  
+    - For Microsoft 365 Enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`  
+    - For Microsoft 365 Government: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
+[![Screenshot that shows the initial part of the app configuration including name and URLs.](media/github-connector/github-app1.png)](media/github-connector/github-app1.png#lightbox)
+
+6. Check **Request user authorization (OAuth) during installation** and disable the **Webhook** option.
+[![Screenshot that of some check boxes required for the app configuration.](media/github-connector/github-app2.png)](media/github-connector/github-app2.png#lightbox)
+
+7. Set the following permissions:
+  - **Repository permissions**: Contents (Read-only), Metadata (Read-only)
+  - **Organization permissions**: Members (Read-only)
+  - **Account permissions**: Email addresses (Read-only)
+
+8. Under **Where can this GitHub App be installed**, select **Any account**, then click **Create GitHub App**.
+[![Screenshot that shows the final steps of the GitHub app set up.](media/github-connector/github-app3.png)](media/github-connector/github-app3.png#lightbox)
+
+9. On the GitHub App’s **General** page, generate and copy the **client secret** by clicking **Generate a new client secret**. Then click **Install App**.
+[![Screenshot that shows the credentials of the app including Client Id and Client secret.](media/github-connector/github-app-credentials.png)](media/github-connector/github-app-credentials.png#lightbox)
+
+10. Select the organization where you want the app to be installed. **After installation**, you're ready to configure the connector.
+[![Screenshot that shows the app installation dialog.](media/github-connector/github-install.png)](media/github-connector/github-install.png#lightbox)
 
 ## Get Started
 
-[![Screenshot that shows connection creation screen for GitHub Microsoft 365 Copilot connector.](media/github-connector/GitHub-create-page.png)](media/github-connector/GitHub-create-page.png#lightbox)
-
-### Choose display name 
+### 1. Display name 
 A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
-### Provide authentication type
+### 2. Authentication Type
+- Select **GitHub App (on behalf of a user)** as the authentication method.
+- Enter the **Client ID** and **Client Secret** from the GitHub App you created [earlier](#set-up-a-github-app-for-authentication).
+- Click **Authorize** to sign in and grant the required access permissions.
 
-To authenticate and sync content from GitHub, you can choose one of the following authentication methods: <br>
-
-1. **GitHub Personal Access Token (PAT)** <br>
-Authenticate using a personal access token to connect and manage GitHub data within Microsoft Graph. Use your personal access token in place of a password. The repositories available for indexing depend on the access granted by your token.
-
-- You must have a personal access token (PAT). To learn more about the personal access tokens, see [Managing your personal access tokens - GitHub Docs](https://docs.github.com/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
-- Your personal access token must have access to all repositories you want to index and must be granted the permission listed below.
-
-[![Screenshot that shows PAT screen for GitHub.](media/github-connector/GitHub-personal-access-token.png)](media/github-connector/GitHub-personal-access-token.png#lightbox)
-
-For classic token: 
-
-| Category | Permission | Remarks |
-| ------------ | ------------ | ------------ |
-| Repo | All | Full control of private repositories |
-| User  | read:user  | Read ALL user profile data |
-| User  | read:email  | Access user email addresses (read-only) |
-
-For the fine-grained token:
-
-| Category | Permission | Permission Level |
-| ------------ | ------------ | ------------ |
-| Repository Permissions | Contents | Read-only |
-| Repository Permissions | Metadata | Read-only |
-| Account Permissions | Email addresses | Read-only |
-
-If you have organization-owned repositories, follow these extra steps:
-- The organization administrator needs to allow access via personal access tokens. For instructions, see [Setting a personal access token policy for your organization - GitHub Docs](https://docs.github.com/organizations/managing-programmatic-access-to-your-organization/setting-a-personal-access-token-policy-for-your-organization#restricting-access-by-personal-access-tokens)
-- If you're using fine-grained tokens, select the organization as the resource owner.
-
-
-2. **GitHub App installation token** <br>
-Use a registered GitHub App for secure authentication and controlled access to GitHub data, and enter the required values: **App ID** , **Account Name** , **Upload Private Key**.
-
-For the GitHub App token:
-
-| Category | Permission | Permission Level |
-| ------------ | ------------ | ------------ |
-| Repository Permissions | Contents | Read-only |
-| Repository Permissions | Metadata | Read-only |
-| Account Permissions | Email addresses | Read-only |
-
-[![Screenshot that shows GitHub App for secure authentication.](media/github-connector/GitHub-app-for-secure-authentication.jpg)](media/github-connector/GitHub-app-for-secure-authentication.jpg#lightbox)
+### 3. Roll out to limited audience
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
 
 ## Custom Setup
 
-In custom setup you can edit any of the default values for users, content, and sync.
+Custom setup is for those admins who want to edit the default values for settings listed. Once you click on the "Custom Setup" option, you see three more tabs - Users, Content, and Sync.
 
 ### Users
 
 **Access Permissions**
 
+The GitHub Cloud Knowledge connector supports search permissions visible to **Only people with access to this data source** (default) or **Everyone**. If you choose **Only people with access to this data source**, indexed data will appear in the search results for users who have access to them. If you choose **Everyone**, indexed data will appear in the search results for all users.
+
+**Map Identities**
+
+In custom setup you can edit any of the default values for users, content, and sync.
+To ensure correct permission enforcement, map GitHub user identities to Microsoft Entra ID. The following are the options:
+
+- **Email**: Maps GitHub email to Microsoft Entra ID user properties.
+- **Login**: Maps GitHub logins with Microsoft Entra ID user properties.
+- **Name**: Maps GitHub name with Microsoft Entra ID user properties.
+
+If direct mapping fails, use regular expressions (regex) to transform the data. For example: [a-zA-Z0-9]+ For personal accounts, mapping accuracy may be impacted due to variations in email domains and individual email visibility settings.
+
 The GitHub Cloud Knowledge Copilot connector supports search permissions visible to **Everyone** with access to this data source. For Everyone, indexed data appears in the search results for all users.
 For identity transformation, refer to the [Map your non-Azure AD Identities | Microsoft Learn](map-non-aad.md).
+
+For more information about identity transformation, see [Map your non-Azure AD Identities | Microsoft Learn](map-non-aad.md).
  
 ### Content
 
@@ -139,9 +141,24 @@ Here, you can add or remove available properties from your GitHub data source, a
 
 The refresh interval determines how often your data is synced between the data source and the GitHub Cloud Knowledge Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
 
+Under **Manage Properties** you can add or remove available properties from your GitHub data source, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label and add an alias to the property.
+
+### Sync
+
+The refresh interval determines how often your data is synced between the data source and the Graph connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+
+The following are the default values:
+
+- Incremental crawl runs every 15 minutes by default.
+- Full crawl runs daily to ensure up-to-date indexing.
+
 You can change the default values of refresh interval from here if you want to.
 
 ## Troubleshooting
 After publishing your connection, you can review the status under the **Data Sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md). 
+
+>[!NOTE]
+>
+> When using the [Index Browser](connectors-index-search.md) to identify indexed items, repository and file names are **case-sensitive**. Make sure to match the exact casing to retrieve accurate results.
 
 If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).
