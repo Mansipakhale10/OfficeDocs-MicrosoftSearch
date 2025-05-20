@@ -130,14 +130,14 @@ Follow the steps to retrieve Service Principal Object Identifier
    ```
    Replace "Application-ID" with the Application (client) ID (without quotes) of the application you registered in step 3.a. Note the value of ID object from PowerShell output. It's the Service Principal ID.
 
-Now you have all the information required from the Azure portal. A quick summary of the information is given in the table below.
+   Now you have all the information required from the Azure portal. A quick summary of the information is given in the table below.
 
-Property | Description
---- | ---
-Directory ID (Tenant ID) | Unique ID of the Microsoft Entra tenant, from step 3.a.
-Application ID (Client ID) | Unique ID of the application registered in step 3.a.
-Client Secret | The secret key of the application (from step 3.b). Treat it like a password.
-Service Principal ID | An identity for the application running as a service. (from step 3.c)
+   Property | Description
+   --- | ---
+   Directory ID (Tenant ID) | Unique ID of the Microsoft Entra tenant, from step 3.a.
+   Application ID (Client ID) | Unique ID of the application registered in step 3.a.
+   Client Secret | The secret key of the application (from step 3.b). Treat it like a password.
+   Service Principal ID | An identity for the application running as a service. (from step 3.c)
 
 ### Step 3.3.4: Register ServiceNow Application
 
