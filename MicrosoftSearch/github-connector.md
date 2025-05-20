@@ -63,7 +63,7 @@ Follow the steps below to create a GitHub App for use with your Graph Connector:
 
 4. Click **New GitHub App**.
 
-   :::image type="content" alt-text="Screenshot that shows entry point to creation of new app." source="media/github-connector/new-github-app.png" source="media/github-connector/new-github-app.png":::
+   :::image type="content" alt-text="Screenshot that shows entry point to creation of new app." source="media/github-connector/new-github-app.png" lightbox="media/github-connector/new-github-app.png":::
 
 5. Configure the app:
    - **GitHub App name**: Enter a name of your choice.
@@ -76,7 +76,7 @@ Follow the steps below to create a GitHub App for use with your Graph Connector:
 
 6. Check **Request user authorization (OAuth) during installation** and disable the **Webhook** option.
 
-   :::image type="content" alt-text="Screenshot that of some check boxes required for the app configuration." source="media/github-connector/github-app2.png" source="media/github-connector/github-app2.png":::
+   :::image type="content" alt-text="Screenshot that of some check boxes required for the app configuration." source="media/github-connector/github-app2.png" lightbox="media/github-connector/github-app2.png":::
 
 7. Set the following permissions:
    - **Repository permissions**: Contents (Read-only), Metadata (Read-only)
