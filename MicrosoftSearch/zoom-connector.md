@@ -41,24 +41,24 @@ Create a Zoom marketplace app for theZoom Meetings Copilot connector:
 
 1. Go to the Zoom marketplace at [https://marketplace.zoom.us](https://marketplace.zoom.us) and log-in using a Zoom admin credentials.
 
-2. Hover over the "Develop" menu, and select "Build app":
+2. Hover over the **Develop** menu, and select **Build app**:
 [![Screenshot that shows the Zoom app marketplace page.](media/zoom-connector/Zoom-marketplace-page.png)](media/zoom-connector/Zoom-marketplace-page.png#lightbox)
 
-3. Select "Server to server OAuth app" and click the Create button:
+3. Select **Server to server OAuth app** and click the **Create** button:
 [![Screenshot that shows the Zoom app selection.](media/zoom-connector/Zoom-app-selection.png)](media/zoom-connector/Zoom-app-selection.png#lightbox)
 
-4. Provide a name for the app, and click Create:
+4. Provide a name for the app, and click **Create**:
 [![Screenshot that shows the Zoom app creation.](media/zoom-connector/Zoom-app-creation.png)](media/zoom-connector/Zoom-app-creation.png#lightbox)
 
 5. In the next page, note the Client ID and the Client Secret. You will need to insert these details when configuring the connector in the next section:
 [![Screenshot that shows the Zoom app credentials.](media/zoom-connector/Zoom-app-credentials.png)](media/zoom-connector/Zoom-app-credentials.png#lightbox)
 
-6. Click continue
+6. Click **Continue**.
 
-7. Fill out the information in the "Information" and "Feature" tabs, click continue to get to the "Scopes" tab.
+7. Fill out the information in the **Information** and **Feature** tabs, click **Continue** to get to the **Scopes** tab.
 [![Screenshot that shows the Zoom app scopes tab.](media/zoom-connector/Zoom-app-scopes.png)](media/zoom-connector/Zoom-app-scopes.png#lightbox)
 
-8. Click the +Add scopes button and select the following scopes (use the value in brackets below to search for a scope, and mark the checkbox next to it to select it):<br>
+8. Click the **+Add scopes** button and select the following scopes (use the value in brackets below to search for a scope, and mark the checkbox next to it to select it):<br>
    a. Dashboard → View all users’ meetings information on dashboard → View meeting metrics (dashboard:read:list_meetings:admin)<br>
    b. Dashboard →  View all users’ meetings information on dashboard → View meeting participants’ metrics (dashboard:read:list_meeting_participants:admin)<br>
    c. Meeting → View all user meetings → View a meeting (meeting:read:meeting:admin)<br>
@@ -66,9 +66,9 @@ Create a Zoom marketplace app for theZoom Meetings Copilot connector:
    e. User → View all user information → View users (user:read:list_users:admin)<br>
 [![Screenshot that shows an example of adding a scope to the Zoom app.](media/zoom-connector/Zoom-app-scopes-sample.png)](media/zoom-connector/Zoom-app-scopes-sample.png#lightbox)
 
-9. Click Done and then click Continue.
+9. Click **Done** and then click **Continue**.
 
-10. In the final screen, click the Activate your app button:
+10. In the final screen, click the **Activate your app** button:
 [![Screenshot that shows Zoom app activation.](media/zoom-connector/Zoom-app-activation.png)](media/zoom-connector/Zoom-app-activation.png#lightbox)
 
 11. Make sure the app is activated successfully:
@@ -88,7 +88,7 @@ Enter the Zoom account ID, the Client ID, and the Client secret which were creat
 ### 3. Roll out to limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
 
-At this point, you are ready to create the connection for Zoom meetings. You can click on the ‘Create’ button and the Zoom Meetings Copilot connector starts indexing meetings from your Zoom account.
+At this point, you are ready to create the connection for Zoom meetings. You can click on the **Create** button and the Zoom Meetings Copilot connector starts indexing meetings from your Zoom account.
 
 For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl frequency, etc., we have defaults set based on what works best with Zoom data. You can see the default values here:
 - **Users**
