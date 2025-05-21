@@ -44,7 +44,7 @@ items:
     href: manage-search-apps.md
 - name: Data sources
   items:
-  - name: Microsoft Graph connectors
+  - name: Microsoft 365 Copilot connectors
     items:
     - name: Overview
       href: connectors-overview.md
@@ -62,9 +62,9 @@ items:
         href: configure-connector.md
       - name: Add Staged rollout to connectors
         href: staged-rollout-for-graph-connectors.md
-      - name: Microsoft Graph connectors in Microsoft 365 Copilot
+      - name: Microsoft 365 Copilot connectors
         items:
-        - name: Enhancing Microsoft 365 Copilot discovery with Microsoft Graph connector content
+        - name: Enhancing Microsoft 365 Copilot discovery with Microsoft 365 Copilot connector content
           href: enhancing-microsoft-copilot-discovery-with-graph-connector-content.md
       - name: On-prem connectors
         items:
@@ -76,7 +76,7 @@ items:
         href: map-non-aad.md
       - name: Map Microsoft Entra identities
         href: map-aad.md
-      - name: Prebuilt Microsoft Graph connectors
+      - name: Prebuilt Microsoft 365 Copilot connectors
         href: pre-built-connectors-overview.md
         items:
         - name: 15Five High Fives
@@ -359,7 +359,7 @@ items:
         href: connector-error-responses.md
       - name: Item delete notification
         href: connectors-viva-topics-item-delete-notification.md
-    - name: Deploy Microsoft Graph connectors in Teams admin center
+    - name: Deploy Microsoft 365 Copilot connectors in Teams admin center
       href: connectors-deploy-teams.md
   - name: Semantic index
     items:

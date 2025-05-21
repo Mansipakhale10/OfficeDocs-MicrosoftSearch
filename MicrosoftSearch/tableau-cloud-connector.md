@@ -1,6 +1,6 @@
 --- 
 
-title: "Tableau Cloud Microsoft 365 Copilot connector" 
+title: "Tableau Cloud Microsoft 365 Copilot connector(preview)" 
 ms.author: rantang
 author: ranran1998
 manager: jecui
@@ -23,6 +23,7 @@ With the Tableau Cloud  Microsoft 365 Copilot connector, your organization can i
 
 This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Tableau Cloud  Microsoft 365 Copilot connector. 
 
+
 ## Capabilities
 - Index sheets of your Tableau Cloud and supports ingestion filters based on top-level projects.
 - Retain access control lists (ACLs) defined by your organization
@@ -35,7 +36,9 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
 ## Prerequisites
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
-- **Configure Connected Apps with Direct Trust in Tableau**: To connect to Tableau Cloud and enable the Tableau Cloud Copilot connector to sync sheets regularly, you need to configure and enable Connected Apps with Direct Trust on your Tableau site, using credentials that can access the sheets. Tableau Connected Apps provide a seamless and secure authentication experience by establishing an explicit trust relationship between your Tableau Cloud site and external applications. 
+
+- **Configure Connected Apps with Direct Trust in Tableau**: To connect to Tableau Cloud and enable the Tableau Cloud Copilot connector to sync sheets regularly, you need to configure and enable Connected Apps with Direct Trust on your Tableau site, using credentials that can access the sheets. Tableau Connected Apps provide a seamless and secure authentication experience by establishing an explicit trust relationship between your Tableau Cloud site and external applications. Find more details [here](https://help.tableau.com/current/online/en-us/connected_apps_direct.htm?_gl=1*9bs6y1*_ga*MTk1OTAyNzg0MS4xNzIxMTIwMzA4*_ga_8YLN0SNXVS*MTczNTE5MzU5OS4zNC4xLjE3MzUyMDA1ODEuMC4wLjA.).
+
 ## Get started
 
 ### 1. Display name 
@@ -72,13 +75,13 @@ When finished, select the Create button.
 ![Screenshot that shows how to generate a secret for the Tableau App.](media/tableau-generate-a-secret.png)  
 2. Make note of the **Secret ID** ，**Secret Value** and **Client ID** to use in Step 3 below.
 
-**Step3: Enter the required fields of Tableau Copilot connector Authentication**.
+**Step 3: Enter the required fields of Tableau Copilot connector authentication**.
 
 Enter the User, Connected App Client ID, Connected App Secret ID and Connected App Secret Key to connect to your Tableau Cloud Site. 
 
 ![Screenshot that shows the authentication process for Tableau Copilot connector.](media/tableau-gc-auth.png) 
 
-Refer to the following table to learn the descriptions of the required fields of Tableau Copilot connector Authentication
+Refer to the following table to learn the descriptions of the required fields of Tableau Copilot connector authentication
 
 Field | Description 
 --- | --- 
