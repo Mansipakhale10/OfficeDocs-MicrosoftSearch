@@ -1,6 +1,6 @@
 ---
 ms.date: 09/06/2021
-title: "Troubleshooting the Confluence Cloud Microsoft Graph connector"
+title: "Troubleshooting the Confluence Cloud Microsoft 365 Copilot connector"
 ms.author: kam1
 author: TheKarthikeyan
 manager: harshkum
@@ -13,10 +13,10 @@ search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Troubleshooting the Confluence Cloud Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot"
+description: "Troubleshooting the Confluence Cloud Microsoft 365 Copilot connector."
 ---
 
-# Troubleshooting the Confluence Cloud Microsoft Graph connector
+# Troubleshooting the Confluence Cloud Microsoft 365 Copilot connector
 
 The following common errors are observed while configuring the connector and their possible reasons.
 
