@@ -144,7 +144,7 @@ You can choose what data you want to index. Use the regex expression of WorkSpac
 | Fuzzy match for a single workspace         | `team-marketing-q1`                      | `.*marketing.*`                    | Matches any workspace that contains "marketing" in the name          |
 | Exact match for multiple workspaces        | `workspace1`, `workspace2`               | <code>^(workspace1&#124;workspace2)$</code>      | Matches exactly `workspace1` or `workspace2`                         |
 | Fuzzy match for multiple workspaces        | `workspace-marketing`, `workspace-sales` | <code>^workspace-[a-z]+$</code>                  | Matches any workspace starting with `workspace-` and letters         |
-| Fuzzy match for multiple keywords in name  | `workspace-engineering`, `workspace-sales-q4` | `.*(eng\|sales).*`       | Matches workspaces containing `eng` or `sales` in the name           |
+| Fuzzy match for multiple keywords in name  | `workspace-engineering`, `workspace-sales-q4` | `.*(eng|sales).*`       | Matches workspaces containing `eng` or `sales` in the name           |
 
 Use the preview results button to verify the sample values of the selected properties and filters. 
 
