@@ -69,7 +69,7 @@ The Monday.com connector enables:
    - **For Microsoft 365 Enterprise**, copy and paste: `https://gcs.office.com/v1.0/admin/oauth/callback`.  
    - **For Microsoft 365 Government**, copy and paste:  `https://gcsgcc.office.com/v1.0/admin/oauth/callback`.
 
-   ![Screenshot that shows how to configure Redirect URL for the Monday.com OAuth App.](media/monday-redirect-URL.png)
+   ![Screenshot that shows how to configure Redirect URL for the Monday.com OAuth App.](media/monday-redirect-urls.png)
 
 6. Click **Promote to Live** to activate the app.
 
@@ -174,7 +174,7 @@ Here, you can check available properties from your Monday.com instance. Assign a
 **Description of `Content` property:**  
 The Content field contains a JSON object that represents all the columns and their corresponding values for a given item. Each key in the JSON object corresponds to a column name (such as Assignee or Status), and each value holds the specific data for that item. Below is an example illustrating how the item and its Content field are structured.
 
-![Screenshot that shows a example of item content](media/mondy-content-example.png)
+![Screenshot that shows a example of item content](media/monday-content-example.png)
 
 ```json
 {
