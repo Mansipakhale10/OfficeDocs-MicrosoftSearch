@@ -21,6 +21,8 @@ The extension only uses activity from third-party sites configured by your organ
 
 ## Installing the extension
 
+Tenant admins can install the extension from the Microsoft Edge Add-ons website. For more information, see [Microsoft Edge extensions](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home).
+
 ## Supported connectors 
 
 Microsoft provides more than 30 Microsoft-built Graph connectors. The extension can recognize content on popular work tools such as Azure DevOps, Jira, Confluence, ServiceNow (tickets and knowledge base), Google Drive, GitHub, and Salesforce, for the connections enabled by your organization.
