@@ -120,7 +120,7 @@ In Confluence Cloud, security permissions for users and groups are defined using
 
 If there are no page restrictions, the connector checks for space-level permissions - 
 * In case the space has 'anonymous users' access enabled, the content is visible to all users within your tenant.
-* In case 'anonymous access' isn't enabled, the space-level permissions are not honored.
+* In case 'anonymous access' isn't enabled, the space-level permissions are honored.
 * In case space level permissions are not defined, the content is not visible to any user in your tenant.
 
 >[!IMPORTANT]
