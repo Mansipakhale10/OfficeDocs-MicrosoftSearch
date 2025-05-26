@@ -138,18 +138,6 @@ For more information about identity transformation, see [Map your non-Azure AD I
 
 Choose the repositories and file types (initially markdown files and other non-code documentation) you wish to make searchable.
 
-**Manage Properties**
-
-:::image type="content" alt-text="Screenshot that shows manage properties screen for GitHub Cloud Knowledge Copilot connector." source="media/github-connector/GitHub-data-manage-properties.png" lightbox="media/github-connector/GitHub-data-manage-properties.png":::
-
-Here, you can add or remove available properties from your GitHub data source, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label and add an alias to the property.
-
-### Sync
-
-:::image type="content" alt-text="Screenshot that shows Sync tab where you can configure crawl frequency." source="media/github-connector/GitHub-sync-tab.png" lightbox="media/github-connector/GitHub-sync-tab.png":::
-
-The refresh interval determines how often your data is synced between the data source and the GitHub Cloud Knowledge Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
-
 Under **Manage Properties** you can add or remove available properties from your GitHub data source, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label and add an alias to the property.
 
 ### Sync
