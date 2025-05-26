@@ -1,6 +1,6 @@
 ---
 ms.date: 06/11/2020
-title: "Troubleshooting the Azure DevOps Work Items Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot"
+title: "Troubleshooting the Azure DevOps Work Items Microsoft 365 Copilot connector"
 ms.author: mecampos
 author: mecampos
 manager: lsheppard
@@ -13,9 +13,9 @@ search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Troubleshoot issues with the Azure DevOps Work Items Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot"
+description: "Troubleshoot issues with the Azure DevOps Work Items Microsoft 365 Copilot connector"
 ---
-# Troubleshooting the Azure DevOps Work Items Microsoft Graph connector
+# Troubleshooting the Azure DevOps Work Items Microsoft 365 Copilot connector
 
 The following common errors are observed while configuring the connector, or during crawling and their possible reasons.
 
