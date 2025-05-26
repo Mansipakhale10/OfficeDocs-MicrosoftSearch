@@ -1,6 +1,6 @@
 --- 
 ms.date: 09/11/2024 
-title: "Troubleshooting guide for Salesforce Microsoft Graph connector" 
+title: "Troubleshooting guide for Salesforce Microsoft 365 Copilot connector" 
 ms.author: gladysa
 author: gladysa
 manager: brian.jackett 
@@ -9,12 +9,12 @@ ms.audience: Admin
 ms.topic: article 
 ms.service: mssearch 
 ms.localizationpriority: medium 
-description: "Troubleshoot issues with the Salesforce Graph connector for Microsoft Search" 
+description: "Troubleshoot issues with the Salesforce Microsoft 365 Copilot connector" 
 --- 
 
-# Troubleshooting guide for Salesforce Microsoft Graph connector 
+# Troubleshooting guide for Salesforce Microsoft 365 Copilot connector 
 
-### 1. **Bad state error while signing-in to create a connection**
+### 1. **Bad state error while signing in to create a connection**
 ![Salesforce bad state error message](media/salesforce-connector/sf-bad-state-troubleshoot.png)
 The PKCE option is checked in the application, causing the issue. To fix it, uncheck this option in the app registration in Salesforce.
 
