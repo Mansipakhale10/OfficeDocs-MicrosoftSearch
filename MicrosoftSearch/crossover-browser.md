@@ -14,7 +14,7 @@ description: "Learn how to use the crossover browser extension for Microsoft 365
 The Microsoft 365 Copilot extension is a browser add-on that enhances your Microsoft 365 search results. Whether you're managing projects, collaborating with colleagues, or organizing your workflow, the Microsoft 365 Copilot extension ensures that all the data from your various apps is seamlessly integrated into Microsoft 365 Copilot and your search results. 
 
 This extension brings together information from tickets, files, documents, and tasks across multiple work-related external sites, providing you with highly relevant and personalized search results. With this powerful tool, you can effortlessly access the information you need, enhancing your productivity and efficiency in the workplace.
-
+## Get started
 The extension works in the background without any manual steps after installation. It is enabled by your organization through the Microsoft Edge Add-Ons website. There’s no new app to learn. You can just use your browser as usual.
 
 The extension only uses activity from third-party sites configured by your organization and does not track your general web browsing. Data captured is stored securely and used only to improve your own Search/Copilot experience, and not shared with others.
