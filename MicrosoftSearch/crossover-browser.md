@@ -1,17 +1,17 @@
 ---
 ms.date: 05/06/2025
-title: "Crossover browser extension for Microsoft 365 Copilot connectors (to be updated)"
+title: "The Microsoft 365 Copilot extension for Copilot connectors"
 author: danielabom
 ms.author: danielabo
 manager: stevewilkins
 ms.topic: article
 ms.service: mssearch
 ms.localizationpriority: medium
-description: "Crossover browser extension for Microsoft 365 Copilot connectors  (to be updated)."
+description: "Crossover browser extension for Microsoft 365 Copilot connectors."
 ---
-# Crossover browser extension
+# The Microsoft 365 Copilot extension for Copilot connectors
 
-The Microsoft 365 Search relevance extension is a browser add-on that enhances your Microsoft 365 search results. Whether you're managing projects, collaborating with colleagues, or organizing your workflow, the M365 Search Relevance Extension ensures that all the data from your various apps is seamlessly integrated into M365 Copilot and your search results. 
+The Microsoft 365 Copilot extension is a browser add-on that enhances your Microsoft 365 search results. Whether you're managing projects, collaborating with colleagues, or organizing your workflow, the Microsoft 365 Copilot extension ensures that all the data from your various apps is seamlessly integrated into Microsoft 365 Copilot and your search results. 
 
 This extension brings together information from tickets, files, documents, and tasks across multiple work-related third-party sites, providing you with highly relevant and personalized search results. With this powerful tool, you can effortlessly access the information you need, enhancing your productivity and efficiency in the workplace.
 
