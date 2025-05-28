@@ -47,8 +47,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 ## Prerequisites
 - To connect to your Amazon S3 bucket, you need:
   - The search admin for your organization's Microsoft 365 tenant
-  - AWS (Amazon Web Service) Access Key ID and Secret Access Key with read permissions to the S3 bucket
-  - S3 bucket name and region
+  - AWS (Amazon Web Service) Access Key ID and Secret Access Key with read permission to the S3 bucket
 
 ## Get started
 
