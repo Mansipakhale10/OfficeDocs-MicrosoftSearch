@@ -29,7 +29,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 ## Limitations
 - The connector supports only index files in 'General purpose buckets'
 - The connector doesn't support only index files in Storage class 'Glacier Flexible Retrieval' and 'Glacier Deep Archive'
-- The connector doesn't index files larger than 20MB
+- The connector doesn't index files larger than 20 MB
 - The connector doesn't support versioned objects (only latest version is indexed)
 
 ## Supported File Types
@@ -58,7 +58,7 @@ The display name is used to identify each citation in Copilot to help users easi
 A default value is provided; you can customize it to a name that users in your organization recognize.
 
 ### 2. Configure AWS credentials
-To connect to your S3 bucket, you need to provide AWS credentials. It is recommended to create a dedicated IAM (Identity and Access Management) user with "AmazonS3ReadOnlyAccess" permissions for security best practices.
+To connect to your S3 bucket, you need to provide AWS credentials. It's recommended to create a dedicated IAM (Identity and Access Management) user with "AmazonS3ReadOnlyAccess" permissions for security best practices.
 
 1. Create an IAM user in your AWS account
 2. Attach the "AmazonS3ReadOnlyAccess" permissions policy
