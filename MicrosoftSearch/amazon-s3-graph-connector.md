@@ -1,5 +1,5 @@
 --- 
-title: "Amazon S3 Microsoft Graph connector" 
+title: "Amazon S3 Microsoft 365 Copilot connector" 
 ms.author: kailiang
 author: Kai-Cloud
 manager: zezhangzhao
@@ -9,15 +9,15 @@ ms.topic: article
 ms.service: mssearch 
 ms.localizationpriority: medium 
 search.appverid: 
-description: "Set up the Amazon S3 Microsoft Graph connector for Microsoft 365 Copilot and Microsoft Search." 
+description: "Set up the Amazon S3 Microsoft 365 Copilot connector." 
 ms.date: 05/12/2025
 ---
 
-# Amazon S3 Microsoft Graph connector
+# Amazon S3 Microsoft 365 Copilot connector
 
-The Amazon S3 Microsoft Graph connector allows your organization to index objects stored in your Amazon S3 buckets. After you configure the connector and index content from S3, users can search for those items in Microsoft 365 Copilot.
+The Amazon S3 Microsoft 365 Copilot connector allows your organization to index objects stored in your Amazon S3 buckets. After you configure the connector and index content from S3, users can search for those items in Microsoft 365 Copilot.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors the Amazon S3 Microsoft Graph connector.
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors the Amazon S3 Microsoft 365 Copilot connector.
 
 ## Capabilities
 - Index objects (documents, files, etc.) stored in Amazon S3 buckets.
@@ -121,7 +121,9 @@ To view available properties from your S3 objects, assign a schema to the proper
 
 ### Sync
 
-The refresh interval determines how often your data is synced between Amazon S3 and the Microsoft Graph connector index. The S3 graph connector supports both full crawl and incremental updates based on LastModified timestamps.
+The refresh interval determines how often your data is synced between the data source and the Amazon S3 Copilot connector index. The Amazon S3 Copilot connector only supports the refresh interval - full crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+
+You can change the default values of the refresh interval.
 
 
 ## Next steps
