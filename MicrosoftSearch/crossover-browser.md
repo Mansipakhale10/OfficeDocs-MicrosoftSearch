@@ -19,7 +19,7 @@ The extension works in the background without any manual steps after installatio
 
 The extension only uses activity from third-party sites configured by your organization and does not track your general web browsing. Data captured is stored securely and used only to improve your own Search/Copilot experience, and not shared with others.
 
-## Installing the extension
+### Installing the extension
 
 Users who have admin permissions can install the extension from the Microsoft Edge add-ons website. For more information, see [Microsoft Edge extensions](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home).
 
