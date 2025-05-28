@@ -21,9 +21,9 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
 ## Capabilities
 - Index objects (documents, files, etc.) stored in Amazon S3 buckets.
-- Enable your users to ask for insights based on the content stored in S3. For example, you have configured the connector to access a bucket containing onboarding documentation for sales managers at the company, Contoso:
+- Enable your users to ask for insights based on the content stored in S3. For example, you configured the connector to access a bucket containing onboarding documentation for sales managers at the company, Contoso:
    - What is the Code of Conduct of Contoso?
-   - Summarize the NDA between Suntech and Contoso.
+   - Summarize the Non-Disclosure Agreement (NDA) between Suntech and Contoso.
    - Extract key insights from the Contoso 2022 Electronics Sales Figures.
    
 ## Limitations
@@ -32,24 +32,22 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 - The connector doesn't index files larger than 20MB
 - The connector doesn't support versioned objects (only latest version is indexed)
 
-
 ## Supported File Types
-- Microsoft Office files (.DOC, .DOCM, .DOCX, .DOT, .DOTX, .ONE, .POT, .PPS, .PPT, .PPTM, .PPTX, .XLB, .XLC, .XLSB, .XLS, .XLSX, .XLT, .XLTX)
-- OpenDocument files (.ODP, .ODS, .ODT)
-- Text-based files (.CSV, .HTML, .TXT, .XML)
+- Microsoft Office files (.DOC, .DOCX, .PPT, .PPTX, .XLS, .XLSX, and etc.)
+- OpenDocument files (.ODP, .ODS, .ODT, and etc.)
+- Text-based files (.CSV, .HTML, .TXT, .XML, and etc.)
 - Adobe files (.PDF)
-- Email files (.EML, .MSG, .MHT, .MHTML, .NWS, .OBD, .OBT)
+- Email files (.EML, .MSG, and etc.)
 - Image files (.GIF, .JPG, .JPEG, .PNG)
 - Archive files (.ZIP)
-- Other files (.XPS)
 
 ## Restricted File Types - only metadata is indexed (filename, extension, author, size, last modified)
 - Other files (audio, video, and etc.)
 
 ## Prerequisites
-- You must be the search admin for your organization's Microsoft 365 tenant
 - To connect to your Amazon S3 bucket, you need:
-  - AWS Access Key ID and Secret Access Key with read permissions to the S3 bucket
+  - The search admin for your organization's Microsoft 365 tenant
+  - AWS (Amazon Web Service) Access Key ID and Secret Access Key with read permissions to the S3 bucket
   - S3 bucket name and region
 
 ## Get started
@@ -60,10 +58,10 @@ The display name is used to identify each citation in Copilot to help users easi
 A default value is provided; you can customize it to a name that users in your organization recognize.
 
 ### 2. Configure AWS credentials
-To connect to your S3 bucket, you need to provide AWS credentials. It's recommended to create a dedicated IAM user with minimal required permissions for security best practices.
+To connect to your S3 bucket, you need to provide AWS credentials. It is recommended to create a dedicated IAM (Identity and Access Management) user with "AmazonS3ReadOnlyAccess" permissions for security best practices.
 
 1. Create an IAM user in your AWS account
-2. Attach the minimum required permissions policy
+2. Attach the "AmazonS3ReadOnlyAccess" permissions policy
 
 [![Screenshot that shows creating an IAM user in AWS account and attaching the required permissions policy.](media/amazons3-iam-permissions.png)](media/amazons3-iam-permissions.png#lightbox)
 
@@ -74,7 +72,7 @@ To connect to your S3 bucket, you need to provide AWS credentials. It's recommen
 4. Copy these credentials to use in the connector setup
 
 ### 3. Authenticate and authorize
-Paste your AWS Access Key ID and Secret Access Key in the connector setup. Choose **Authorize**, and the connector will validate the credentials have proper permissions to access the bucket.
+Paste your AWS Access Key ID and Secret Access Key in the connector setup. Choose **Authorize**, and the connector validates the credentials have proper permissions to access the bucket.
 
 ### 4. Roll out to a limited audience
 Deploy the connection to a limited user base if you want to validate it in Copilot and other Search surfaces before you roll it out to a broader audience. For more information, see [Staged rollout for connectors](staged-rollout-for-graph-connectors.md).
@@ -88,7 +86,7 @@ In custom setup you can edit any of the default values for users, content, and s
 ### Users
 #### Access permissions
 
-Currently, the Amazon S3 connector only supports permissions visible to Everyone due to API restrictions. All content indexed using the Amazon S3 connector will be visible to Microsoft 365 users.
+Currently, the Amazon S3 connector only supports permissions visible to Everyone due to API restrictions. All content indexed using the Amazon S3 connector is visible to Microsoft 365 users.
 
 ### Content
 
@@ -108,7 +106,7 @@ To view available properties from your S3 objects, assign a schema to the proper
 | BucketName | N/A | Name of the S3 bucket containing the object | Query, Retrieve, Search |
 | Content | CONTENT | Full text content of the object | Search |
 | ETag | N/A | Entity tag for object version identification | N/A |
-| FileExtension | File extension | File type extension (e.g., .pdf, .docx) | Query, Refine, Retrieve |
+| FileExtension | File extension | File type extension | Query, Refine, Retrieve |
 | IconUrl | IconUrl | URL to the icon representing the file type | Query, Retrieve, Search |
 | Id | N/A | Unique identifier for the object | N/A |
 | LastModified | Last modified date time | Timestamp when object was last modified | Query, Refine, Retrieve |
