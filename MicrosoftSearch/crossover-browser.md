@@ -13,7 +13,10 @@ description: "Learn how to use the crossover browser extension for Microsoft 365
 
 The Microsoft 365 Copilot extension is a browser add-on designed to enhance your Microsoft 365 Copilot experience. It works by delivering personalized, highly relevant Copilot results from your work-related applications, directly within Microsoft 365 Copilot. 
 
-In essence, this extension bridges the gap between Microsoft 365 and the non-Microsoft applications you use at work, bringing their data into your Copilot experience. Importantly, the extension exclusively operates with Microsoft 365 Copilot connectors that your organization’s administrator has approved and enabled, meaning it will only recognize and use data from apps once those connections are in place.
+This extension bridges the gap between Microsoft 365 and the non-Microsoft applications you use at work, bringing their data into your Copilot experience. 
+
+> [Important]
+> The extension exclusively operates with Microsoft 365 Copilot connectors that your organization’s administrator has approved and enabled, and it only recognizes and uses data from apps once those connections are in place.
 
 ## Smart results from across your work tools 
 The Microsoft 365 Copilot extension brings together tickets, files, documents, and tasks from multiple applications, empowering you to resolve issues, collaborate with teammates, and move projects forward, from Microsoft 365 Copilot. With every search, you’re equipped to make faster decisions, complete tasks efficiently, and drive productivity throughout your day. 
@@ -27,11 +30,10 @@ To use the extension and related features, install the Microsoft 365 Copilot ext
 
 Once installed, the extension runs automatically in the background—no extra steps or new apps required. You can simply keep browsing as you normally would.
 
-
 ### Accessing the extension
-- Type edge://extensions directly into the address bar. The extension will appear in a card-like format with a description, its permissions, and access information.  
-- Click on the extension icon (a stylized puzzle piece) in the browser toolbar: Clicking on the puzzle piece icon will open a dropdown menu with a list of all installed extensions. The extension will appear on this list. Clicking on the extension from this dropdown menu will redirect you to Microsoft 365 Copilot. 
-
+- Type edge://extensions directly into the address bar. The extension appears in a card-like format with a description, its permissions, and access information.  
+- Click the extension icon (a stylized puzzle piece) in the browser toolbar.
+- Click the puzzle piece icon. It opens a drop-down menu with a list of all installed extensions. The extension appears on this list, and it redirects you to Microsoft 365 Copilot. 
 
 > [!Note] 
 > The extension can only collect activity from specific websites  approved by your organization’s administrator. It doesn't monitor or track your general web browsing. 
@@ -39,10 +41,10 @@ Once installed, the extension runs automatically in the background—no extra st
 ### What data is collected? 
 1. Intentional user behavior: Specifically, when you view an item and close the item on your browser, for the specific apps your organization has approved. 
 
-2. Contextual metadata related to the user behavior: Including the source application (e.g. ServiceNow, Azure DevOps), item ID, item type, and related details. 
+2. Contextual metadata related to the user behavior: Including the source application, for example, ServiceNow, Azure DevOps, item ID, item type, and related details. 
 
 The extension prioritizes data protection as a fundamental part of its compliance approach, using strong encryption and strict access controls to safeguard your information. 
 
 ### Supported connectors 
 
-The Microsoft 365 Copilot extension works together with Microsoft Copilot connectors. The extension can handle content from popular workplace tools, including Azure DevOps, Jira, Confluence, ServiceNow (covering tickets and knowledge base articles), Google Drive, GitHub, and Salesforce, all depending [on which connections your organization has enabled] (https://learn.microsoft.com/en-us/microsoftsearch/pre-built-connectors-overview). The list is continually expanding and will include all connectors. ```
+The Microsoft 365 Copilot extension works together with Microsoft Copilot connectors. The extension can handle content from popular workplace tools, including Azure DevOps, Jira, Confluence, ServiceNow (covering tickets and knowledge base articles), Google Drive, GitHub, and Salesforce, all depending [on which connections your organization has enabled] (https://learn.microsoft.com/en-us/microsoftsearch/pre-built-connectors-overview). The list is continually expanding and will include all connectors. 
