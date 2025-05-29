@@ -29,12 +29,12 @@ Once installed, the extension runs automatically in the background—no extra st
 
 
 ### Accessing the extension
-- Type edge://extensions directly into the address bar. The extension will appear in a card-like format with a description, and its’ permissions and access information.  
-- Click on the extension icon (a stylized puzzle piece) in the browser toolbar: Clicking on the puzzle piece icon will open a dropdown menu with a list of all installed extensions. The extension will appear on this list. Clicking on the extension from this dropdown menu will redirect you to Micorosoft 365 Copilot. 
+- Type edge://extensions directly into the address bar. The extension will appear in a card-like format with a description, its permissions, and access information.  
+- Click on the extension icon (a stylized puzzle piece) in the browser toolbar: Clicking on the puzzle piece icon will open a dropdown menu with a list of all installed extensions. The extension will appear on this list. Clicking on the extension from this dropdown menu will redirect you to Microsoft 365 Copilot. 
 
 
-## What the extension can access, and, what it doesn’t  
-This extension only collects activity from specific websites that have been approved by your organization’s administrator. It does not monitor or track your general web browsing. 
+> [!Note] 
+> The extension can only collect activity from specific websites  approved by your organization’s administrator. It doesn't monitor or track your general web browsing. 
 
 ### What data is collected? 
 1. Intentional user behavior: Specifically, when you view an item and close the item on your browser, for the specific apps your organization has approved. 
