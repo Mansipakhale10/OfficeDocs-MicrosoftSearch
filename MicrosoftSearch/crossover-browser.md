@@ -31,17 +31,16 @@ To experience the benefits of the extension and related features, install the Mi
 Once installed, the extension runs automatically in the background—no extra steps or new apps required. You can simply keep browsing as you normally would.
 
 ### Accessing the extension
-- Type edge://extensions directly into the address bar. The Microsoft 365 Copilot extension appears in a card-like format with a description, its permissions, and access information.  
-- Click the extension icon (a stylized puzzle piece) in the browser toolbar.
-- Click the puzzle piece icon. It opens a drop-down menu with a list of all installed extensions. The Microsoft 365 extension appears on this list, and it redirects you to Microsoft 365 Copilot. 
+1. Type edge://extensions directly into the address bar. The Microsoft 365 Copilot extension appears in a card-like format with a description, its permissions, and access information.  
+2. Click the extension icon (a stylized puzzle piece) in the browser toolbar.
+3. Click the puzzle piece icon. It opens a drop-down menu with a list of all installed extensions. The Microsoft 365 extension appears on this list, and it redirects you to Microsoft 365 Copilot. 
 
 > [!Note] 
 > The extension only collects activity signals from specific applications that have been approved by your organization’s administrator. It doesn't monitor or track your general web browsing. 
 
 ### What data is collected? 
-1. Intentional user behavior: For example, when you view a page for the specific apps your organization has approved. 
-
-2. Contextual metadata related to the user behavior: Including the source application, for example, ServiceNow, Azure DevOps, item ID, item type, and related details. 
+- Intentional user behavior: For example, when you view a page for the specific apps your organization has approved. 
+- Contextual metadata related to the user behavior: Including the source application, for example, ServiceNow, Azure DevOps, item ID, item type, and related details. 
 
 The extension prioritizes data protection as a fundamental part of its compliance approach, using strong encryption and strict access controls to safeguard your information. 
 
