@@ -22,7 +22,7 @@ This extension bridges the gap between Microsoft 365 and the non-Microsoft appli
 The Microsoft 365 Copilot extension brings together tickets, files, documents, and tasks from multiple applications, empowering you to resolve issues, collaborate with teammates, and move projects forward, from Microsoft 365 Copilot. With every search, you’re equipped to make faster decisions, complete tasks efficiently, and drive productivity throughout your day. 
 
 ## Getting started with the Microsoft 365 Copilot extension 
-To experience the benefits from the extension and related features, install the Microsoft 365 Copilot extension. You can install it in one of 2 ways: 
+To experience the benefits of the extension and related features, install the Microsoft 365 Copilot extension. You can install it in one of 2 ways: 
 
 1. Install the extension on your browser from the [Microsoft Edge add-ons](https://microsoftedge.microsoft.com/addons/) website or the [Chrome web store](https://chrome.google.com/webstore). 
 
@@ -47,4 +47,4 @@ The extension prioritizes data protection as a fundamental part of its complianc
 
 ### Supported connectors 
 
-The Microsoft 365 Copilot extension works together with Microsoft Copilot connectors. It can handle content from popular workplace tools, including Azure DevOps, Jira, Confluence, ServiceNow (covering tickets, catalog, and knowledge base articles), Google Drive, GitHub, and Salesforce, all depending [on which connections your organization has enabled](https://learn.microsoft.com/en-us/microsoftsearch/pre-built-connectors-overview). The list is continually expanding and will include all connectors
+The Microsoft 365 Copilot extension works together with Microsoft Copilot connectors. It can handle content from popular workplace tools, including Azure DevOps, Jira, Confluence, ServiceNow (covering tickets, catalog, and knowledge base articles), Google Drive, GitHub, and Salesforce, all depending [on which connections your organization has enabled](https://learn.microsoft.com//microsoftsearch/pre-built-connectors-overview). The list is continually expanding and will include all connectors
