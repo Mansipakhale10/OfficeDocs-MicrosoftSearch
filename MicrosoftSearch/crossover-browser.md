@@ -26,7 +26,7 @@ To experience the benefits of the extension and related features, install the Mi
 
 1. Install the extension on your browser from the [Microsoft Edge add-ons](https://microsoftedge.microsoft.com/addons/) website or the [Chrome web store](https://chrome.google.com/webstore). 
 
-2. Your tenant admins can install and manage the extension for your organization from the [Microsoft Edge add-ons](https://microsoftedge.microsoft.com/addons/) website. For more information, see [Microsoft Edge extensions](https://learn.microsoft.com/deployedge/microsoft-edge-manage-extensions) 
+2. Your tenant admins can install and manage the extension for your organization from the [Microsoft Edge add-ons](https://microsoftedge.microsoft.com/addons/) website. For more information, see [Microsoft Edge extensions](/deployedge/microsoft-edge-manage-extensions) 
 
 Once installed, the extension runs automatically in the background—no extra steps or new apps required. You can simply keep browsing as you normally would.
 
@@ -47,4 +47,4 @@ The extension prioritizes data protection as a fundamental part of its complianc
 
 ### Supported connectors 
 
-The Microsoft 365 Copilot extension works together with Microsoft Copilot connectors. It can handle content from popular workplace tools, including Azure DevOps, Jira, Confluence, ServiceNow (covering tickets, catalog, and knowledge base articles), Google Drive, GitHub, and Salesforce, all depending [on which connections your organization has enabled](https://learn.microsoft.com//microsoftsearch/pre-built-connectors-overview). The list is continually expanding and will include all connectors
+The Microsoft 365 Copilot extension works together with Microsoft Copilot connectors. It can handle content from popular workplace tools, including Azure DevOps, Jira, Confluence, ServiceNow (covering tickets, catalog, and knowledge base articles), Google Drive, GitHub, and Salesforce, all depending [on which connections your organization has enabled](/pre-built-connectors-overview). The list is continually expanding and will include all connectors
