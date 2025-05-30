@@ -15,7 +15,7 @@ The Microsoft 365 Copilot extension is a browser add-on designed to enhance your
 
 This extension bridges the gap between Microsoft 365 and the non-Microsoft applications you use at work, bringing their data into your Copilot experience. 
 
-> [Important]
+> [!Important]
 > The extension exclusively operates with Microsoft 365 Copilot connectors that your organization’s administrator has approved and enabled, and it only recognizes and uses data from apps once those connections are in place.
 
 ## Smart results from across your work tools 
