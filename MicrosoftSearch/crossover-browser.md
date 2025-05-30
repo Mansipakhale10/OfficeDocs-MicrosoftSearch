@@ -47,4 +47,4 @@ The extension prioritizes data protection as a fundamental part of its complianc
 
 ### Supported connectors 
 
-The Microsoft 365 Copilot extension works together with Microsoft Copilot connectors. It can handle content from popular workplace tools, including Azure DevOps, Jira, Confluence, ServiceNow (covering tickets, catalog, and knowledge base articles), Google Drive, GitHub, and Salesforce, all depending [on which connections your organization has enabled](/pre-built-connectors-overview). The list is continually expanding and will include all connectors
+The Microsoft 365 Copilot extension works together with Microsoft Copilot connectors. It can handle content from popular workplace tools, including Azure DevOps, Jira, Confluence, ServiceNow (covering tickets, catalog, and knowledge base articles), Google Drive, GitHub, and Salesforce, all depending [on which connections your organization has enabled](/microsoftsearch/pre-built-connectors-overview). The list continues to expand and will include all connectors.
