@@ -58,7 +58,7 @@ Create a connected app from Tableau Cloud’s Settings page.
 
    :::image type="content" alt-text="Screenshot that shows the navigation path to the apps configuration in Tableau." source="media/tableau-navigation-to-settings-apps.png" lightbox="media/tableau-navigation-to-settings-apps.png":::
 
-3. Select the New Connected App button drop-down arrow and select **Direct Trust**.
+3. Select the **New Connected App** button drop-down arrow and select **Direct Trust**.
 4. Use the information in the following table to fill out the **Create Connected App dialog box**.
 
    | Field | Description | Recommended Value |
@@ -67,7 +67,7 @@ Create a connected app from Tableau Cloud’s Settings page.
    | Access Level | To control which views or metrics can be embedded, select "All projects" or "Only one project". All projects: This option enables the content in all projects to be embedded. Only one project: This option enables only the content in the specified project to be embedded. If the specified project contains nested projects, embedding content in those nested projects is not enabled. |"All project" or "Only one project" |
    | Domain allowlist|the domains where views or metrics can be embedded|All domains |
 
-   When finished, select the Create button.
+   When finished, select the **Create** button.
 
    :::image type="content" alt-text="Screenshot that shows the Tableau direct trust configuration." source="media/tableau-direct-trust-configuration.png":::
 
@@ -81,7 +81,7 @@ Create a connected app from Tableau Cloud’s Settings page.
 
    :::image type="content" alt-text="Screenshot that shows how to generate a secret for the Tableau App." source="media/tableau-generate-a-secret.png":::
 
-2. Make note of the **Secret ID** ，**Secret Value** and **Client ID** to use in Step 3 below.
+2. Make note of the **Secret ID**，**Secret Value** and **Client ID** to use in Step 3 below.
 
 **Step 3: Enter the required fields of Tableau Copilot connector authentication**.
 
@@ -114,11 +114,11 @@ For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl
 | Sync | Incremental crawl | Frequency: Every 15 mins |
 | Sync | Full crawl | Frequency: Every day |
 
-If you want to edit any of these values, you need to choose the **Custom setup** option. 
+If you want to edit any of these values, you need to choose **Custom setup**.
 
 ## Custom setup 
 
-Custom setup is for those admins who want to edit the default values for settings. Once you click the **Custom setup** option, you should see three other tabs – **Users**, **Content**, and **Sync**. 
+Custom setup is for those admins who want to edit the default values for settings. Once you select **Custom setup**, you should see three other tabs – **Users**, **Content**, and **Sync**. 
 
 ### Users 
 
@@ -140,9 +140,9 @@ The Tableau Cloud Copilot connector supports data visible to **Only people with 
 If you choose Only people with access to this data source, you need to further choose whether your Tableau Cloud Site has Microsoft Entra ID provisioned users or non-AAD users. 
 To identify which option is suitable for your organization: 
 
-1. Choose the **Microsoft Entra ID** option if the email ID of Tableau Cloud users is same as the UserPrincipalName (UPN) of users in Microsoft Entra ID. 
+1. Choose **Microsoft Entra ID** if the email ID of Tableau Cloud users is same as the UserPrincipalName (UPN) of users in Microsoft Entra ID. 
 
-2. Choose the **non-AAD** option if the email ID of Tableau Cloud users is **different** from the UserPrincipalName (UPN) of users in Microsoft Entra ID.
+2. Choose **non-AAD** if the email ID of Tableau Cloud users is **different** from the UserPrincipalName (UPN) of users in Microsoft Entra ID.
 
    >[!Important]
    >- If you choose Microsoft Entra ID as the type of identity source, the connector maps the email IDs of users obtained from Tableau Cloud directly to UPN property from Microsoft Entra ID.
@@ -183,4 +183,4 @@ You can configure full and incremental crawls based on the scheduling options pr
 ## Troubleshooting
 After publishing your connection, you can review the status under **Data sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
-If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/graph/support).
+If you have issues or want to provide feedback, contact [Microsoft Graph](https://developer.microsoft.com/graph/support).
