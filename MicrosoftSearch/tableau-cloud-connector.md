@@ -1,5 +1,4 @@
 --- 
-
 title: "Tableau Cloud Microsoft 365 Copilot connector(preview)" 
 ms.author: rantang
 author: ranran1998
@@ -51,35 +50,44 @@ A Tableau Cloud site URL typically looks like `https://<your-domain>.online.tabl
 To enable and configure the Connected Apps with Direct Trust for Tableau Cloud, use the following steps to use Tableau Connected Apps with Direct Trust for authentication.
 
 **Step 1: Create a Tableau Connected Apps with Direct Trust**
+
 Create a connected app from Tableau Cloud’s Settings page.
+
 1. As a site admin, sign in to Tableau Cloud.
 2. From the left pane, select **Settings > Connected Apps**.
-![Screenshot that shows the navigation path to the apps configuration in Tableau.](media/tableau-navigation-to-settings-apps.png)
+
+   :::image type="content" alt-text="Screenshot that shows the navigation path to the apps configuration in Tableau." source="media/tableau-navigation-to-settings-apps.png" lightbox="media/tableau-navigation-to-settings-apps.png":::
+
 3. Select the New Connected App button drop-down arrow and select **Direct Trust**.
 4. Use the information in the following table to fill out the **Create Connected App dialog box**.
 
-Field | Description | Recommended Value
---- | --- | ---
-Connected app name| Unique value that identifies the application that you require Direct Trust for. | Microsoft Search and Copilot
-Access Level | To control which views or metrics can be embedded, select "All projects" or "Only one project". All projects: This option enables the content in all projects to be embedded. Only one project: This option enables only the content in the specified project to be embedded. If the specified project contains nested projects, embedding content in those nested projects is not enabled. |"All project" or "Only one project"
-Domain allowlist|the domains where views or metrics can be embedded|All domains
+   Field | Description | Recommended Value
+   --- | --- | ---
+   Connected app name| Unique value that identifies the application that you require Direct Trust for. | Microsoft Search and Copilot
+   Access Level | To control which views or metrics can be embedded, select "All projects" or "Only one project". All projects: This option enables the content in all projects to be embedded. Only one project: This option enables only the content in the specified project to be embedded. If the specified project contains nested projects, embedding content in those nested projects is not enabled. |"All project" or "Only one project"
+   Domain allowlist|the domains where views or metrics can be embedded|All domains
 
-When finished, select the Create button.
-![Screenshot that shows the Tableau direct trust configuration.](media/tableau-direct-trust-configuration.png)  
+   When finished, select the Create button.
+
+   :::image type="content" alt-text="Screenshot that shows the Tableau direct trust configuration." source="media/tableau-direct-trust-configuration.png":::
 
 5. Next to the connected app's name, select the actions menu and select **Enable**.
-![Screenshot that shows how to enable the Tableau App.](media/tableau-enable-app.png)  
+
+   :::image type="content" alt-text="Screenshot that shows how to enable the Tableau App." source="media/tableau-enable-app.png":::
 
 **Step 2: Generate a secret**
+
 1. On the detail page of the connected app you created in Step 1, select the **Generate New Secret** button.
-![Screenshot that shows how to generate a secret for the Tableau App.](media/tableau-generate-a-secret.png)  
+
+   :::image type="content" alt-text="Screenshot that shows how to generate a secret for the Tableau App." source="media/tableau-generate-a-secret.png":::
+
 2. Make note of the **Secret ID** ，**Secret Value** and **Client ID** to use in Step 3 below.
 
 **Step 3: Enter the required fields of Tableau Copilot connector authentication**.
 
 Enter the User, Connected App Client ID, Connected App Secret ID and Connected App Secret Key to connect to your Tableau Cloud Site. 
 
-![Screenshot that shows the authentication process for Tableau Copilot connector.](media/tableau-gc-auth.png) 
+:::image type="content" alt-text="Screenshot that shows the authentication process for Tableau Copilot connector." source="media/tableau-gc-auth.png":::
 
 Refer to the following table to learn the descriptions of the required fields of Tableau Copilot connector authentication
 
@@ -97,7 +105,7 @@ At this point, you're ready to create the connection for Tableau Cloud. You can 
 
 For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl frequency, etc., we set defaults based on what works best with Tableau Cloud data. The default values are as follows: 
 
-**Page** | **Settings** | **Default values**
+Page | Settings | Default values
 --- | ---- | ---
 Users | Access permissions | Only people with access to this data source.
 Users | Map Identities |Data source identities mapped using Microsoft Entra IDs.
