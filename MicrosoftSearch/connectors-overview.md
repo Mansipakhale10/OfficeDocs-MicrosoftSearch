@@ -60,6 +60,10 @@ You can connect to the many popular data sources using connectors created by Mic
 
 The [Microsoft 365 Copilot connectors gallery](https://www.microsoft.com/microsoft-search/connectors) contains a brief description of each of these connectors. If you're ready to connect one of these data sources to your tenant, be sure to read the [Setup overview](configure-connector.md) and any other articles in the setup connectors by Microsoft section that apply to your data source.
 
+### Microsoft 365 Copilot connectors for people data
+
+[Microsoft 365 Copilot connectors for people data](https://learn.microsoft.com/en-us/graph/peopleconnectors.md) integrate third-party people data into M365 applications to enhance and unify individual profiles. They provide a synchronized view of people data while keeping the original data authoritative in its source system. These connectors improve identity cohesion, Copilot’s response relevance, and data discoverability within M365, including updated profile cards and search capabilities. Read more [here](https://learn.microsoft.com/en-us/graph/peopleconnectors.md).
+
 ### Microsoft 365 Copilot connectors by our partners
 
 The [Microsoft 365 Copilot connectors gallery](https://www.microsoft.com/microsoft-search/connectors) includes a brief description of each of the connectors created by our partners and a link to each partner's website. To learn more, contact each partner directly.
