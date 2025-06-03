@@ -21,9 +21,9 @@ This extension enables Copilot Search to enhance the relevance of third-party co
 ## Smart results from across your work tools 
 The Microsoft 365 Copilot extension brings together tickets, files, documents, and tasks from multiple applications, empowering you to resolve issues, collaborate with teammates, and move projects forward, from Microsoft 365 Copilot. With every search, you’re equipped to make faster decisions, complete tasks efficiently, and drive productivity throughout your day. 
 
-The Microsoft 365 Copilot extension makes your Copilot search results more personal. It ensures that the things you have spent time on are prioritized for you. To illustrate this, imagine two employees searching the same thing "Q3 plan". Without the extension, they will both get a list of relevant documents matching "Q3 plan" primarily from Microsoft 365 applications. 
+The Microsoft 365 Copilot extension makes your Copilot search results more personal. It ensures that the things you have spent time on are prioritized for you. To illustrate this, imagine two employees searching for the same thing, "Q3 plan". Without the extension, they both get a list of relevant documents matching "Q3 plan," primarily from Microsoft 365 applications. 
 
-With the extension, one employee might see the Confluence page they just read about Q3 marketing plans at the top, while another employee, might see a different result, perhaps a Google Drive doc they opened recently, at the top. Each gets a result tailored to what they were working on, bridging the gap between the Microsoft 365 and third-party apps you use at work.
+With the extension, one employee might see the Confluence page they just read about Q3 marketing plans at the top. In contrast, another employee might see a different result, perhaps a Google Drive doc they opened recently, at the top. Each user receives a result tailored to their specific task, bridging the gap between Microsoft 365 and third-party apps used at work.
 
 ## Getting started with the Microsoft 365 Copilot extension 
 To experience the benefits of the extension and related features, install the Microsoft 365 Copilot extension. You can install it in 1 of 2 ways: 
