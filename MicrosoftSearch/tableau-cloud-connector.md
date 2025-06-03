@@ -61,11 +61,11 @@ Create a connected app from Tableau Cloud’s Settings page.
 3. Select the New Connected App button drop-down arrow and select **Direct Trust**.
 4. Use the information in the following table to fill out the **Create Connected App dialog box**.
 
-   Field | Description | Recommended Value
-   --- | --- | ---
-   Connected app name| Unique value that identifies the application that you require Direct Trust for. | Microsoft Search and Copilot
-   Access Level | To control which views or metrics can be embedded, select "All projects" or "Only one project". All projects: This option enables the content in all projects to be embedded. Only one project: This option enables only the content in the specified project to be embedded. If the specified project contains nested projects, embedding content in those nested projects is not enabled. |"All project" or "Only one project"
-   Domain allowlist|the domains where views or metrics can be embedded|All domains
+   | Field | Description | Recommended Value |
+   | --- | --- | --- |
+   | Connected app name| Unique value that identifies the application that you require Direct Trust for. | Microsoft Search and Copilot |
+   | Access Level | To control which views or metrics can be embedded, select "All projects" or "Only one project". All projects: This option enables the content in all projects to be embedded. Only one project: This option enables only the content in the specified project to be embedded. If the specified project contains nested projects, embedding content in those nested projects is not enabled. |"All project" or "Only one project" |
+   | Domain allowlist|the domains where views or metrics can be embedded|All domains |
 
    When finished, select the Create button.
 
@@ -91,12 +91,12 @@ Enter the User, Connected App Client ID, Connected App Secret ID and Connected A
 
 Refer to the following table to learn the descriptions of the required fields of Tableau Copilot connector authentication
 
-Field | Description 
---- | --- 
-User| The admin user email. Recommend to fill the email of an admin user who configured the Tableau Connected Apps with Direct Trust.
-Connected App Client ID| **Client ID** of the Tableau Connected Apps with Direct Trust, refer to the value noted in the Step 2 above.
-Connected App Secret ID| **Secret ID** of the Tableau Connected Apps with Direct Trust, refer to the value noted in the Step 2 above.
-Connected App Secret Key| **Secret Value** of the Tableau Connected Apps with Direct Trust, refer to the value noted in the Step 2 above.
+| Field | Description |
+| --- | --- |
+| User| The admin user email. Recommend to fill the email of an admin user who configured the Tableau Connected Apps with Direct Trust. |
+| Connected App Client ID| **Client ID** of the Tableau Connected Apps with Direct Trust, refer to the value noted in the Step 2 above. |
+| Connected App Secret ID| **Secret ID** of the Tableau Connected Apps with Direct Trust, refer to the value noted in the Step 2 above. |
+| Connected App Secret Key| **Secret Value** of the Tableau Connected Apps with Direct Trust, refer to the value noted in the Step 2 above. |
 
 ### 4. Staged rollout to a limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience.
@@ -105,14 +105,14 @@ At this point, you're ready to create the connection for Tableau Cloud. You can 
 
 For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl frequency, etc., we set defaults based on what works best with Tableau Cloud data. The default values are as follows: 
 
-Page | Settings | Default values
---- | ---- | ---
-Users | Access permissions | Only people with access to this data source.
-Users | Map Identities |Data source identities mapped using Microsoft Entra IDs.
-Content | Index content | All sheets, except the sheets in personal space. 
-Content | Manage properties | To check default properties and their schema, [click here](#content).
-Sync | Incremental crawl | Frequency: Every 15 mins
-Sync | Full crawl | Frequency: Every day
+| Page | Settings | Default values |
+| --- | ---- | --- |
+| Users | Access permissions | Only people with access to this data source. |
+| Users | Map Identities |Data source identities mapped using Microsoft Entra IDs. |
+| Content | Index content | All sheets, except the sheets in personal space. |
+| Content | Manage properties | To check default properties and their schema, [click here](#content). |
+| Sync | Incremental crawl | Frequency: Every 15 mins |
+| Sync | Full crawl | Frequency: Every day |
 
 If you want to edit any of these values, you need to choose the **Custom setup** option. 
 
