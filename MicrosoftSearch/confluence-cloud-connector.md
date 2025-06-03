@@ -75,10 +75,15 @@ The following steps provide guidance on how to register the app:
    | View content details | `read:content-details:confluence` | Crawl content satisfying criteria.
    | View groups | `read:group:confluence` | To access group permissions of content.
    | View user details | `read:user:confluence` | To access individual user details to support permissions.
+   | View audit records | `read:audit-log:confluence` | To access audit records for Confluence events to support permissions.
+   | View pages | `read:page:confluence` | To access page content details to support permissions.
+   | View spaces | `read:space:confluence` | To access space details to support permissions.
+   | View content summaries | `read:content.metadata:confluence` | To access information about the content to support permissions.
+   | View content restrictions and space permissions | `read:permission:confluence` | To access content restrictions and speace permission details to support permissions.
 
-5. Click **Save**.
-6. Navigate to `Authorization` from the navigation pane on the left. Add the callback URL, for **Microsoft 365 Enterprise**: `https://gcs.office.com/v1.0/admin/oauth/callback`, for **Microsoft 365 Government**: `https://gcsgcc.office.com/v1.0/admin/oauth/callback` and save the changes.
-7. Navigate to **Settings** from the navigation pane on the left. You get the **Client ID** and **Secret** from this page.
+6. Click **Save**.
+7. Navigate to `Authorization` from the navigation pane on the left. Add the callback URL, for **Microsoft 365 Enterprise**: `https://gcs.office.com/v1.0/admin/oauth/callback`, for **Microsoft 365 Government**: `https://gcsgcc.office.com/v1.0/admin/oauth/callback` and save the changes.
+8. Navigate to **Settings** from the navigation pane on the left. You get the **Client ID** and **Secret** from this page.
 
    Complete the connection settings step using the **Client ID** and **Secret**.
 
