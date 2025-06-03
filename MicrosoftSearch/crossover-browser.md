@@ -30,7 +30,7 @@ To experience the benefits of the extension and related features, install the Mi
 
 1. Install the extension on your browser from the [Microsoft Edge add-ons](https://microsoftedge.microsoft.com/addons/detail/m365-search-relevance-ext/danmflhegmadnfikaeoakocddjockglk) website. 
 
-2. Your tenant admins can install and manage the extension for your organization from the [Microsoft Edge add-ons](https://microsoftedge.microsoft.com/addons/detail/m365-search-relevance-ext/danmflhegmadnfikaeoakocddjockglk/) website. For more information, see [Microsoft Edge extensions](/deployedge/microsoft-edge-manage-extensions) 
+2. Your tenant admins can install and manage the extension for your organization from the [Microsoft Edge add-ons](https://microsoftedge.microsoft.com/addons/detail/m365-search-relevance-ext/danmflhegmadnfikaeoakocddjockglk/) website. For more information, see [Microsoft Edge extensions](/deployedge/microsoft-edge-manage-extensions).
 
 Once installed, the extension runs automatically in the background—no extra steps or new apps required. You can keep browsing as you normally would.
 
