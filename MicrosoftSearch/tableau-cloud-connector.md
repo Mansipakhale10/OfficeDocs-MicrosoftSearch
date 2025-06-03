@@ -128,7 +128,7 @@ The Tableau Cloud Copilot connector supports data visible to **Only people with 
 
 >[!NOTE]
 >Tableau's ACL system uses a layered evaluation mechanism to calculate users' effective permissions. When you select "**Only people with access to this data source**" while configuring the Tableau Cloud Copilot connector, the connector applies a logic similar to Tableau’s native ACL system. This mechanism ensures that the content indexed by the Copilot connector is **not overshared** with users who don't have appropriate permissions within Tableau Cloud Sites. This image shows the specific rules are applied to determine which permissions govern the content and which users are authorized to access it.![Diagram that shows the workflow of Tableau Copilot connector ACL.](media/tableau-connector-acl-workflow.png)  
-
+>
 > - For admin users, they're always ALLOWED.
 > - If the user is a “denied user”, part of a “denied group” or in a “denied group set”, the user is DENIED.
 > - If the user is a project leader or a content owner, the user is ALLOWED.
@@ -142,10 +142,10 @@ To identify which option is suitable for your organization:
 
 2. Choose the **non-AAD** option if the email ID of Tableau Cloud users is **different** from the UserPrincipalName (UPN) of users in Microsoft Entra ID.
 
->[!Important]
->- If you choose Microsoft Entra ID as the type of identity source, the connector maps the email IDs of users obtained from Tableau Cloud directly to UPN property from Microsoft Entra ID.
->- If you chose "non-AAD" for the identity type see Map your non-Azure AD Identities for instructions on mapping the identities. You can use this option to provide the mapping regular expression from email ID to UPN.
->- Updates to users or groups governing access permissions are synced in full crawls only. Incremental crawls do not currently support the processing of updates to permissions.
+   >[!Important]
+   >- If you choose Microsoft Entra ID as the type of identity source, the connector maps the email IDs of users obtained from Tableau Cloud directly to UPN property from Microsoft Entra ID.
+   >- If you chose "non-AAD" for the identity type see Map your non-Azure AD Identities for instructions on mapping the identities. You can use this option to provide the mapping regular expression from email ID to UPN.
+   >- Updates to users or groups governing access permissions are synced in full crawls only. Incremental crawls do not currently support the processing of updates to permissions.
 
 ### Content 
 
