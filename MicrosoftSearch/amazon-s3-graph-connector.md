@@ -59,19 +59,19 @@ A default value is provided; you can customize it to a name that users in your o
 ### Configure AWS credentials
 To connect to your S3 bucket, you need to provide AWS credentials. It is recommended to create a dedicated IAM (Identity and Access Management) user with "AmazonS3ReadOnlyAccess" permissions for security best practices.
 
-1. Create an IAM user in your AWS account
-2. Attach the "AmazonS3ReadOnlyAccess" permissions policy
+1. Create an IAM user in your AWS account.
+2. Attach the "AmazonS3ReadOnlyAccess" permissions policy.
 
 [![Screenshot that shows creating an IAM user in AWS account and attaching the required permissions policy.](media/amazons3-iam-permissions.png)](media/amazons3-iam-permissions.png#lightbox)
 
-3. Generate an Access Key ID and Secret Access Key
+3. Generate an access key ID and secret access key.
 
 [![Screenshot that shows generating an access key for an IAM user.](media/amazons3-iam-access-key.png)](media/amazons3-iam-access-key.png#lightbox)
 
-4. Copy these credentials to use in the connector setup
+4. Copy these credentials to use in the connector setup.
 
 ### Authenticate and authorize
-Paste your AWS Access Key ID and Secret Access Key in the connector setup. Choose **Authorize**, and the connector validates that the credentials have proper permissions to access the bucket.
+Paste your AWS access key ID and secret access key in the connector setup. Choose **Authorize**, and the connector validates that the credentials have proper permissions to access the bucket.
 
 ### Roll out to a limited audience
 Deploy the connection to a limited user base if you want to validate it in Copilot and other Search surfaces before you roll it out to a broader audience. For more information, see [Staged rollout for connectors](staged-rollout-for-graph-connectors.md).
