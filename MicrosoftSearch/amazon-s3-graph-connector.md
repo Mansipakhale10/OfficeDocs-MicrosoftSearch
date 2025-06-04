@@ -45,18 +45,18 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 - Other files (audio, video, and etc.)
 
 ## Prerequisites
-- To connect to your Amazon S3 bucket, you need:
-  - The search admin for your organization's Microsoft 365 tenant
-  - AWS (Amazon Web Service) Access Key ID and Secret Access Key with read permission to the S3 bucket
+To connect to your Amazon S3 bucket, you need:
+- The search admin for your organization's Microsoft 365 tenant.
+- AWS (Amazon Web Service) Access Key ID and Secret Access Key with read permission to the S3 bucket.
 
 ## Get started
 
-### 1. Choose a display name 
+### Choose a display name 
 The display name is used to identify each citation in Copilot to help users easily recognize the associated file or item. The display name also signifies trusted content and is used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters).
 
 A default value is provided; you can customize it to a name that users in your organization recognize.
 
-### 2. Configure AWS credentials
+### Configure AWS credentials
 To connect to your S3 bucket, you need to provide AWS credentials. It is recommended to create a dedicated IAM (Identity and Access Management) user with "AmazonS3ReadOnlyAccess" permissions for security best practices.
 
 1. Create an IAM user in your AWS account
@@ -70,10 +70,10 @@ To connect to your S3 bucket, you need to provide AWS credentials. It is recomme
 
 4. Copy these credentials to use in the connector setup
 
-### 3. Authenticate and authorize
-Paste your AWS Access Key ID and Secret Access Key in the connector setup. Choose **Authorize**, and the connector validates the credentials have proper permissions to access the bucket.
+### Authenticate and authorize
+Paste your AWS Access Key ID and Secret Access Key in the connector setup. Choose **Authorize**, and the connector validates that the credentials have proper permissions to access the bucket.
 
-### 4. Roll out to a limited audience
+### Roll out to a limited audience
 Deploy the connection to a limited user base if you want to validate it in Copilot and other Search surfaces before you roll it out to a broader audience. For more information, see [Staged rollout for connectors](staged-rollout-for-graph-connectors.md).
 
 At this point, you're ready to create the connection for Amazon S3. Choose **Create** to publish your connection and begin indexing objects from your S3 bucket.
@@ -93,14 +93,14 @@ Currently, the Amazon S3 connector only supports permissions visible to Everyone
 Use the preview results button to verify the data retrieved by this connection.
 
 #### Content Filter
-The connector provides a content filter what content gets indexed:
+The connector provides a content filter for what content gets indexed:
 - Bucket name filter: Select specific buckets to include
 
 #### Manage properties
 
 To view available properties from your S3 objects, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias in the property. Some properties are selected by default.
 
-| **Properties** | **Semantic Label** | **Description** | **Schema** |
+| Default properties | Semantic label | Description | Schema |
 |------------------|-------------------|----------------|------------|
 | BucketName | N/A | Name of the S3 bucket containing the object | Query, Retrieve, Search |
 | Content | CONTENT | Full text content of the object | Search |
@@ -115,13 +115,11 @@ To view available properties from your S3 objects, assign a schema to the proper
 | StorageClass | N/A | S3 storage class for the object | N/A |
 | Url | url | Direct URL to access the object | Retrieve, Search |
 
-
 ### Sync
 
 The refresh interval determines how often your data is synced between the data source and the Amazon S3 Copilot connector index. The Amazon S3 Copilot connector only supports the refresh interval - full crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
 
 You can change the default values of the refresh interval.
-
 
 ## Next steps
 After you publish your connection, you can review the status under **Your connections** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
