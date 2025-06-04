@@ -25,24 +25,22 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
    - What is the Code of Conduct of Contoso?
    - Summarize the Non-Disclosure Agreement (NDA) between Suntech and Contoso.
    - Extract key insights from the Contoso 2022 Electronics Sales Figures.
-   
+- Supported file types
+   - Microsoft Office files (.DOC, .DOCX, .PPT, .PPTX, .XLS, .XLSX, and etc.)
+   - OpenDocument files (.ODP, .ODS, .ODT, and etc.)
+   - Text-based files (.CSV, .HTML, .TXT, .XML, and etc.)
+   - Adobe files (.PDF)
+   - Email files (.EML, .MSG, and etc.)
+   - Image files (.GIF, .JPG, .JPEG, .PNG)
+   - Archive files (.ZIP)
+   - 
 ## Limitations
 - Only supports indexed files in 'General purpose buckets'.
 - Doesn't support only indexed files in storage classes 'Glacier Flexible Retrieval' and 'Glacier Deep Archive'.
 - Doesn't index files larger than 20 MB.
 - Doesn't support versioned objects (only the latest version is indexed).
-
-## Supported file types
-- Microsoft Office files (.DOC, .DOCX, .PPT, .PPTX, .XLS, .XLSX, and etc.)
-- OpenDocument files (.ODP, .ODS, .ODT, and etc.)
-- Text-based files (.CSV, .HTML, .TXT, .XML, and etc.)
-- Adobe files (.PDF)
-- Email files (.EML, .MSG, and etc.)
-- Image files (.GIF, .JPG, .JPEG, .PNG)
-- Archive files (.ZIP)
-
-## Restricted file types - only metadata is indexed (filename, extension, author, size, last modified)
-- Other files (audio, video, and etc.)
+- Restricted file types - only metadata is indexed (filename, extension, author, size, last modified)
+   - Other files (audio, video, and etc.)
 
 ## Prerequisites
 To connect to your Amazon S3 bucket, you need:
