@@ -33,7 +33,6 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
    - Email files (.EML, .MSG, and etc.)
    - Image files (.GIF, .JPG, .JPEG, .PNG)
    - Archive files (.ZIP)
-   - 
 ## Limitations
 - Only supports indexed files in 'General purpose buckets'.
 - Doesn't support only indexed files in storage classes 'Glacier Flexible Retrieval' and 'Glacier Deep Archive'.
