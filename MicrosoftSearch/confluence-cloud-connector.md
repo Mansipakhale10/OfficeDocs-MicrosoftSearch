@@ -27,8 +27,8 @@ This article is intended for Microsoft 365 administrators who are responsible fo
 * Users can perform natural language queries for accurate responses.
 
 ## Prerequisites
-* You must be the admin for your organization's Microsoft 365 tenant and the admin for your organization's Confluence site
-* Ensure that you have authentication credentials with the right access. 
+- You must be the admin for your organization's Microsoft 365 tenant and the admin for your organization's Confluence site.
+- Make sure you have authentication credentials with the right access. 
 
 ## Limitations
 - Doesn't index attachment files or comments.
