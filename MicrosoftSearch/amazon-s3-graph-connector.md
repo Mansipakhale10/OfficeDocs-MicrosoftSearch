@@ -54,7 +54,7 @@ The display name is used to identify each citation in Copilot to help users easi
 A default value is provided; you can customize it to a name that users in your organization recognize.
 
 ### Configure AWS credentials
-To connect to your S3 bucket, you need to provide AWS credentials. It is recommended to create a dedicated IAM (Identity and Access Management) user with "AmazonS3ReadOnlyAccess" permissions for security best practices.
+To connect to your S3 bucket, you need to provide AWS credentials. It's recommended to create a dedicated IAM (Identity and Access Management) user with "AmazonS3ReadOnlyAccess" permissions for security best practices.
 
 1. Create an IAM user in your AWS account.
 2. Attach the "AmazonS3ReadOnlyAccess" permissions policy.
