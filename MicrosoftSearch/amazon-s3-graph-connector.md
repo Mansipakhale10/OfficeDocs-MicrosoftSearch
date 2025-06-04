@@ -80,7 +80,7 @@ At this point, you're ready to create the connection for Amazon S3. Choose **Cre
 
 ## Custom setup
 
-In custom setup you can edit any of the default values for users, content, and sync.
+In custom setup, you can edit any of the default values for users, content, and sync.
 
 ### Users
 #### Access permissions
@@ -93,8 +93,7 @@ Currently, the Amazon S3 connector only supports permissions visible to Everyone
 Use the preview results button to verify the data retrieved by this connection.
 
 #### Content Filter
-The connector provides a content filter for what content gets indexed:
-- Bucket name filter: Select specific buckets to include
+The connector provides a content filter to determine which content gets indexed. You can select specific buckets to include by using the bucket name filter.
 
 #### Manage properties
 
