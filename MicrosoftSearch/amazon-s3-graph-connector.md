@@ -59,11 +59,11 @@ To connect to your S3 bucket, you need to provide AWS credentials. It's recommen
 1. Create an IAM user in your AWS account.
 2. Attach the "AmazonS3ReadOnlyAccess" permissions policy.
 
-[![Screenshot that shows creating an IAM user in AWS account and attaching the required permissions policy.](media/amazons3-iam-permissions.png)](media/amazons3-iam-permissions.png#lightbox)
+   [![Screenshot that shows creating an IAM user in AWS account and attaching the required permissions policy.](media/amazons3-iam-permissions.png)](media/amazons3-iam-permissions.png#lightbox)
 
 3. Generate an access key ID and secret access key.
 
-[![Screenshot that shows generating an access key for an IAM user.](media/amazons3-iam-access-key.png)](media/amazons3-iam-access-key.png#lightbox)
+   [![Screenshot that shows generating an access key for an IAM user.](media/amazons3-iam-access-key.png)](media/amazons3-iam-access-key.png#lightbox)
 
 4. Copy these credentials to use in the connector setup.
 
