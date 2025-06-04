@@ -17,7 +17,7 @@ ms.date: 05/12/2025
 
 The Amazon S3 Microsoft 365 Copilot connector allows your organization to index objects stored in your Amazon S3 buckets. After you configure the connector and index content from S3, users can search for those items in Microsoft 365 Copilot.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors the Amazon S3 Microsoft 365 Copilot connector.
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors the Amazon S3 Copilot connector.
 
 ## Capabilities
 - Index objects (documents, files, etc.) stored in Amazon S3 buckets.
@@ -27,12 +27,12 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
    - Extract key insights from the Contoso 2022 Electronics Sales Figures.
    
 ## Limitations
-- The connector supports only index files in 'General purpose buckets'
-- The connector doesn't support only index files in Storage class 'Glacier Flexible Retrieval' and 'Glacier Deep Archive'
-- The connector doesn't index files larger than 20 MB
-- The connector doesn't support versioned objects (only latest version is indexed)
+- Only supports indexed files in 'General purpose buckets'.
+- Doesn't support only indexed files in storage classes 'Glacier Flexible Retrieval' and 'Glacier Deep Archive'.
+- Doesn't index files larger than 20 MB.
+- Doesn't support versioned objects (only the latest version is indexed).
 
-## Supported File Types
+## Supported file types
 - Microsoft Office files (.DOC, .DOCX, .PPT, .PPTX, .XLS, .XLSX, and etc.)
 - OpenDocument files (.ODP, .ODS, .ODT, and etc.)
 - Text-based files (.CSV, .HTML, .TXT, .XML, and etc.)
@@ -41,7 +41,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 - Image files (.GIF, .JPG, .JPEG, .PNG)
 - Archive files (.ZIP)
 
-## Restricted File Types - only metadata is indexed (filename, extension, author, size, last modified)
+## Restricted file types - only metadata is indexed (filename, extension, author, size, last modified)
 - Other files (audio, video, and etc.)
 
 ## Prerequisites
