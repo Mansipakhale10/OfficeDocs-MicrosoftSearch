@@ -62,7 +62,7 @@ The [Microsoft 365 Copilot connectors gallery](https://www.microsoft.com/microso
 
 ### Microsoft 365 Copilot connectors for people data
 
-[Microsoft 365 Copilot connectors for people data](https://learn.microsoft.com/en-us/graph/peopleconnectors.md) integrate third-party people data into M365 applications to enhance and unify individual profiles. They provide a synchronized view of people data while keeping the original data authoritative in its source system. These connectors improve identity cohesion, Copilot’s response relevance, and data discoverability within M365, including updated profile cards and search capabilities. Read more [here](https://learn.microsoft.com/en-us/graph/peopleconnectors.md).
+[Microsoft 365 Copilot connectors for people data](https://learn.microsoft.com/en-us/graph/peopleconnectors.md) integrate third-party people data into Microsoft 365 applications to enhance and unify individual profiles. They provide a synchronized view of people data while keeping the original data authoritative in its source system. These connectors improve identity cohesion, Copilot’s response relevance, and data discoverability within M365, including updated profile cards and search capabilities. For more information, see [Microsoft 365 Copilot connectors for people data](https://learn.microsoft.com/en-us/graph/peopleconnectors.md). 
 
 ### Microsoft 365 Copilot connectors by our partners
 
