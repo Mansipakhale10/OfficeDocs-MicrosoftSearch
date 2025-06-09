@@ -36,12 +36,22 @@ This article is intended for Microsoft 365 administrators or anyone who configur
 
 ## Prerequisites
 
-
 1. Your Bitbucket instance is accessible via API.
-2. You generate a **Client ID** and **Client secret** from Bitbucket for authentication.
-3. The user account used for authentication has access to the repositories, pull requests, and knowledge files to be indexed.
-4. The client ID and client secret have the **repository:read**, **account:read,** and **pullrequest** permissions.
-5. Users who access indexed Bitbucket data have corresponding **Microsoft Entra ID** identities for permission mapping.
+2. The user account used for authentication has access to the repositories, pull requests, and knowledge files to be indexed.
+3. Users who access indexed Bitbucket data have corresponding **Microsoft Entra ID** identities for permission mapping.
+
+### Set up an OAuth consumer on BitBucket
+1. Go to your workspace page on BitBucket. 
+2. Click on the gear icon in the top right corner and select Workspace settings. 
+3. On the left navigation, select OAuth Consumers located under Workflows section. 
+4. Click Add consumer and fill out according to the following redirect URLs: 
+    - For Microsoft 365 Enterprise, use `https://gcs.office.com/v1.0/admin/oauth/callback`
+    - For Microsoft 365 Government, use `https://gcsgcc.office.com/v1.0/admin/oauth/callback`  
+5. Enable that the key to have the following permissions configured to read issues:
+    - Account
+    - Repositories
+    - Pull requests
+6. Save the configuration and copy the key and secret values 
 
 We recommend using separate user accounts for OAuth authentication with each connection, as Bitbucket's rate limit is calculated individually per user.
 
@@ -53,11 +63,11 @@ Choose a display name that helps users recognize merge requests or documentation
 ### Bitbucket instance URL
 Enter the URL of your Bitbucket instance (for example, `https://bitbucket.org/testinstance`).
 
-### Provide authentication type
+### Authentication type
 
-- Enter your **Client ID** and **Client secret** from Bitbucket.
+- Enter your Client ID using the key from your Bitbucket OAuth consumer, and your Client Secret using the corresponding OAuth consumer secret.
 - Choose **Authorize** to sign in and grant access.
-- Grant the required API scopes.
+- Click Authorize to sign in and grant the required access permissions.
 
 ### 4. Roll out to limited audience
 Before you deploy the connector, test the connection with a limited user base in Copilot and Microsoft Search.
