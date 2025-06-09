@@ -69,7 +69,7 @@ Enter the URL of your Bitbucket instance (for example, `https://bitbucket.org/te
 - Choose **Authorize** to sign in and grant access.
 - Click Authorize to sign in and grant the required access permissions.
 
-### 4. Roll out to limited audience
+### Roll out to limited audience
 Before you deploy the connector, test the connection with a limited user base in Copilot and Microsoft Search.
 
 ## Custom setup
@@ -84,7 +84,12 @@ To ensure correct permission enforcement, map Bitbucket user identities to Micro
   - **Full name:** Matches Bitbucket full names to Microsoft Entra ID user properties.
   - **Public name:** Maps Bitbucket public names with Microsoft Entra ID user properties.
 
-If direct mapping fails, use **regular expressions (regex)** for transformation.
+If direct mapping fails, use **regular expressions (regex)** for transformation. For example:
+
+1. Select **Mail** as the **Microsoft Entra user property**.
+2. Select **Full Name** as the **non-Microsoft Entra user property**.
+3. Use a regular expression such as `([^@]+)` to capture a sequence of one or more characters that are before the `@` symbol.
+4. Create a formula to complete the mapping, such as `{0}@<your-domain>`.
 
 ### Content
 On the **Content** tab, you can verify property mappings in the sample data for metadata such as **content**, **labels**, **description**, and **timestamps**.
