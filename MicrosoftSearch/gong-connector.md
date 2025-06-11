@@ -1,8 +1,8 @@
 --- 
 title: "Gong Copilot connector" 
 ms.author: rerabo
-author: rerabo
-manager: ereza
+author: vivg
+manager: harshkum
 audience: Admin
 ms.audience: Admin 
 ms.topic: article 
@@ -44,9 +44,9 @@ Follow the steps below to get the Gong base URL and required credentials for the
 1. Go to https://app.gong.io/company/api-authentication?copilot=true <br>
 **Note:** The step is equivalent to navigating in Gong to **Settings → Ecosystem → API**, but the URL includes `copilot=true`, which reveals the option to generate a dedicated API key for the Copilot connector.
 2. The base URL presented on the screen is used later in the configuration phase of the Gong connector.
-[![Screenshot that shows how to get the Gong base URL.](media/gong-connector/gongBaseURL.png)](media/gong-connector/gongBaseURL.png#lightbox)
+[![Screenshot that shows how to get the Gong base URL.](media/gong-connector/gong-base-url.png)](media/gong-connector/gong-base-url.png#lightbox)
 3. Click **Get Copilot API Key** and copy the Access key and Access key secret. 
-[![Screenshot that shows how to get the access key credentials.](media/gong-connector/gongKey.png)](media/gong-connector/gongKey.png#lightbox)
+[![Screenshot that shows how to get the access key credentials.](media/gong-connector/gong-key.png)](media/gong-connector/gong-key.png#lightbox)
 
 ## Get Started
 
@@ -72,7 +72,7 @@ Custom setup is intended for admins who want greater control over user access, t
 >[!NOTE]
 > Ensure you authenticate to be able to edit the properties under Users, Content, and Sync.
 
-[![Screenshot that shows custom setup options.](media/gong-connector/gongCustom.png)](media/gong-connector/gongCustom.png#lightbox)
+[![Screenshot that shows custom setup options.](media/gong-connector/gong-custom.png)](media/gong-connector/gong-custom.png#lightbox)
 
 ### Users
 
@@ -85,7 +85,7 @@ If you choose **Everyone**, indexed data appears in the search results for all u
 
 #### Map Identities
 
-[![Screenshot that shows Users setup.](media/gong-connector/gongUsers.png)](media/gong-connector/gongUsers.png#lightbox)
+[![Screenshot that shows Users setup.](media/gong-connector/gong-users.png)](media/gong-connector/gong-users.png#lightbox)
 
 To enforce correct permissions, you need to map user identities from Gong to Microsoft Entra ID (ME-ID). There are two options:
 1. **Microsoft Entra ID (ME-ID) mapping (default):**<br>
@@ -107,13 +107,13 @@ If the default mapping doesn't work for your organization (for example, if email
 
 #### Filter by workspace
 By default, data is crawled from all Gong workspaces. To limit crawling to a specific workspace, click **Specific workspace**. A dropdown menu will appear, allowing you to select a single workspace for data indexing.
-[![Screenshot that shows Gong workspace selection.](media/gong-connector/gongWorkspace.png)](media/gong-connector/gongWorkspace.png#lightbox)
+[![Screenshot that shows Gong workspace selection.](media/gong-connector/gong-workspace.png)](media/gong-connector/gong-workspace.png#lightbox)
 
 #### Filter by date
 By default, data is crawled from all available dates. To limit the crawl to more recent content, you can select a specific start date by clicking the **Select start date** option.
-[![Screenshot that shows Gong date selection.](media/gong-connector/gongDate.png)](media/gong-connector/gongDate.png#lightbox)
+[![Screenshot that shows Gong date selection.](media/gong-connector/gong-date.png)](media/gong-connector/gong-date.png#lightbox)
 
 ### Sync
 The refresh interval determines how often your data is synced between the data source and the Copilot connector index. There are two types of refresh intervals: full crawl and incremental crawl. For more details, click [here](configure-connector.md#guidelines-for-sync-settings).
 You can change the default refresh interval values from here if needed.
-[![Screenshot that shows sync and refresh frequency settings.](media/gong-connector/gongSync.png)](media/gong-connector/gongSync.png#lightbox)
+[![Screenshot that shows sync and refresh frequency settings.](media/gong-connector/gong-sync.png)](media/gong-connector/gong-sync.png#lightbox)
