@@ -82,7 +82,7 @@ Select from the list of available Graph Connector Agents registered to your tena
 Choose the authentication type from the drop-down menu of options. Currently supported options are:
 - Basic, 
 - Windows( Keberos is not supported)
-- O-auth2 with Microsoft Entra ID(only OIDC is supported).
+- O-auth2 with Microsoft Entra ID (only OIDC is supported).
 
 > [!NOTE]
 - Use Domain\username format in username to authenticate to the SharePoint server instance using the Windows option.
