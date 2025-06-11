@@ -31,4 +31,4 @@ The following common errors are observed while configuring the connector, or dur
 | Crawl time (post connector configuration) | `Item listed but no longer accessible or no longer exists` | The crawling account may be missing 'basic' access level. Crawls fail with 'stakeholder' access. |
 | Crawl time (post connector configuration) | `2011: Bad data source API` | The crawling account may be missing 'basic' access level. Crawls fail with 'stakeholder' access. |
 
-If you have issues or want to provide feedback, contact [Microsoft Graph | Support (https://developer.microsoft.com/en-us/graph/support).
+If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).
