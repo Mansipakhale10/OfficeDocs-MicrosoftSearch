@@ -42,7 +42,8 @@ This article is intended for Microsoft 365 administrators and anyone responsible
 Follow the steps below to get the Gong base URL and required credentials for the Copilot connector:
 
 1. Go to https://app.gong.io/company/api-authentication?copilot=true <br>
-**Note:** The step is equivalent to navigating in Gong to **Settings → Ecosystem → API**, but the URL includes `copilot=true`, which reveals the option to generate a dedicated API key for the Copilot connector.
+   > [!NOTE]
+   > The step is equivalent to navigating in Gong to **Settings → Ecosystem → API**, but the URL includes `copilot=true`, which reveals the option to generate a dedicated API key for the Copilot connector.
 2. The base URL presented on the screen is used later in the configuration phase of the Gong connector.
 [![Screenshot that shows how to get the Gong base URL.](media/gong-connector/gong-base-url.png)](media/gong-connector/gong-base-url.png#lightbox)
 3. Click **Get Copilot API Key** and copy the Access key and Access key secret. 
@@ -57,7 +58,7 @@ A display name is used to identify each reference in Copilot, making it easier f
 Enter the Gong base URL that you copied during the [Prerequisites step](#prerequisites).
 
 ### 3. Authentication Type
-- Select ‘Basic’.
+- Select 'Basic'.
 - Provide authentication details: Enter the Gong Access key and Access key secret which were created in the [Prerequisites](#prerequisites) section above, to authenticate to your instance.
 
 ### 4. Rollout to limited audience
