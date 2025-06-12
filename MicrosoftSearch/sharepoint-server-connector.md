@@ -81,12 +81,12 @@ Select from the list of available Graph Connector Agents registered to your tena
 
 Choose the authentication type from the drop-down menu of options. The supported options are:
 - Basic, 
-- Windows( Keberos is not supported)
+- Windows(Kerberos is not supported)
 - O-auth2 with Microsoft Entra ID (only OIDC is supported).
 
 > [!NOTE]
-- Use Domain\username format in username to authenticate to the SharePoint server instance using the Windows option.
-- ADFS is currently not supported - including SAML or OIDC.
+>- Use Domain\username format in username to authenticate to the SharePoint server instance using the Windows option.
+>- ADFS is currently not supported - including SAML or OIDC.
 
 To authenticate with the provided credentials, you need to click on Sign-in to load the list of available site collections.
 
