@@ -1,13 +1,13 @@
 ---
 ms.date: 11/02/2020
-title: "Index quota for Microsoft Copilot 365 connectors"
+title: "Index quota for Microsoft 365 Copilot connectors"
 author: danielabom
 ms.author: danielabo
 manager: stevewilkins
 ms.topic: article
 ms.service: mssearch
 ms.localizationpriority: medium
-description: "Index quota for Microsoft Copilot 365 connectors."
+description: "Index quota for Microsoft 365 Copilot connectors."
 ---
 # Index quota
 Any valid Microsoft 365 Copilot, Microsoft 365, or Office 365 license allows you to view data from connectors in your Microsoft 365 Copilot and Microsoft Search results.
