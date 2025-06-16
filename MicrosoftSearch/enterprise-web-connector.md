@@ -52,6 +52,31 @@ These are the supported file types.
 | .md | Markdown | Markdown File |
 | .rtf | Rich Text Format | Rich Text Format |
 | .tsv | Tab Separated Values | Tab-Separated Values |
+| .gif | GIF | Graphics Interchange Format |
+| .jpeg | JPEG | JPEG Image |
+| .jpg | JPG | JPEG Image |
+| .png | PNG | Portable Network Graphics |
+| .mp3 | MP3 | MPEG Audio Layer III |
+| .wav | WAV | Waveform Audio File Format |
+| .aiff | AIFF | Audio Interchange File Format |
+| .flac | FLAC | Free Lossless Audio Codec |
+| .aac | AAC | Advanced Audio Coding |
+| .alac | ALAC | Apple Lossless Audio Codec |
+| .wma | WMA (Lossy) | Windows Media Audio (Lossy) |
+| .wma | WMA (Lossless) | Windows Media Audio (Lossless) |
+| .ogg | OGG | Ogg Vorbis Audio Format |
+| .pcm | PCM | Pulse-Code Modulation Audio |
+| .mp4 | MP4 | MPEG-4 Video File |
+| .mkv | MKV | Matroska Video File |
+| .avi | AVI | Audio Video Interleave |
+| .wmv | WMV | Windows Media Video |
+| .mov | MOV | Apple QuickTime Movie |
+| .flv | FLV | Flash Video Format |
+| .avchd | AVCHD | Advanced Video Coding High Definition |
+| .webm | WebM | Web Media File |
+| .mpeg | MPEG-2 | Moving Picture Experts Group Format |
+| .hevc | HEVC/H.265 | High Efficiency Video Coding |
+
 
 These are the supported MIME types.
 
