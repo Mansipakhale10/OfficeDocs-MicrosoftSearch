@@ -77,7 +77,6 @@ These are the supported file types.
 | .mpeg | MPEG-2 | Moving Picture Experts Group Format |
 | .hevc | HEVC/H.265 | High Efficiency Video Coding |
 
-
 These are the supported MIME types.
 
 | MIME type | Description |
@@ -103,10 +102,7 @@ These are the supported MIME types.
 A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### Add Website URLs to index
-Specify the root of the website that you'd like to crawl. The Enterprise Websites cloud Copilot connector uses this URL as the starting point and follows all the links from this URL for its crawl. You can index up to 50 different site URLs in a single connection. In the URLs field, enter the site URLs separated by commas (,). For example, `https://www.contoso.com,https://www.contosoelectronics.com`.
-
-> [!NOTE]
-> The connector always starts crawling from the root of the URL. For example - if your provided URL is `https://www.contoso.com/electronics`, then the connector starts crawl from `https://www.contoso.com`.
+Specify the root of the website that you'd like to crawl. The Enterprise Websites cloud Copilot connector uses this URL as the starting point and follows all the links from this URL for its crawl. You can index up to 50 different site URLs in a single connection.
 
 The connector only crawls webpages in the domain of root URLs and doesn't support crawling of out-of-domain URLs. Redirection is only supported within the same domain. If there are redirections in the webpages to be crawled, you may add the redirected URL directly in the list of URLs to be crawled.
 
@@ -123,6 +119,13 @@ b. Upon locating the robots.txt file, the crawler finds the sitemap links in the
 c. The crawler then crawls all webpages as listed in the sitemap files.
 
 d. If there's failure in any of the above steps, the crawler performs a deep crawl of the website, without throwing any error.
+
+**Index only pages under the specified subdirectory**
+
+The Website connector offers an option to index only webpages which are under the specified subdirectory specified. 
+
+- When this option is **not checked**, the connector always starts crawling from the root of the URL. For example - if your provided URL is `https://www.contoso.com/electronics`, then the connector starts crawl from `https://www.contoso.com`.
+- When this option is **checked**, the connector starts crawling from the exact input URL. For example - if your provided URL is `https://www.contoso.com/electronics`, then the connector starts crawl from `https://www.contoso.com/electronics`.
 
 ### Provide authentication type
 The authentication method you choose applies for all websites you provided to index in a connection. To authenticate and sync content from websites, choose **one of the five** supported methods:<br>
@@ -308,6 +311,13 @@ There are two ways to prevent pages from being crawled: disallow them in your ro
 2. Add URLs to exclude
 
     You can optionally create an **Exclusion list** to exclude some URLs from getting crawled if that content is sensitive or not worth crawling. To create an exclusion list, browse through the root URL. You can add the excluded URLs to the list during the configuration process.
+
+**Site configuration**
+
+The connector supports two options to customize crawler behaviour.
+
+1. Index pages containing a "noindex" directive in their "meta" tag or X-Robots-Tag HTTP response header: Selecting this option forces the crawler to index these pages and override the default crawler behaviour.
+2. Ignore 'Allow' and 'Disallow' directives specified in the "robots.txt" file: Selecting this option forces the crawler to ignore the crawl directives in robots.txt file.
 
 **Manage Properties**
 
