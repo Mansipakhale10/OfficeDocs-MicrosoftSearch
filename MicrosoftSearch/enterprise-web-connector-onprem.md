@@ -90,7 +90,7 @@ These are the supported  MIME types.
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
 - **Install the Microsoft Graph connector agent**: To access your on-premises websites, you must install and configure the [Microsoft Graph connector agent](https://www.microsoft.com/download/details.aspx?id=104045). [Download the agent installer](https://www.microsoft.com/download/details.aspx?id=104045) and follow the installation instructions to set it up. Once installed, ensure that the agent is configured correctly to connect your on-premises websites with the connector.
 - **Website URLs**: To connect to your website content, you need the URL to the website. You can index multiple websites (up to 50) in a single connection. 
-- **Service Account (optional)**: A service account is only needed when your websites require authentication. Public websites don't require authentication and can be crawled directly. For websites requiring authentication, it is advisable to have a dedicated account to authenticate and crawl the content.
+- **Service Account (optional)**: A service account is only needed when your websites require authentication. Public websites don't require authentication and can be crawled directly. For websites requiring authentication, it's advisable to have a dedicated account to authenticate and crawl the content.
 
 ## Get started
 
@@ -116,7 +116,7 @@ b. Upon locating the robots.txt file, the crawler finds the sitemap links in the
 
 c. The crawler then crawls all webpages as listed in the sitemap files.
 
-d. If there is failure in any of the above steps, the crawler performs a deep crawl of the website, without throwing any error.
+d. If there's failure in any of the above steps, the crawler performs a deep crawl of the website, without throwing any error.
 
 **Index only pages under the specified subdirectory**
 
@@ -177,7 +177,7 @@ The resource ID, client ID, and client secret values depend on how you did the s
       > [ ![Image showing the settings section on the authentication page.](media/enterprise-web-connector/connectors-enterpriseweb-authentication.png) ](media/enterprise-web-connector/connectors-enterpriseweb-authentication.png#lightbox)
     
       > [!NOTE]
-      > It is not required to have the above-specified route for Redirect URI on your website. Only if you use the user token sent by Azure in your website for authentication you will need to have the route.
+      > It isn't required to have the above-specified route for Redirect URI on your website. Only if you use the user token sent by Azure in your website for authentication you'll need to have the route.
     
     * View of the client ID on the **Essentials** section:
     
@@ -286,7 +286,7 @@ There are two ways to prevent pages from being crawled: disallow them in your ro
 
 The connector supports two options to customize crawler behavior.
 
-1. Index pages containing a "noindex" directive in their "meta" tag or X-Robots-Tag HTTP response header: Selecting this option forces the crawler to index these pages and override the default crawler behaviour.
+1. Index pages containing a "noindex" directive in their "meta" tag or X-Robots-Tag HTTP response header: Selecting this option forces the crawler to index these pages and override the default crawler behavior.
 2. Ignore 'Allow' and 'Disallow' directives specified in the "robots.txt" file: Selecting this option forces the crawler to ignore the crawl directives in robots.txt file.
 
 **Dynamic site configuration**
