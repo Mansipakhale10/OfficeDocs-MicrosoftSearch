@@ -92,7 +92,7 @@ These are the supported MIME types.
 ## Prerequisites
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
 - **Website URLs**: To connect to your website content, you need the URL to the website. You can index multiple websites (up to 50) in a single connection. 
-- **Service Account (optional)**: A service account is only needed when your websites require authentication. Public websites don't require authentication and can be crawled directly. For websites requiring authentication, it's advised to have a dedicated account to authenticate and crawl the content.
+- **Service Account (optional)**: A service account is only needed when your websites require authentication. Public websites don't require authentication and can be crawled directly. For websites requiring authentication, it is advisable to have a dedicated account to authenticate and crawl the content.
 
 ## Get Started
 
@@ -122,7 +122,7 @@ d. If there's failure in any of the above steps, the crawler performs a deep cra
 
 **Index only pages under the specified subdirectory**
 
-The Website connector offers an option to index only webpages which are under the specified subdirectory specified. 
+The Website connector offers an option to index only webpages that are under the specified subdirectory specified. 
 
 - When this option is **not checked**, the connector always starts crawling from the root of the URL. For example - if your provided URL is `https://www.contoso.com/electronics`, then the connector starts crawl from `https://www.contoso.com`.
 - When this option is **checked**, the connector starts crawling from the exact input URL. For example - if your provided URL is `https://www.contoso.com/electronics`, then the connector starts crawl from `https://www.contoso.com/electronics`.
@@ -270,7 +270,7 @@ For other settings, like **Access Permissions**, **Data Inclusion Rules**, **Sch
 
 | Users | Description |
 |----|---|
-| Access permissions | _Everyone in your organization will see this content_ |
+| Access permissions | _Everyone in your organization sees this content_ |
 
 | Content | Description |
 |---|---|
@@ -314,7 +314,7 @@ There are two ways to prevent pages from being crawled: disallow them in your ro
 
 **Site configuration**
 
-The connector supports two options to customize crawler behaviour.
+The connector supports two options to customize crawler behavior.
 
 1. Index pages containing a "noindex" directive in their "meta" tag or X-Robots-Tag HTTP response header: Selecting this option forces the crawler to index these pages and override the default crawler behaviour.
 2. Ignore 'Allow' and 'Disallow' directives specified in the "robots.txt" file: Selecting this option forces the crawler to ignore the crawl directives in robots.txt file.
