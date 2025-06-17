@@ -1,6 +1,6 @@
 --- 
 
-title: "Adobe Experience Manager(AEM) Assets Microsoft Graph connector" 
+title: "Adobe Experience Manager(AEM) Assets Microsoft 365 Copilot connector" 
 ms.author: rantang
 author: ranran1998
 manager: jecui
@@ -13,15 +13,15 @@ search.appverid:
 - BFB160 
 - MET150 
 - MOE150 
-description: "Set up the Adobe Experience Manager Assets Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot" 
+description: "Set up the Adobe Experience Manager Assets Microsoft 365 Copilot connector for Microsoft Search and Microsoft 365 Copilot" 
 ms.date: 03/14/2025
 ---
 
-# Adobe Experience Manager Assets Microsoft Graph connector (preview)
+# Adobe Experience Manager Assets Microsoft 365 Copilot connector (preview)
 
-With the Adobe Experience Manager Assets Microsoft Graph connector, your organization can index published assets of your Adobe Experience Manager Assets instance. After you configure the connector and index content from Adobe Experience Manager Assets, end users can search for those published assets in Microsoft Copilot and from any Microsoft Search client. 
+With the Adobe Experience Manager Assets Microsoft 365 Copilot connector, your organization can index published assets of your Adobe Experience Manager Assets instance. After you configure the connector and index content from Adobe Experience Manager Assets, end users can search for those published assets in Microsoft Copilot and from any Microsoft Search client. 
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Adobe Experience Manager Assets Microsoft Graph connector. 
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Adobe Experience Manager Assets Microsoft 365 Copilot connector. 
 
 ## Capabilities
 - Index the published assets of your Adobe Experience Manager Assets.
@@ -32,13 +32,13 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
 ## Limitations
 - Doesn't index comments.
-- Doesn't crawl user identities and access permissions. All published assets indexed using the Adobe Experience Manager Assets Microsoft Graph connector are visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.   
+- Doesn't crawl user identities and access permissions. All published assets indexed using the Adobe Experience Manager Assets Microsoft 365 Copilot connector are visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.   
 ## Prerequisites
 1. You must be the **search admin** for your organization's Microsoft 365 tenant.
 2. To connect to your Adobe Experience Manager Assets data, you need your organization's Adobe Experience Cloud instance author and publish environment URL.
   Your organization's Adobe Experience Cloud instance author environment URL typically looks like: `https://author-p<PROGRAM_ID>-e<ENVIRONMENT_ID>.<REGION>.adobeaemcloud.com`.
   Your organization's Adobe Experience Cloud instance publish environment URL typically looks like: `https://publish-p<PROGRAM_ID>-e<ENVIRONMENT_ID>.<REGION>.adobeaemcloud.com`. 
-3. To connect to Adobe Experience Cloud and allow the Adobe Experience Manager Assets Graph connector to regularly update published assets and metadata, you need a technical account of your Adobe Experience Manager Assets with the credentials to access published assets and metadata. The technical account is the secure, service-based account for external access to Adobe Experience Manager Assets. Find more details [here](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis#generate-a-jwt-token-and-exchange-it-for-an-access-token).
+3. To connect to Adobe Experience Cloud and allow the Adobe Experience Manager Assets 365 Copilot connector to regularly update published assets and metadata, you need a technical account of your Adobe Experience Manager Assets with the credentials to access published assets and metadata. The technical account is the secure, service-based account for external access to Adobe Experience Manager Assets. Find more details [here](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis#generate-a-jwt-token-and-exchange-it-for-an-access-token).
 
 ## Get started
 
@@ -60,7 +60,7 @@ For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl
 
 |Page |Settings |Default values|
 |--- | ---- | ---|
-|Users | Access permissions | All published assets or posts indexed using the Adobe Experience Manager Assets Microsoft Graph connector are visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.|
+|Users | Access permissions | All published assets or posts indexed using the Adobe Experience Manager Assets Microsoft 365 Copilot connector are visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.|
 |Content | Index content | All published assets are selected by default. |
 |Content | Manage properties | To check default properties and their schema, [click here](#content).|
 |Sync | Incremental crawl | Frequency: Every 15 mins.|
@@ -74,7 +74,7 @@ In custom setup, you can edit any of the default values for users, content, and 
 
 #### Access permissions
 
-Currently, only published assets from your Adobe Experience Manager Assets are indexed. All data indexed using the Adobe Experience Manager Assets Microsoft Graph connector is visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.
+Currently, only published assets from your Adobe Experience Manager Assets are indexed. All data indexed using the Adobe Experience Manager Assets Microsoft 365 Copilot connector is visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.
 
 ### Content 
 
@@ -160,4 +160,4 @@ You can configure full and incremental crawls based on the scheduling options pr
 
 ## Next steps
 After you publish your connection, you can review the status under **Data sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
-If you have issues or want to provide feedback, see [Microsoft Graph support](https://developer.microsoft.com/graph/support).
+If you have issues or want to provide feedback, see [Microsoft 365 Copilot support](https://developer.microsoft.com/graph/support).
