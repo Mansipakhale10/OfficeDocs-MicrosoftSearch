@@ -1,6 +1,6 @@
 ---
 ms.date: 10/08/2019
-title: "Troubleshooting the Azure SQL and Microsoft SQL Server Microsoft Graph connectors for Microsoft Search and Microsoft 365 Copilot"
+title: "Troubleshooting the Azure SQL and Microsoft SQL Server Microsoft 365 Copilot connectors."
 ms.author: mecampos
 author: mecampos
 manager: umas
@@ -13,12 +13,12 @@ search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Troubleshooting the Azure SQL and Microsoft SQL Microsoft Graph connectors for Microsoft Search and Microsoft 365 Copilot."
+description: "Troubleshooting the Azure SQL and Microsoft SQL Microsoft 365 Copilot connectors."
 ---
 
-# Troubleshooting the Azure SQL and Microsoft SQL Microsoft Graph connectors
+# Troubleshooting the Azure SQL and Microsoft SQL Microsoft 365 Copilot connectors
 
-The following are common errors observed while configuring the connector, or during crawling, and their possible reasons.
+The following are common errors observed while configuring the connectors, or during crawling, and their possible reasons.
 
 | Configuration step | Error message | Possible reasons |
 |:------------ |:----------- |:------------ |
