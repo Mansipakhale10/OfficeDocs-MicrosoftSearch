@@ -4,7 +4,7 @@ ms.author: tlarsen
 author: tlarsen
 manager: mnirkhe
 ms.audience: Admin
-ms.topic: article
+ms.topic: get-started
 ms.service: mssearch
 ms.localizationpriority: medium
 search.appverid:
