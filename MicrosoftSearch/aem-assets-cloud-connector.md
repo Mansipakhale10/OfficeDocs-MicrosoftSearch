@@ -92,32 +92,32 @@ You can also set ingestion filters based on the value of **metadata properties**
 
 To find and verify the property path, see [Query builder debugger console| Adobe Experience Manager](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api#testing-and-debugging).
 
-1. Open the query builder bebugger with `http://<host>:<port>/libs/cq/search/content/querydebug.html` and input the following query
+1. Open the query builder debugger with `http://<host>:<port>/libs/cq/search/content/querydebug.html` and input the following query
 
-```plaintext
-p.limit=10
-p.guessTotal=true
-p.hits=full
-type=dam:Asset
-p.nodedepth=2
-property=jcr:content/cq:lastReplicationAction
-property.value=Activate
-```
+    ```plaintext
+    p.limit=10
+    p.guessTotal=true
+    p.hits=full
+    type=dam:Asset
+    p.nodedepth=2
+    property=jcr:content/cq:lastReplicationAction
+    property.value=Activate
+    ```
 
 2. Click **search**.
 
 3. After the results are successfully returned, click **JSON query builder link**, to see the JSON content with all properties.
 
-![Screenshot that shows the Adobe Experience Manager Assets Query Builder Debugger.](media/aem-assets-query-builder-debugger.png)
+   [![Screenshot that shows the Adobe Experience Manager Assets Query Builder Debugger.](media/aem-assets-query-builder-debugger.png)](media/aem-assets-query-builder-debugger.png#lightbox)
 
 4. Find the property and JSON path of the property. For example, the JSON path of the property `dc:format` shown in the following snapshot is `hits.jcr:content.metadata.dc:format`
 
-![Screenshot that shows a sample of a JCR path.](media/aem-assets-jcrpath-sample.png)
+   ![Screenshot that shows a sample of a JCR path.](media/aem-assets-jcrpath-sample.png)
 
-|Operators and target values in query conditions|Description|
-|:---|:---|
-|Operator|A drop-down menu for setting `"="`, `"!="`, `"In"`, `"Not In"`.|
-|Target-value| Single-value and multi-value settings are different.
+   |Operators and target values in query conditions|Description|
+   |:---|:---|
+   |Operator|A drop-down menu for setting `"="`, `"!="`, `"In"`, `"Not In"`.|
+   |Target-value| Single-value and multi-value settings are different.
 - Single-value usage in (=) and (!=) conditions: Give a single value without any quotes.
 - Multi-value usage in (In) and (Not In) conditions: If multi-value is a group of text, enclose them in double quotes and square brackets []. If it’s a group of numbers, a user only needs to enclose them in square brackets []. It doesn’t matter if there are quotes or not. |
 
@@ -153,7 +153,7 @@ To check available standard properties from your Adobe Experience Manager Assets
 
 To edit any of these values, choose "Custom setup".
 
-![Screenshot that shows how to add a property.](media/aem-assets-add-property.png)
+[![Screenshot that shows how to add a property.](media/aem-assets-add-property.png)](media/aem-assets-add-property.png#lightbox)
 
 ### Sync 
 You can configure full and incremental crawls based on the scheduling options present here. By default, incremental crawl is set for every 15 minutes, and full crawl is set for every day. If needed, you can adjust these schedules to fit your data refresh needs.
