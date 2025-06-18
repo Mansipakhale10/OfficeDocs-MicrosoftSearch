@@ -34,7 +34,7 @@ This article is intended for Microsoft 365 administrators who are responsible fo
 - Doesn't index attachment files or comments.
 
 >[!IMPORTANT]
-> * In January 2024, Atlassian deprecated a set of Confluence cloud APIs (version 1) and released new APIs (version 2). For more information see [changelog updates](https://developer.atlassian.com/cloud/confluence/changelog/#CHANGE-864) and [general updates](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcommunity.developer.atlassian.com%2Ft%2Frfc-19-deprecation-of-confluence-cloud-rest-api-v1-endpoints%2F71752&data=05%7C01%7Cvivg%40microsoft.com%7Cb8d049f07c3544de6b2c08dbe98b2a02%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638360556187110970%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=DIw8xhEwulo59mAm8T0f0TTKvbtRr4tIMTMpQYgPDDQ%3D&reserved=0). Some of these deprecated v1 APIs are used by the connector for **OAuth connections** only. Hence, after this change, your existing Confluence connections may have stopped working.
+> * In January 2024, Atlassian deprecated a set of Confluence cloud APIs (version 1) and released new APIs (version 2). For more information, see [changelog updates](https://developer.atlassian.com/cloud/confluence/changelog/#CHANGE-864) and [general updates](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcommunity.developer.atlassian.com%2Ft%2Frfc-19-deprecation-of-confluence-cloud-rest-api-v1-endpoints%2F71752&data=05%7C01%7Cvivg%40microsoft.com%7Cb8d049f07c3544de6b2c08dbe98b2a02%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638360556187110970%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=DIw8xhEwulo59mAm8T0f0TTKvbtRr4tIMTMpQYgPDDQ%3D&reserved=0). Some of these deprecated v1 APIs are used by the connector for **OAuth connections** only. Hence, after this change, your existing Confluence connections may stop working.
 > * In December 2023, a new set of v2 APIs was released to all customers. After the release, your existing connections needed reauthentication. The new v2 APIs also require some more scopes (as compared to the previous v1 APIs), which need to be provided during re-authentication. New set of scopes required (complete list) – `read:group:confluence`, `read:user:confluence`, `read:content-details:confluence`, `Read:space:confluence`, `Read:permission:confluence`, `read:audit-log:confluence`, `read:content.metadata:confluence` and `read:page:confluence`.
 
 ## Get started
@@ -123,7 +123,7 @@ In Confluence Cloud, security permissions for users and groups are defined using
 If there are no page restrictions, the connector checks for space-level permissions - 
 * In case the space has 'anonymous users' access enabled, the content is visible to all users within your tenant.
 * In case 'anonymous access' isn't enabled, the space-level permissions are honored.
-* In case space-level permissions are not defined, the content is not visible to any user in your tenant.
+* In case space-level permissions aren't defined, the content is not visible to any user in your tenant.
 
 >[!IMPORTANT]
 >Permissions are managed at the space and page level only, and parent page permissions are not taken into consideration.
@@ -138,8 +138,8 @@ To identify which option is suitable for your organization:
 >[!NOTE]
 >
 > * If you choose Microsoft Entra ID as the type of identity source, the connector maps the email IDs of users obtained from Confluence directly to UPN property from Microsoft Entra ID.
-> * If you chose "Non-AAD" for the identity type see [Map your non-Azure AD Identities](map-non-aad.md) for instructions on mapping the identities. You can use this option to provide the mapping regular expression from email ID to UPN.
-> * Updates to users or groups governing access permissions are synced in full crawls only. Incremental crawls do not currently support the processing of updates to permissions.
+> * If you chose "Non-AAD" for the identity type, see [Map your non-Azure AD Identities](map-non-aad.md) for instructions on mapping the identities. You can use this option to provide the mapping regular expression from email ID to UPN.
+> * Updates to users or groups governing access permissions are synced in full crawls only. Incremental crawls don't currently support the processing of updates to permissions.
 
 
 ### Content
@@ -159,14 +159,14 @@ To add or remove available properties from your Aha!, assign a schema to the pro
 
 |Default property | Label | Description|
 |:--- |:--- |:---|
-Authors   | `authors` | Name of people who participated/collaborated on the item in the data source.|
-CreatedByName  | `createdBy` | Name of the person who most recently edited the item in the data source.|
-CreatedOn  | `createdDateTime` | Date and time that the item was created in the data source.|
-IconUrl  | `iconUrl` | The associated icon URL of the item.|
-Title   | `title` | The title of the item that you want to be shown in search and other experiences.|
-UpdatedByName  | `lastModifiedBy` | Name of the person who most recently edited the item in the data source.|
-UpdatedOn  | `lastModifiedDateTime` | Date and time the item was last modified in the data source.|
-Url  | `url` | The target URL of the item in the data source.
+|Authors   | `authors` | Name of people who participated/collaborated on the item in the data source.|
+|CreatedByName  | `createdBy` | Name of the person who most recently edited the item in the data source.|
+|CreatedOn  | `createdDateTime` | Date and time that the item was created in the data source.|
+|IconUrl  | `iconUrl` | The associated icon URL of the item.|
+|Title   | `title` | The title of the item that you want to be shown in search and other experiences.|
+|UpdatedByName  | `lastModifiedBy` | Name of the person who most recently edited the item in the data source.|
+|UpdatedOn  | `lastModifiedDateTime` | Date and time the item was last modified in the data source.|
+|Url  | `url` | The target URL of the item in the data source.
 
 #### Preview data
 
