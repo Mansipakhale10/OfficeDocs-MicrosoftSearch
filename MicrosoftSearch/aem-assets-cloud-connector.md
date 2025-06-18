@@ -104,7 +104,7 @@ property=jcr:content/cq:lastReplicationAction
 property.value=Activate
 ```
 
-2. Click "**search**"
+2. Click **search**.
 
 3. After the results are successfully returned, click **JSON query builder link**, to see the JSON content with all properties.
 
@@ -151,7 +151,7 @@ To check available standard properties from your Adobe Experience Manager Assets
 | Tags                | None                  | Tags defined in Adobe Experience Manager Assets metadata. In Adobe Experience Manager, tags are organized hierarchically   | Query, Retrieve, Search.     |
 
 
-If you would like to add **custom properties** besides these standard properties of Adobe Experience Manager Assets, you could click “Add Property” to add it - define the property name, select the data type, input the **JSON-path of the property**,add an alias and assign a schema to the property.
+To edit any of these values, choose "Custom setup".
 
 ![Screenshot that shows how to add a property.](media/aem-assets-add-property.png)
 
