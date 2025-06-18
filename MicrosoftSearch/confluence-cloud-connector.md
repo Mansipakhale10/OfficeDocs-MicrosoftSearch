@@ -38,8 +38,6 @@ This article is intended for Microsoft 365 administrators who are responsible fo
 > * In December 2023, a new set of v2 APIs was released to all customers. After the release, your existing connections needed reauthentication. The new v2 APIs also require some more scopes (as compared to the previous v1 APIs), which need to be provided during re-authentication. New set of scopes required (complete list) – `read:group:confluence`, `read:user:confluence`, `read:content-details:confluence`, `Read:space:confluence`, `Read:permission:confluence`, `read:audit-log:confluence`, `read:content.metadata:confluence` and `read:page:confluence`.
 
 ## Get started
-This video provides a step-by-step guide on adding the Confluence Cloud Copilot connector.
-> [!VIDEO https://www.youtube-nocookie.com/embed/9WXQt1JykXo]
 
 ### 1. Display name
 
@@ -183,6 +181,6 @@ You can change the default values of the refresh interval from here if you want 
 - Search and validate your indexed content and permissions using [Index browser](./connectors-index-search.md)
 - You may find answers to common questions in our [FAQ section](./frequently-asked-questions.md)
 
-For Microsoft  Search, if you need to customize the search results page. To learn about customizing search results, see [Customize the search results page](customize-search-page.md).
+For Microsoft Search, if you need to customize the search results page. To learn about customizing search results, see [Customize the search results page](customize-search-page.md).
 
 If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/graph/support).
