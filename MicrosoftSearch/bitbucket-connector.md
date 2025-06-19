@@ -42,12 +42,12 @@ This article is intended for Microsoft 365 administrators or anyone who configur
 
 ### Set up an OAuth consumer on BitBucket
 1. Go to your workspace page on BitBucket. 
-2. Click on the gear icon in the top right corner and select Workspace settings. 
-3. On the left navigation, select OAuth Consumers located under Workflows section. 
-4. Click Add consumer and fill out according to the following redirect URLs: 
+2. Click the gear icon on the top right corner and select **Workspace settings**. 
+3. On the left navigation, select OAuth Consumers located under the Workflows section. 
+4. Click **Add consumer** and fill out according to the following redirect URLs: 
     - For Microsoft 365 Enterprise, use `https://gcs.office.com/v1.0/admin/oauth/callback`
     - For Microsoft 365 Government, use `https://gcsgcc.office.com/v1.0/admin/oauth/callback`  
-5. Enable that the key to have the following permissions configured to read issues:
+5. Enable the key to have the following permissions configured to read issues:
     - Account
     - Repositories
     - Pull requests
@@ -77,7 +77,7 @@ In custom setup, you can edit any of the default values for users, content, and 
 
 ### Users
 #### Identity mapping
-By default, due to the limitation of Bitbucket API, the connector maps emails in Microsoft Entra ID using public names from Bitbucket.
+By default, due to the limitation of the Bitbucket API, the connector maps emails in Microsoft Entra ID using public names from Bitbucket.
 If this mapping does not align with your configuration, customize the identity mapping.
 
 To ensure correct permission enforcement, map Bitbucket user identities to Microsoft Entra ID. The following are the options:
