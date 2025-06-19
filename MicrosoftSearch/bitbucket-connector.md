@@ -66,7 +66,7 @@ Enter the URL of your Bitbucket instance (for example, `https://bitbucket.org/te
 
 - Enter your Client ID using the key from your Bitbucket OAuth consumer, and your Client Secret using the corresponding OAuth consumer secret.
 - Choose **Authorize** to sign in and grant access.
-- Click Authorize to sign in and grant the required access permissions.
+- Click **Authorize** to sign in and grant the required access permissions.
 
 ### Roll out to limited audience
 Before you deploy the connector, test the connection with a limited user base in Copilot and Microsoft Search.
