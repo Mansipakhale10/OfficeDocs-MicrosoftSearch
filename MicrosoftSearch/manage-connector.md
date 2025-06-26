@@ -22,7 +22,7 @@ To access and manage your Microsoft Graph connectors, you must be designated as 
 
 ## Manage Visibility of Third-Party Data Sources in Copilot
 **Overview:**
-Admins can now control the visibility of third-party (3P) connectors in Copilot Search and Copilot Chat using a simple toggle. This feature enhances data governance and the user experience by allowing selective exposure of indexed content. If the connection is off, it will still crawl the data source, but the data won't be used for search results.
+Admins can now control the visibility of third-party (3P) connectors in Copilot Search and Copilot Chat using a simple toggle. This feature enhances data governance and the user experience by allowing selective exposure of indexed content. If the connection is off, it still crawls the data source, but the data isn't used for search results.
 
 **How it works:**
 - Navigate to MAC > Settings > Search & Intelligence -> Data sources
